@@ -6,14 +6,14 @@
     <title>Tasqia</title>
     <link rel="stylesheet" href="CSS/styles.css">
     <?php 
-        require_once 'funcions.php';
-        require_once 'connexioBD.php';    
+        require_once 'Scripts/funcions.php';
+        require_once 'Scripts/connexioBD.php';    
     ?>
 </head>
 <body>
     <section>
-        <form class="formulari" action="procesarLogin.php" method="post">
-            <h1 id="titolIndex">Inicia sessió</h1>
+        <form action="procesarLogin.php" method="post">
+            <h1>Inicia sessió</h1>
             <label for="usuari">Usuari:</label><br>
             <input type="text" id="usuari" name="usuari" placeholder="Introdueix el teu nom d'usuari" required><br>
             <label for="contrasenya">Contrasenya:</label><br>
