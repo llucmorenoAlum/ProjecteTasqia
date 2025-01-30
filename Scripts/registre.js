@@ -3,7 +3,7 @@ window.onload = () => {
     usuari.addEventListener("input", (event) => {
         usuari.setCustomValidity("");
         
-        let regex = /^[a-zA-Z\s]+$/
+        let regex = /^[a-zA-Záéíóúàèìòùãõäëïöü\s]+$/
 
         if(!usuari.validity.valid) return;
 
