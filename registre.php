@@ -17,7 +17,7 @@
         <form action="procesarRegistre.php" method="post">
             <h1>Registre d'usuari</h1>
             <label for="usuari">Nom:</label>
-            <input type="text" id="usuari" name="usuari" placeholder="Introdueix el teu nom..." required minlength="2" maxlength="30">
+            <input type="text" id="usuari" name="usuari" placeholder="Introdueix el teu nom..." required minlength="2" maxlength="30" pattern="[a-Z]">
             <label for="email">Correu electrònic:</label>
             <input type="email" name="email" id="email" placeholder="Introdueix el correu electrònic...">
             <label for="contrasenya">Contrasenya:</label>
