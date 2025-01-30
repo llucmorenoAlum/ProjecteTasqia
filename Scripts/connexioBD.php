@@ -1,9 +1,9 @@
 <?php
 //variables
 
-$BD = ''
-$user = ''
-$pass = ''
+$BD = 'Tasqia'
+$user = 'fidel'
+$pass = '1234'
 
 //Funció de connexió
 function conectarBD(){
