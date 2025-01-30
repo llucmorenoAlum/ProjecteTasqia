@@ -5,8 +5,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
+    padding: 10px;
 }
 
 section {
@@ -50,7 +51,7 @@ input::placeholder {
 }
 
 button {
-    background-color: #0066cc;
+    background-color: #7d3c98;
     color: white;
     padding: 12px;
     font-size: 16px;
@@ -61,7 +62,7 @@ button {
 }
 
 button:hover {
-    background-color: #0052a3;
+    background-color: #6a3283;
 }
 
 button:last-child {
@@ -72,8 +73,15 @@ button:last-child:hover {
     background-color: #777;
 }
 
-@media (max-width: 480px) {
+/* Estils per a pantalles grans */
+@media (min-width: 768px) {
     section {
-        padding: 15px;
+        max-width: 600px;
+        padding: 30px;
+    }
+
+    button {
+        padding: 14px;
+        font-size: 18px;
     }
 }
