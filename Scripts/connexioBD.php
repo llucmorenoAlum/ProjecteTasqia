@@ -2,8 +2,8 @@
 //variables
 
 $BD = 'Tasqia'
-$user = 'fidel'
-$pass = '1234'
+$user = 'fidel';
+$pass = '1234';
 
 //Funció de connexió
 function conectarBD(){
