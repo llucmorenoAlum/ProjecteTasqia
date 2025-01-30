@@ -1,7 +1,7 @@
 <?php
 //variables
 
-$BD = 'Tasqia'
+$BD = 'Tasqia';
 $user = 'fidel';
 $pass = '1234';
 
