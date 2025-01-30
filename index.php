@@ -11,8 +11,8 @@
     ?>
 </head>
 <body>
+    <h1>Tasqia</h1>
     <section>
-        <h1>Tasqia</h1>
         <form action="procesarLogin.php" method="post">
             <h1>Inicia sessió</h1>
             <label for="usuari">Usuari:</label><br>
