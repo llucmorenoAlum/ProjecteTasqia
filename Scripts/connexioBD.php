@@ -6,7 +6,7 @@ $user = 'fidel';
 $pass = '1234';
 
 //Funció de connexió
-function conectarBD(){
+function conectarBD($BD, $user, $pass){
     try {
         $pdo = new PDO('mysql:host=localhost;dbname=' . $BD, $user, $pass);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
