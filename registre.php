@@ -9,6 +9,7 @@
         require_once 'Scripts/funcions.php';
         require_once 'Scripts/connexioBD.php';    
     ?>
+    <script src="Scripts/registre.js"></script>
 </head>
 <body>
     <h1>Tasqia</h1>
