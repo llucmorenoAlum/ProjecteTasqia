@@ -19,7 +19,7 @@
             <label for="usuari">Nom:</label>
             <input type="text" id="usuari" name="usuari" placeholder="Introdueix el teu nom..." required minlength="2" maxlength="30">
             <label for="email">Correu electrònic:</label>
-            <input type="email" name="email" id="email" placeholder="Introdueix el correu electrònic...">
+            <input type="email" name="email" id="email" placeholder="Introdueix el correu electrònic..." required>
             <label for="contrasenya">Contrasenya:</label>
             <input type="password" id="contrasenya" name="contrasenya" placeholder="Introdueix la contrasenya..." required minlength="5" maxlength="30">
             <label for="contrasenyaRep">Confirmar contrasenya:</label>
