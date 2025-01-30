@@ -15,11 +15,14 @@
     <section>
         <form action="procesarLogin.php" method="post">
             <h1>Inicia sessió</h1>
-            <label for="usuari">Usuari:</label><br>
-            <input type="text" id="usuari" name="usuari" placeholder="Introdueix el teu nom d'usuari" required><br>
-            <label for="contrasenya">Contrasenya:</label><br>
-            <input type="password" id="contrasenya" name="contrasenya" placeholder="Introdueix la contrasenya" required><br>    
-            <button type="submit">Iniciar sessió</button><button>Registrar-se</button>
+            <label for="usuari">Nom:</label>
+            <input type="text" id="usuari" name="usuari" placeholder="Introdueix el teu nom" required>
+            <label for="email">Correu electrònic:</label>
+            <input type="email" name="email" id="email">
+            <label for="contrasenya">Contrasenya:</label>
+            <input type="password" id="contrasenya" name="contrasenya" placeholder="Introdueix la contrasenya" required>
+            <button type="submit">Iniciar sessió</button>
+            <button onclick="window.location.href='registre.php'">Registrar-se</button>
         </form>
     </section>
 </body>

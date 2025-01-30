@@ -36,8 +36,7 @@ label {
     font-weight: bold;
 }
 
-input[type="text"],
-input[type="password"] {
+input {
     background-color: #555;
     color: #f0f0f0;
     border: 1px solid #777;
