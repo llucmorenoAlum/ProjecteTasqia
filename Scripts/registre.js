@@ -8,7 +8,7 @@ window.onload = () => {
         if(!usuari.validity.valid) return;
 
         if(!regex.test(usuari.value)){
-            usuari.setCustomValidity("Només es permeten lletres en minúscules sense accents i números")
+            usuari.setCustomValidity("Només es permeten lletres")
         }
 
         usuari.reportValidity();
