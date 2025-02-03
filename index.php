@@ -1,5 +1,5 @@
 <?php
-session_start();
+/*session_start();
 
 // Comprova si l'usuari ha iniciat sessió
 if (!isset($_SESSION['usuari_id'])) {
@@ -8,5 +8,6 @@ if (!isset($_SESSION['usuari_id'])) {
     exit();
 }else{
     require_once './app/views/index.php';
-}
+}*/
+require_once './app/views/index.php';
 ?>
