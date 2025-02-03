@@ -19,11 +19,14 @@ header{
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 main{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, fr);
+    grid-template-rows: repeat(2, fr);
     flex-grow: 1;
     width: 100%;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 section {
     width: 100%;
@@ -32,6 +35,18 @@ section {
     background-color: #444;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+#tasquesActives{
+    grid-column: 1;
+}
+#tasquesEnProces{
+    grid-column: 2;
+}
+#tasquesCompletades{
+    grid-column: 3;
+}
+#tasquesDia{
+    grid-column: 1/4;
 }
 
 h1 {

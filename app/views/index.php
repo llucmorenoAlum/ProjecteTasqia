@@ -9,9 +9,10 @@
 <body>
     <?php include './app/views/header.php'?>
     <main>
-        <section>Test 1</section>
-        <section>Test 2</section>
-        <section>test 3</section>
+        <section id="tasquesActives"></section>
+        <section id="tasquesEnProces">Test 2</section>
+        <section id="tasquesCompletades">test 3</section>
+        <section id="tasquesDia">Test 4</section>
     </main>
 </body>
 </html>
