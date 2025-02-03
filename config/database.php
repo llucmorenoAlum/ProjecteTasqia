@@ -1,6 +1,6 @@
 <?php
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'tasqia');
+define('DB_NAME', 'Tasqia');
 define('DB_USER', 'root');
 define('DB_PASS', '');
 

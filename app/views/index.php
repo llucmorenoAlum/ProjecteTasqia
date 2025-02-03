@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="./public/css/styles.css">
 </head>
 <body>
-    
+    <?php include './app/views/header.php'?>
+    <section>Test 1</section>
+    <section>Test 2</section>
+    <section>test 3</section>
 </body>
 </html>
