@@ -17,8 +17,8 @@
             <?php 
                 if($tasquesPendents->rowcount() >= 0):?>
                     <ul>
-                        <?php while ($tasca = $tasquesPendents->fetch()) :?>
-                            <li><?php echo $tasca['nom']?> - <?php echo $tasca['descripcio']?></li>
+                        <?php while ($tascaPendent = $tasquesPendents->fetch()) :?>
+                            <li><?php echo $tascaPendent['nom']?> - <?php echo $tascaPendent['descripcio']?></li>
                         <?php endwhile ?>
                     </ul>
                 <?php else:?>
