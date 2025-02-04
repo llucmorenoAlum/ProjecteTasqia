@@ -15,7 +15,7 @@
         <section id="tasquesActives">
             <p>Tàsques a completar:</p>
             <?php 
-                if($tasquesPendents->rowcount() >= 0):?>
+                if($tasquesPendents->rowcount() > 0):?>
                     <ul>
                         <?php while ($tascaPendent = $tasquesPendents->fetch()) :?>
                             <li><?php echo $tascaPendent['nom']?> - <?php echo $tascaPendent['descripcio']?></li>
@@ -29,7 +29,7 @@
         <section id="tasquesEnProces">
             <p>Tàsques en procés:</p>
             <?php 
-                if($tasquesEnProces->rowcount() >= 0):?>
+                if($tasquesEnProces->rowcount() > 0):?>
                     <ul>
                         <?php while ($tasca = $tasquesEnProces->fetch()) :?>
                             <li><?php echo $tasca['nom']?> - <?php echo $tasca['descripcio']?></li>
@@ -43,7 +43,7 @@
         <section id="tasquesCompletades">
             <p>Tàsques completades:</p>
             <?php 
-                if($tasquesCompletades->rowcount() >= 0):?>
+                if($tasquesCompletades->rowcount() > 0):?>
                     <ul>
                         <?php while ($tasca = $tasquesCompletades->fetch()) :?>
                             <li><?php echo $tasca['nom']?> - <?php echo $tasca['descripcio']?></li>
