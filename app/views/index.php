@@ -13,7 +13,7 @@
     ?>
     <main>
         <section id="tasquesActives">
-            <p>Tàsques a completar:</p>
+            <h3>Tàsques a completar:</h3>
             <?php 
                 if($tasquesPendents->rowcount() > 0):?>
                     <ul>
@@ -27,7 +27,7 @@
                 ?>
         </section>
         <section id="tasquesEnProces">
-            <p>Tàsques en procés:</p>
+            <h3>Tàsques en procés:</h3>
             <?php 
                 if($tasquesEnProces->rowcount() > 0):?>
                     <ul>
@@ -41,7 +41,7 @@
             ?>
         </section>
         <section id="tasquesCompletades">
-            <p>Tàsques completades:</p>
+            <h3>Tàsques completades:</h3>
             <?php 
                 if($tasquesCompletades->rowcount() > 0):?>
                     <ul>
