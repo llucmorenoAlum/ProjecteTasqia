@@ -16,6 +16,12 @@ header{
     width: 100%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
+#titolHeader{
+    margin-left: 10px;
+}
+#imgHeader{
+    margin-right: 10px;
+}
 main{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
