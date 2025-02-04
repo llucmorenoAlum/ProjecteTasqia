@@ -6,11 +6,12 @@
     <title>Tasqia</title>
     <link rel="stylesheet" href="./public/css/styles.css">
 </head>
-<body>
-    <?php 
+<?php 
         require_once 'app/views/header.php';
         require_once 'app/controllers/indexController.php';
     ?>
+<body>
+
     <main>
         <section id="tasquesActives">
             <p>Tàsques a completar:</p>
