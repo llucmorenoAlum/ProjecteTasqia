@@ -1,4 +1,4 @@
 <header>
     <h1>Tasqia</h1>
-    <img src="https://ui-avatars.com/api?rounded=true&name=Lluc+Moreno" alt="Perfil" width="50px">
+    <img src="https://ui-avatars.com/api?rounded=true&name=Lluc+Moreno" alt="Perfil" width="40px">
 </header>
