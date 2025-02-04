@@ -4,6 +4,6 @@ require_once 'config/database.php';
 
 function mostrarIndex(){
     $pdo = conectarBD();
-    $tasquesPendents = getTasquesPendents($pdo);
+    $tasquesPendents = getTasques($pdo);
     require 'app/views/index.php';
 }
