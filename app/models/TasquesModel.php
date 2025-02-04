@@ -1,9 +1,13 @@
 <?php
 
 function getTasques($pdo){
-    $sql = 'SELECT * FROM tasques';
-    $tasques = $pdo->query($sql);
-    return $tasques;
+    try {  
+        $sql = 'SELECT * FROM tasques';
+        $tasques = $pdo->query($sql);
+        return $tasques;
+    } catch (PDOException $e) {?>
+        <h2>ERROR: <?php echo $e?></h2><?php
+    }
 }
 
 function getTasquesPendents($pdo){
