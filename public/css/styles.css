@@ -17,10 +17,10 @@ header{
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 #titolHeader{
-    margin-left: 10px;
+    margin-left: 20px;
 }
 #imgHeader{
-    margin-right: 10px;
+    margin-right: 20px;
 }
 main{
     display: grid;
