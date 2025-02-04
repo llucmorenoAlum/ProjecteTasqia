@@ -35,6 +35,8 @@ section {
     background-color: #444;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    height: -webkit-fill-available;
+    margin: 50px 10px;
 }
 #tasquesActives{
     grid-column: 1;
