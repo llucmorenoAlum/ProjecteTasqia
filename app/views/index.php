@@ -25,12 +25,9 @@
                     <h2>No s'ha trobat cap pelicula</h2>
                 <?php endif;
                 ?>
-            <ul>
-                   
-            </ul>
         </section>
-        <section id="tasquesEnProces"><p>Tàsques en procés</p></section>
-        <section id="tasquesCompletades"><p>Tàsques completades</p></section>
+        <section id="tasquesEnProces"><p>Tàsques en procés:</p></section>
+        <section id="tasquesCompletades"><p>Tàsques completades:</p></section>
         <section id="tasquesDia"><h3>Avui | Dilluns 3 de Febrer de 2025</h3><p>Entregar pràctica 3 - M06</p></section>
     </main>
 </body>
