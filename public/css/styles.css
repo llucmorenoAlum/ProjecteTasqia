@@ -25,7 +25,7 @@ header{
 main{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     flex-grow: 1;
     width: 100%;
     justify-content: center;
@@ -41,6 +41,9 @@ section {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     height: -webkit-fill-available;
     margin: 50px 10px;
+}
+#crearTasques{
+    height: fit-content;
 }
 #tasquesActives{
     grid-column: 1;
