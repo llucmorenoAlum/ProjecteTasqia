@@ -44,7 +44,7 @@ section {
 }
 #crearTasques{
     height: fit-content;
-    margin: 0;
+    margin: 10px;
     width: 100%;
 }
 #tasquesActives{
