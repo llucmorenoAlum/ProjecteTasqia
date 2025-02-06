@@ -44,6 +44,7 @@ section {
 }
 #crearTasques{
     height: fit-content;
+    margin: 0;
 }
 #tasquesActives{
     grid-column: 1;
