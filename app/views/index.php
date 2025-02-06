@@ -22,7 +22,7 @@
                         <?php endwhile ?>
                     </ul>
                 <?php else:?>
-                    <h2>No tens cap tasca</h2>
+                    <p>No tens cap tasca</p>
                 <?php endif;
                 ?>
         </section>

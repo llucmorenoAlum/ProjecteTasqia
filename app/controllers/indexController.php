@@ -7,6 +7,6 @@ function mostrarIndex(){
     $tasquesPendents = getTasquesPendents($pdo);
     $tasquesEnProces = getTasquesEnProces($pdo);
     $tasquesCompletades = gettasquesCompletades($pdo);
-    
+    $tasquesDia = getTasquesDia($pdo);
     require 'app/views/index.php';
 }
