@@ -10,19 +10,9 @@ function getTasques($pdo){
     }
 }
 
-function getTasquesPendents($pdo){
+function getTasquesActives($pdo){
     try {  
-        $sql = "SELECT * FROM tasques WHERE estat = 'pendent'";
-        $tasquesPendents = $pdo->query($sql);
-        return $tasquesPendents;
-    } catch (PDOException $e) {?>
-        <h2>ERROR: <?php echo $e?></h2><?php
-    }
-}
-
-function getTasquesEnProces($pdo){
-    try {  
-        $sql = "SELECT * FROM tasques WHERE estat = 'en procés'";
+        $sql = "SELECT * FROM tasques WHERE estat = 'activa'";
         $tasquesPendents = $pdo->query($sql);
         return $tasquesPendents;
     } catch (PDOException $e) {?>

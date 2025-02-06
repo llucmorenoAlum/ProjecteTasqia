@@ -26,20 +26,6 @@
                 <?php endif;
                 ?>
         </section>
-        <section id="tasquesEnProces">
-            <h3>Tàsques en procés:</h3>
-            <?php 
-                if($tasquesEnProces->rowcount() > 0):?>
-                    <ul>
-                        <?php while ($tasca = $tasquesEnProces->fetch()) :?>
-                            <li><?php echo $tasca['nom']?> - <?php echo $tasca['descripcio']?></li>
-                        <?php endwhile ?>
-                    </ul>
-                <?php else:?>
-                    <p>No tens cap tasca</p>
-                <?php endif;
-            ?>
-        </section>
         <section id="tasquesCompletades">
             <h3>Tàsques completades:</h3>
             <?php 
