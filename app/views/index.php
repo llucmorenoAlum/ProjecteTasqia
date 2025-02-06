@@ -11,8 +11,8 @@
         require_once 'app/views/header.php';
         require_once 'app/controllers/indexController.php';
     ?>
+    <section id="crearTasques"><button>Crear tasca +</button></section>
     <main>
-        <section id="crearTasques"><button>Crear tasca +</button></section>
         <section id="tasquesActives">
             <h3>Tàsques a completar:</h3>
             <?php 
