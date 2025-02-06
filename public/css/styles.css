@@ -42,6 +42,11 @@ section {
     height: -webkit-fill-available;
     margin: 50px 10px;
 }
+#crearTasques{
+    height: fit-content;
+    margin: 0;
+    width: 100%;
+}
 #tasquesActives{
     grid-column: 1;
 }
