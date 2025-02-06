@@ -54,7 +54,21 @@
                 <?php endif;
                 ?>
         </section>
-        <section id="tasquesDia"><h3>Avui | Dilluns 3 de Febrer de 2025</h3><p>Entregar pràctica 3 - M06</p></section>
+        <section id="tasquesDia">
+            <h3>Avui | Dilluns 3 de Febrer de 2025</h3>
+            <?php 
+                if($tasquesDia->rowcount() > 0):?>
+                    <ul>
+                        <?php while ($tasca = $tasquesDia->fetch()) :?>
+                            <li><?php echo $tasca['nom']?> - <?php echo $tasca['descripcio']?>  <?php $tasca['data_limit']?></li>
+                        <?php endwhile ?>
+                    </ul>
+                <?php else:?>
+                    <p>No tens cap tasca</p>
+                <?php endif;
+                ?>
+            <p>Entregar pràctica 3 - M06</p>
+        </section>
     </main>
 </body>
 </html>

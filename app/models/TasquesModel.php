@@ -40,3 +40,13 @@ function getTasquesCompletades($pdo){
     }
 }
 
+function getTasquesDia($pdo){
+    try {
+        $sql = "SELECT * FROM tasques WHERE data_inici LIKE '%2025-02-06%' OR data_limit LIKE '%2025-02-06%'";
+        $tasquesDia = $pdo->query($sql);
+        return $tasquesDia;
+    } catch (PDOException $e) {?>
+        <h2>ERROR: <?php echo $e?></h2><?php
+    }
+}
+
