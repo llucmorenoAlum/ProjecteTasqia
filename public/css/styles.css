@@ -45,14 +45,11 @@ section {
 #tasquesActives{
     grid-column: 1;
 }
-#tasquesEnProces{
+#tasquesCompletades{
     grid-column: 2;
 }
-#tasquesCompletades{
-    grid-column: 3;
-}
 #tasquesDia{
-    grid-column: 1/4;
+    grid-column: 1/3;
 }
 
 h1 {
