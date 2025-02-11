@@ -16,8 +16,9 @@
         <div>Calendari</div>
         <div>Notes</div>
     </nav>
-    <section id="crearTasques"><button>Crear tasca +</button></section>
     <main>
+        <section id="crearTasques"><button>Crear tasca +</button></section>
+
         <section id="tasquesActives">
             <h3>Tàsques a completar:</h3>
             <?php 
