@@ -6,8 +6,7 @@
     <title>Tasqia</title>
     <link rel="stylesheet" href="CSS/styles.css">
     <?php 
-        require_once 'Scripts/funcions.php';
-        require_once 'Scripts/connexioBD.php';    
+        //require_once '';
     ?>
     <script src="Scripts/registre.js"></script>
 </head>

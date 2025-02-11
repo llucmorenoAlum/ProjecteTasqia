@@ -21,7 +21,7 @@
             <label for="contrasenya">Contrasenya:</label>
             <input type="password" id="contrasenya" name="contrasenya" placeholder="Introdueix la contrasenya" required>
             <button type="submit">Iniciar sessió</button>
-            <button id="botoRegistre" onclick="window.location.href='registre.php'">Registrar-se</button>
+            <button id="botoRegistre" onclick="window.location.href='app/views/registre.php'">Registrar-se</button>
         </form>
     </section>
 </body>
