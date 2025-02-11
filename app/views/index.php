@@ -8,9 +8,12 @@
 </head>
 <body>
     <?php 
-        require_once 'app/views/header.php';
         require_once 'app/controllers/indexController.php';
     ?>
+    <header>
+        <div><img src="public/media/menu.webp" alt=""></div><h1>Tasqia</h1>
+        <img src="https://ui-avatars.com/api?rounded=true&name=Lluc+Moreno" alt="Perfil" width="40px">
+    </header>
     <nav>
         <div>Taques</div>
         <div>Calendari</div>
