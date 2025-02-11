@@ -6,13 +6,13 @@
     <title>Tasqia</title>
     <link rel="stylesheet" href="public/css/styles.css">
     <?php 
-        require_once '';  
+        require_once 'app/controllers/loginController.php';  
     ?>
 </head>
 <body>
     <h1>Tasqia</h1>
     <section>
-        <form action="./controllers/UserController.php" method="post">
+        <form action="index.php" method="post">
             <h1>Inicia sessió</h1>
             <label for="usuari">Nom:</label>
             <input type="text" id="usuari" name="usuari" placeholder="Introdueix el teu nom" required>
