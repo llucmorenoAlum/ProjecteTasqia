@@ -20,8 +20,8 @@
             <input type="email" name="email" id="email" placeholder="Introduiex el correu electrònic" required>
             <label for="contrasenya">Contrasenya:</label>
             <input type="password" id="contrasenya" name="contrasenya" placeholder="Introdueix la contrasenya" required>
-            <button type="submit">Iniciar sessió</button>
-            <button id="botoRegistre" onclick="window.location.href='app/views/registre.php'">Registrar-se</button>
+            <button type="submit" name="accio" value="login">Iniciar sessió</button>
+            <button name="accio" value="regsitre">Registrar-se</button>
         </form>
     </section>
 </body>
