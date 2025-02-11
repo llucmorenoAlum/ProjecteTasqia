@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tasqia</title>
-    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="public/css/styles.css">
     <?php 
         //require_once '';
     ?>
-    <script src="Scripts/registre.js"></script>
+    <script src="public/js/registre.js"></script>
 </head>
 <body>
     <h1>Tasqia</h1>
