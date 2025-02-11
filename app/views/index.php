@@ -11,6 +11,11 @@
         require_once 'app/views/header.php';
         require_once 'app/controllers/indexController.php';
     ?>
+    <nav>
+        <div>Taques</div>
+        <div>Calendari</div>
+        <div>Notes</div>
+    </nav>
     <section id="crearTasques"><button>Crear tasca +</button></section>
     <main>
         <section id="tasquesActives">
