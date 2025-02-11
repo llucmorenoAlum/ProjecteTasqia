@@ -22,7 +22,7 @@
             <input type="password" id="contrasenya" name="contrasenya" placeholder="Introdueix la contrasenya" required>
             <button type="submit" name="accio" value="login">Iniciar sessió</button>
         </form>
-        <form action="index" method="post">
+        <form action="index.php" method="post">
             <button name="accio" value="regsitre">Registrar-se</button>
         </form>
     </section>
