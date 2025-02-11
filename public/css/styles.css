@@ -14,8 +14,6 @@ header{
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-left: 10px;
-    margin-right: 10px;
 }
 header div img{
     width: 50px;
@@ -43,8 +41,6 @@ main{
     gap: 10px;
 }
 section {
-    /*width: 100%;
-    max-width: 400px;*/
     padding: 20px;
     background-color: #444;
     border-radius: 12px;
