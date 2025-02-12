@@ -9,6 +9,8 @@ if (!isset($_SESSION['usuari_id'])) {
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (isset($_POST['accio']) && $_POST['action'] === 'registre') {
             mostrarRegistre();
+        }else{
+            mostrarlogin();
         }
     }else{
         mostrarlogin();

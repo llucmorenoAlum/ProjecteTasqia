@@ -23,7 +23,7 @@
             <button type="submit" name="accio" value="login">Iniciar sessió</button>
         </form>
         <form action="/index.php" method="post">
-            <button name="accio" value="regsitre">Registrar-se</button>
+            <button name="accio" value="registre">Registrar-se</button>
         </form>
     </section>
 </body>
