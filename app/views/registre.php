@@ -13,7 +13,7 @@
 <body>
     <h1>Tasqia</h1>
     <section>
-        <form action="procesarRegistre.php" method="post">
+        <form action="index.php" method="post">
             <h1>Registre d'usuari</h1>
             <label for="usuari">Nom:</label>
             <input type="text" id="usuari" name="usuari" placeholder="Introdueix el teu nom..." required minlength="2" maxlength="30">
@@ -23,7 +23,7 @@
             <input type="password" id="contrasenya" name="contrasenya" placeholder="Introdueix la contrasenya..." required minlength="5" maxlength="30">
             <label for="contrasenyaRep">Confirmar contrasenya:</label>
             <input type="password" id="contrasenya2" name="contrasenya2" placeholder="Torna a introduir la contrasenya..." required maxlength="30">
-            <button type="submit">Registrar-se</button>
+            <button type="submit" name="accio" value="registrarse">Registrar-se</button>
         </form>
     </section>
 </body>

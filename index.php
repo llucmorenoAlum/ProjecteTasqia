@@ -9,7 +9,23 @@ if (!isset($_SESSION['usuari_id'])) {
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (isset($_POST['accio']) && $_POST['accio'] === 'registre') {
             mostrarRegistre();
-        }else{
+        }
+        elseif(isset($_POST['accio']) && $_POST['accio'] === 'registrarse'){
+            $usuari = htmlspecialchars($_POST['usuari']);
+            $correu = htmlspecialchars($_POST['email']);
+            $contrasenya = htmlspecialchars($_POST['contrasenya']);
+            $contrasenya2 = htmlspecialchars($_POST['contrasenya2']);
+
+            registrarUsuari($usuari, $correu, $contrasenya, $contrasenya2);
+        }
+        elseif (isset($_POST['accio']) && $_POST['accio'] === 'login') {
+            $usuari = htmlspecialchars($_POST['usuari']);
+            $correu = htmlspecialchars($_POST['email']);
+            $contrasenya = htmlspecialchars($_POST['contrasenya']);
+            
+            loginUsuari($usuari, $correu, $contrasenya);
+        }
+        else{
             mostrarlogin();
         }
     }else{

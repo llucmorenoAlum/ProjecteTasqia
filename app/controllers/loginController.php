@@ -9,3 +9,14 @@
     function mostrarRegistre(){
         require_once 'app/views/registre.php';
     }
+
+    function registrarUsuari($usuari, $correu, $contrasenya){
+        $pdo = conectarBD();
+        if(!comprovarUsuariExistent($pdo, $correu)){
+            afegirUsuari($pdo, $usuari, $correu, $contrasenya);
+        }
+    }
+
+    function loginUsuari($usuari, $correu, $contrasenya){
+
+    }

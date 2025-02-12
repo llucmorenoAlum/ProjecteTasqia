@@ -13,7 +13,7 @@
         }
     }
 
-    function comprovarUsuariExistent($pdo, $correu){
+    /*function comprovarUsuariExistent($pdo, $correu){
         try {
             $sql = "SELECT COUNT(*) FROM usuaris WHERE correu = :correu";
             $stmt = $pdo->prepare($sql);
@@ -26,7 +26,7 @@
             error_log("Error en comprovarUsuariExistent: " . $e->getMessage());
             return false;
         }
-    }
+    }*/
 
     function loginUsuari($pdo, $correu, $contrasenya) {
         $sql = "SELECT * FROM usuaris WHERE correu = :correu";
