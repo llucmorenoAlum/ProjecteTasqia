@@ -12,7 +12,7 @@
 <body>
     <h1>Tasqia</h1>
     <section>
-        <form action="/index.php" method="post">
+        <form action="/" method="post">
             <h1>Inicia sessió</h1>
             <label for="usuari">Nom:</label>
             <input type="text" id="usuari" name="usuari" placeholder="Introdueix el teu nom" required>
