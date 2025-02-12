@@ -7,7 +7,7 @@ session_start();
 if (!isset($_SESSION['usuari_id'])) {
     // Redirigeix a la pàgina de login
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        if (isset($_POST['accio']) && $_POST['action'] === 'registre') {
+        if (isset($_POST['accio']) && $_POST['accio'] === 'registre') {
             mostrarRegistre();
         }else{
             mostrarlogin();
