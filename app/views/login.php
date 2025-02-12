@@ -12,7 +12,7 @@
 <body>
     <h1>Tasqia</h1>
     <section>
-        <form action="/" method="post">
+        <form action="/index.php" method="post">
             <h1>Inicia sessió</h1>
             <label for="usuari">Nom:</label>
             <input type="text" id="usuari" name="usuari" placeholder="Introdueix el teu nom" required>
@@ -22,7 +22,7 @@
             <input type="password" id="contrasenya" name="contrasenya" placeholder="Introdueix la contrasenya" required>
             <button type="submit" name="accio" value="login">Iniciar sessió</button>
         </form>
-        <form action="index.php" method="post">
+        <form action="/index.php" method="post">
             <button name="accio" value="regsitre">Registrar-se</button>
         </form>
     </section>
