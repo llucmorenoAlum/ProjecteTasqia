@@ -10,6 +10,17 @@ function getTasques($pdo){
     }
 }
 
+// function getTasquesActives($pdo){
+//     try {  
+//         $idUsuari = $_SESSION['id_usuari'];
+//         $sql = "SELECT * FROM tasques WHERE estat = 'activa' AND id_usuari = $idUsuari";
+//         $tasquesPendents = $pdo->query($sql);
+//         return $tasquesPendents;
+//     } catch (PDOException $e) {>
+ //         <h2>ERROR: <php echo $e></h2><php -->
+//     }
+// }
+
 function getTasquesActives($pdo) {
     try {  
         // Comprovem si l'usuari està autenticat
