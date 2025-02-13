@@ -16,15 +16,18 @@ if (!isset($_SESSION['usuari_id'])) {
             $contrasenya = htmlspecialchars($_POST['contrasenya']);
             $contrasenya2 = htmlspecialchars($_POST['contrasenya2']);
 
-            registrarUsuari($usuari, $correu, $contrasenya, $contrasenya2);
-            mostrarlogin();
+            if(registrarUsuari($usuari, $correu, $contrasenya, $contrasenya2)){
+                mostrarlogin();
+            }else{
+                $error = "Aquest correu ja està registrat";
+                mostrarRegistre($error);
+            }
         }
         elseif (isset($_POST['accio']) && $_POST['accio'] === 'login') {
-            $usuari = htmlspecialchars($_POST['usuari']);
             $correu = htmlspecialchars($_POST['email']);
             $contrasenya = htmlspecialchars($_POST['contrasenya']);
             
-            if(loginUsuari($usuari, $correu, $contrasenya)){
+            if(loginUsuari($correu, $contrasenya)){
                 mostrarIndex();
             }else{
                 $error = "Inici de sessió incorrecte";

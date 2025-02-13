@@ -13,6 +13,11 @@
 <body>
     <h1>Tasqia</h1>
     <section>
+        <?php 
+            if ($error != ""):?>
+                <p class="error"><?php echo $error?></p>
+            <?php endif
+        ?>
         <form action="index.php" method="post">
             <h1>Registre d'usuari</h1>
             <label for="usuari">Nom:</label>

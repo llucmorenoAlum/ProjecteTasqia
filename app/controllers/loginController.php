@@ -7,7 +7,8 @@
         require_once 'app/views/login.php';
     }
 
-    function mostrarRegistre(){
+    function mostrarRegistre($error = ""){
+        $error;
         require_once 'app/views/registre.php';
     }
 
@@ -15,10 +16,13 @@
         $pdo = conectarBD();
         if(!comprovarUsuariExistent($pdo, $correu)){
             afegirUsuari($pdo, $usuari, $correu, $contrasenya);
+            return true;
+        }else{
+            return false;
         }
     }
 
-    function loginUsuari($usuari, $correu, $contrasenya){
+    function loginUsuari($correu, $contrasenya){
         $pdo = conectarBD();
         if(comprovarUsuariExistent($pdo, $correu)){
             if(comprovarContrasenya($pdo,$correu, $contrasenya)){
