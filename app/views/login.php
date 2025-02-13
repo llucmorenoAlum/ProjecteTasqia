@@ -14,7 +14,7 @@
     <section>
         <?php 
             if ($error != ""):?>
-                <p id="error"><?php echo $error?></p>
+                <p class="error"><?php echo $error?></p>
             <?php endif
         ?>
         <form action="index.php" method="post">
