@@ -15,8 +15,9 @@ header{
     align-items: center;
     width: 100%;
 }
-header div img{
-    width: 50px;
+
+header img{
+    width: 45px;
 }
 nav{
     display: flex;

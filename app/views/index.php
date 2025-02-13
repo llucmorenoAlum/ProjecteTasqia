@@ -11,8 +11,9 @@
         require_once 'app/controllers/indexController.php';
     ?>
     <header>
-        <div><img src="public/media/menu.webp" alt=""></div><h1>Tasqia</h1>
-        <img src="https://ui-avatars.com/api?rounded=true&name=Lluc+Moreno" alt="Perfil" width="40px">
+        <div><img src="public/media/menu.webp" alt=""></div>
+        <h1>Tasqia</h1>
+        <img src="https://ui-avatars.com/api?rounded=true&name=Lluc+Moreno" alt="Perfil">
     </header>
     <nav>
         <div>Taques</div>
@@ -20,8 +21,6 @@
         <div>Notes</div>
     </nav>
     <main>
-        <!--<section id="crearTasques"><button>Crear tasca +</button></section>-->
-
         <section id="tasquesActives">
             <h3>Tàsques a completar:</h3>
             <?php 
