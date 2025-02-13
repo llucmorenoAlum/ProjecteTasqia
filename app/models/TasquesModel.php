@@ -18,7 +18,7 @@ function getTasquesActives($pdo) {
         }
 
         $idUsuari = $_SESSION['id_usuari'];
-
+        echo $idUsuari;
         // Consulta segura amb prepared statements
         $sql = "SELECT * FROM tasques WHERE estat = :estat AND id_usuari = :idUsuari";
         $stmt = $pdo->prepare($sql);
