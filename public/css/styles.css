@@ -121,11 +121,11 @@ button:hover {
     background-color: #6a3283;
 }
 
-#btnRegistrarse {
+.btnRegistrarse {
     background-color: #888;
 }
 
-#btnRegistrarse:hover {
+.btnRegistrarse:hover {
     background-color: #777;
 }
 
