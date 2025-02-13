@@ -25,13 +25,17 @@
         <section id="tasquesActives">
             <h3>Tàsques a completar:</h3>
             <?php 
-                if(empty($tasquesPendents)):?>
+                if (!empty($tasquesPendents)) : ?>
                     <ul>
-                        <?php while ($tascaPendent = $tasquesPendents->fetch()) :?>
-                            <li><?php echo $tascaPendent['nom']?> - <?php echo $tascaPendent['descripcio']?></li>
-                        <?php endwhile ?>
+                        <?php foreach ($tasquesPendents as $tascaPendent) : ?>
+                            <li>
+                                <?php echo htmlspecialchars($tascaPendent['nom']); ?>
+                                 - 
+                                <?php echo htmlspecialchars($tascaPendent['descripcio']); ?>
+                            </li>
+                        <?php endforeach; ?>
                     </ul>
-                <?php else:?>
+                <?php else : ?>
                     <p>No tens cap tasca</p>
                 <?php endif;
                 ?>
