@@ -121,7 +121,7 @@ button:hover {
     background-color: #6a3283;
 }
 
-#btnRegistrarse {
+.formRegistre button{
     background-color: #888;
 }
 
