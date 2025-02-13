@@ -47,6 +47,7 @@ section {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     height: -webkit-fill-available;
     margin: 50px 10px;
+    width: 100%;
 }
 #crearTasques{
     height: fit-content;
@@ -121,13 +122,6 @@ button:hover {
     background-color: #6a3283;
 }
 
-.formRegistre button{
-    background-color: #888;
-}
-
-#btnRegistrarse:hover {
-    background-color: #777;
-}
 
 /* Estils per a pantalles grans */
 @media (min-width: 768px) {
