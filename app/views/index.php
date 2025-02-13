@@ -43,13 +43,17 @@
         <section id="tasquesCompletades">
             <h3>Tàsques completades:</h3>
             <?php 
-                if($tasquesCompletades->rowcount() > 0):?>
+                if (!empty($tasquesCompletades)) : ?>
                     <ul>
-                        <?php while ($tasca = $tasquesCompletades->fetch()) :?>
-                            <li><?php echo $tasca['nom']?> - <?php echo $tasca['descripcio']?></li>
-                        <?php endwhile ?>
+                        <?php foreach ($tasquesCompletades as $tascaCompletada) : ?>
+                            <li>
+                                <?php echo htmlspecialchars($tascaCompletada['nom']); ?>
+                                 - 
+                                <?php echo htmlspecialchars($tascaCompletada['descripcio']); ?>
+                            </li>
+                        <?php endforeach; ?>
                     </ul>
-                <?php else:?>
+                <?php else : ?>
                     <p>No tens cap tasca</p>
                 <?php endif;
                 ?>
@@ -57,17 +61,20 @@
         <section id="tasquesDia">
             <h3>Avui | Dilluns 3 de Febrer de 2025</h3>
             <?php 
-                if($tasquesDia->rowcount() > 0):?>
+                if (!empty($tasquesAvui)) : ?>
                     <ul>
-                        <?php while ($tasca = $tasquesDia->fetch()) :?>
-                            <li><?php echo $tasca['nom']?> - <?php echo $tasca['descripcio']?>  <?php $tasca['data_limit']?></li>
-                        <?php endwhile ?>
+                        <?php foreach ($tasquesAvui as $tascaAvui) : ?>
+                            <li>
+                                <?php echo htmlspecialchars($tascaAvui['nom']); ?>
+                                 - 
+                                <?php echo htmlspecialchars($tascaAvui['descripcio']); ?>
+                            </li>
+                        <?php endforeach; ?>
                     </ul>
-                <?php else:?>
+                <?php else : ?>
                     <p>No tens cap tasca</p>
                 <?php endif;
                 ?>
-            <p>Entregar pràctica 3 - M06</p>
         </section>
     </main>
 </body>
