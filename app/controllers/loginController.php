@@ -19,5 +19,7 @@
 
     function loginUsuari($usuari, $correu, $contrasenya){
         $pdo = conectarBD();
-        comprovarUsuariExistent($pdo, $correu)
+        if(comprovarUsuariExistent($pdo, $correu)){
+            comprovarContrasenya($pdo);  
+        }
     }
