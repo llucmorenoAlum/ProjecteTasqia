@@ -15,6 +15,22 @@ function comprovarUsuariExistent($pdo, $correu){
     }
 }
 
+function comprovarContrasenya(PDO $pdo, string $correu,string $contrasenya){
+    try {
+        $sql = "SELECT contrasenya FROM usuaris WHERE correu = :correu";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(':correu', $correu, PDO::PARAM_STR);
+        $stmt->execute();
+        
+        $hash = $stmt->fetchColumn();
+        
+        return password_verify($contrasenya, $hash);
+    } catch (PDOException $e) {
+        error_log("Error en comprovarContrasenya: " . $e->getMessage());
+        return false;
+    }
+}
+
 function afegirUsuari(PDO $pdo, string $usuari, string $correu, string $contrasenya): bool {
     $contrasenyaEncriptada = password_hash($contrasenya, PASSWORD_DEFAULT);
     
