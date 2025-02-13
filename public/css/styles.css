@@ -31,9 +31,9 @@ nav div:hover{
     opacity: 0.9;
 }
 main{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    display: flex;
+    /* grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr); */
     flex-grow: 1;
     width: 100%;
     justify-content: center;
