@@ -47,4 +47,20 @@ function afegirUsuari(PDO $pdo, string $usuari, string $correu, string $contrase
         return false; // No exposa informació sensible a l'usuari
     }
 }
+
+function getDadesUsuari(PDO $pdo, string $correu){
+    try {
+        $sql = "SELECT * FROM usuaris WHERE correu = :correu";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(':correu', $correu, PDO::PARAM_STR);
+        $stmt->execute();
+        
+        $dades = $stmt->fetchColumn();
+        
+        return $dades;
+    } catch (PDOException $e) {
+        error_log("Error en comprovarContrasenya: " . $e->getMessage());
+        return false;
+    }
+}
 ?>

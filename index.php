@@ -29,7 +29,9 @@
                 $contrasenya = htmlspecialchars($_POST['contrasenya']);
                 
                 if(loginUsuari($correu, $contrasenya)){
-                    $_SESSION['usuari'];
+                    $_SESSION['usuari'] = $correu;
+                    crearSessio($correu);
+                    $_SESSION['usuari_id'] ;
                     mostrarIndex();
                 }else{
                     $error = "Inici de sessió incorrecte";
