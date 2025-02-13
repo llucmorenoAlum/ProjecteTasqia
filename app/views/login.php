@@ -14,8 +14,6 @@
     <section>
         <form action="index.php" method="post">
             <h1>Inicia sessió</h1>
-            <label for="usuari">Nom:</label>
-            <input type="text" id="usuari" name="usuari" placeholder="Introdueix el teu nom" required>
             <label for="email">Correu electrònic:</label>
             <input type="email" name="email" id="email" placeholder="Introduiex el correu electrònic" required>
             <label for="contrasenya">Contrasenya:</label>
