@@ -2,7 +2,8 @@
     require_once 'app/models/UserModel.php';
     require_once 'config/database.php';
 
-    function mostrarlogin(){
+    function mostrarlogin($error = ""){
+        $error;
         require_once 'app/views/login.php';
     }
 

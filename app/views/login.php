@@ -12,6 +12,11 @@
 <body>
     <h1>Tasqia</h1>
     <section>
+        <?php 
+            if ($error != ""):?>
+                <p id="error"><?php echo $error?></p>
+            <?php endif
+        ?>
         <form action="index.php" method="post">
             <h1>Inicia sessió</h1>
             <label for="email">Correu electrònic:</label>

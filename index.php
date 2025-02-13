@@ -26,6 +26,9 @@ if (!isset($_SESSION['usuari_id'])) {
             
             if(loginUsuari($usuari, $correu, $contrasenya)){
                 mostrarIndex();
+            }else{
+                $error = "Inici de sessió incorrecte";
+                mostrarlogin($error);
             }
         }
         else{
