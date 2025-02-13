@@ -64,8 +64,8 @@ section {
 }
 
 .error{
-    color: red;
-    justify-content: center;
+    color: rgb(238, 49, 49);
+    text-align: center;
 }
 
 h1 {
