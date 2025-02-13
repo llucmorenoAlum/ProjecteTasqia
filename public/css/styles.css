@@ -48,7 +48,7 @@ section {
     height: -webkit-fill-available;
     margin: 50px 10px;
     width: 100%;
-    max-width: 400px;
+    max-width: 300px;
 }
 #crearTasques{
     height: fit-content;
