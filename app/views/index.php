@@ -25,7 +25,7 @@
         <section id="tasquesActives">
             <h3>Tàsques a completar:</h3>
             <?php 
-                if($tasquesPendents->rowcount() > 0):?>
+                if(empty($tasquesPendents)):?>
                     <ul>
                         <?php while ($tascaPendent = $tasquesPendents->fetch()) :?>
                             <li><?php echo $tascaPendent['nom']?> - <?php echo $tascaPendent['descripcio']?></li>
