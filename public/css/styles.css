@@ -49,6 +49,7 @@ section {
     width: 100%;
     max-width: 80%;
 }
+
 #crearTasques{
     height: fit-content;
     margin: 10px;
@@ -142,9 +143,9 @@ button:hover {
 
 /* Estils per a pantalles grans */
 @media (min-width: 768px) {
-    section {
-        /*max-width: 600px;*/
-        padding: 30px;
+    .formulari {
+        max-width: 600px;
+        
     }
 
     button {
