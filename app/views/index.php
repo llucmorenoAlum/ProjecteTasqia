@@ -75,7 +75,7 @@
                 <?php endif;
                 ?>
         </section>
-        <button class="btnCrearTasca">Crear tasca</button>
+        <button class="btnCrearTasca">+</button>
     </main>
 </body>
 </html>

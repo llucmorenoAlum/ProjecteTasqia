@@ -120,6 +120,7 @@ button {
 
 button:hover {
     background-color: #6a3283;
+    cursor: pointer;
 }
 
 .btnCrearTasca {
@@ -127,7 +128,7 @@ button:hover {
     bottom: 20px;
     right: 20px;
     z-index: 1000; /* Assegura que estigui per sobre d'altres elements */
-    background-color: #007bff;
+    /* background-color: #007bff; */
     color: white;
     border: none;
     border-radius: 50%;
@@ -139,9 +140,6 @@ button:hover {
     transition: background-color 0.3s ease;
 }
 
-.btnCrearTasca:hover {
-    background-color: #0056b3;
-}
 /* Estils per a pantalles grans */
 @media (min-width: 768px) {
     section {
