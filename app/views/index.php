@@ -16,9 +16,11 @@
         <img src="https://ui-avatars.com/api?rounded=true&name=Lluc+Moreno" alt="Perfil">
     </header>
     <nav>
-        <div>Taques</div>
-        <div>Calendari</div>
-        <div>Notes</div>
+        <form action="index.php" method="post">
+            <button name="accio" value="mostrarTasques">Taques</button>
+            <button name="accio" value="mostrarCalendari">Calendari</button>
+            <button name="accio" value="mostrarNotes">Notes</button>
+        </form>
     </nav>
     <main>
         <section id="tasquesActives">
@@ -75,7 +77,9 @@
                 <?php endif;
                 ?>
         </section>
-        <button class="btnCrearTasca">+</button>
+        <form action="index.php" method="post">
+            <button name="accio" value="crearTasca" class="btnCrearTasca">+</button>
+        </form>
     </main>
 </body>
 </html>

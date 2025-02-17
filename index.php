@@ -8,7 +8,19 @@
     if (!isset($_SESSION['usuari'])) {
         // Redirigeix a la pàgina de login
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            if (isset($_POST['accio']) && $_POST['accio'] === 'registre') {
+            if(isset($_POST['accio']) && $_POST['accio'] === 'crearTasca'){
+                mostrarCreacioTasques();
+            }
+            elseif (isset($_POST['accio']) && $_POST['accio'] === 'mostrarTasques') {
+                mostrarTasques();
+            }
+            elseif (isset($_POST['accio']) && $_POST['accio'] === 'mostrarCalendari') {
+                mostrarCalendari();
+            }
+            elseif (isset($_POST['accio']) && $_POST['accio'] === 'mostrarNotes') {
+                mostrarNotes();
+            }
+            elseif (isset($_POST['accio']) && $_POST['accio'] === 'registre') {
                 mostrarRegistre();
             }
             elseif(isset($_POST['accio']) && $_POST['accio'] === 'registrarse'){
