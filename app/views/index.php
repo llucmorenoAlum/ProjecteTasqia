@@ -21,10 +21,11 @@
         <div>Notes</div>
     </nav>
     <main>
+        <?php print_r($idUsuari);?>
+
         <section id="tasquesActives">
             <h3>Tàsques a completar:</h3>
             <?php
-            print_r($tasquesPendents);
                 if (!empty($tasquesPendents)) : ?>
                     <ul>
                         <?php foreach ($tasquesPendents as $tascaPendent) : ?>
