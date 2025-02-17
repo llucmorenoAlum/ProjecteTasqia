@@ -10,26 +10,13 @@ function getTasques($pdo){
     }
 }
 
-// function getTasquesActives($pdo){
-//     try {  
-//         $idUsuari = $_SESSION['id_usuari'];
-//         $sql = "SELECT * FROM tasques WHERE estat = 'activa' AND id_usuari = $idUsuari";
-//         $tasquesPendents = $pdo->query($sql);
-//         return $tasquesPendents;
-//     } catch (PDOException $e) {>
- //         <h2>ERROR: <php echo $e></h2><php -->
-//     }
-// }
-
-function getTasquesActives($pdo) {
+function getTasquesActives($pdo, $idUsuari) {
     try {  
         // Comprovem si l'usuari està autenticat
         if (!isset($_SESSION['id_usuari'])) {
             throw new Exception("Error: Usuari no identificat.");
         }
 
-        $idUsuari = $_SESSION['id_usuari'];
-        echo $idUsuari;
         // Consulta segura amb prepared statements
         $sql = "SELECT * FROM tasques WHERE estat = :estat AND id_usuari = :idUsuari";
         $stmt = $pdo->prepare($sql);

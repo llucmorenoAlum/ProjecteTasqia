@@ -6,7 +6,9 @@ require_once 'app/helpers/dateHelper.php';
 
 function mostrarIndex(){
     $pdo = conectarBD();
-    $tasquesPendents = getTasquesActives($pdo);
+    $idUsuari = $_SESSION['id_usuari'];
+    print_r($idUsuari);
+    $tasquesPendents = getTasquesActives($pdo, $idUsuari);
     $tasquesCompletades = getTasquesCompletades($pdo);
     $data = obtenirDataActual();
     $tasquesDia = getTasquesDia($pdo, $data);
