@@ -21,8 +21,6 @@
         <div>Notes</div>
     </nav>
     <main>
-        <h1><?php echo $idUsuari;?></h1>
-
         <section id="tasquesActives">
             <h3>Tàsques a completar:</h3>
             <?php

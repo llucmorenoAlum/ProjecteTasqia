@@ -30,8 +30,6 @@
                 
                 if(loginUsuari($correu, $contrasenya)){
                     crearSessio($correu);
-                    print_r($correu);
-                    print_r($_SESSION);
                     mostrarIndex();
                 }else{
                     $error = "Inici de sessió incorrecte";
