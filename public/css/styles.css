@@ -30,6 +30,8 @@ nav{
 nav form{
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
 }
 nav form button{
     background-color: #333;
