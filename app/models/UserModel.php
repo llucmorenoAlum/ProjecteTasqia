@@ -55,11 +55,11 @@ function getDadesUsuari(PDO $pdo, string $correu){
         $stmt->bindParam(':correu', $correu, PDO::PARAM_STR);
         $stmt->execute();
         
-        $dades = $stmt->fetchColumn();
+        $dades = $stmt->fetch(PDO::FETCH_ASSOC);
         
         return $dades;
     } catch (PDOException $e) {
-        error_log("Error en comprovarContrasenya: " . $e->getMessage());
+        error_log("Error en getDadesUsuari: " . $e->getMessage());
         return false;
     }
 }
