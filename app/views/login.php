@@ -11,7 +11,7 @@
 </head>
 <body>
     <h1>Tasqia</h1>
-    <section>
+    <section class="formulari">
         <?php 
             if ($error != ""):?>
                 <p class="error"><?php echo $error?></p>
