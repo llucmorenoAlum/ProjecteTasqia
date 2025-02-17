@@ -31,6 +31,13 @@ nav form{
     display: flex;
     flex-direction: row;
 }
+nav form button{
+    background-color: #333;
+
+}
+nav form button:hover{
+    background-color: #222;
+}
 main{
     display: flex;
     flex-direction: column;
