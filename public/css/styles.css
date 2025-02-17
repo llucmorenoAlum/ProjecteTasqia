@@ -27,8 +27,9 @@ nav{
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
     padding: 10px 0px;
 }
-nav form button{
-    background-color: #333;
+nav form{
+    display: flex;
+    flex-direction: row;
 }
 main{
     display: flex;
