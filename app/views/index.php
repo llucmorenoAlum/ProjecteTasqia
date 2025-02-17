@@ -23,7 +23,8 @@
     <main>
         <section id="tasquesActives">
             <h3>Tàsques a completar:</h3>
-            <?php 
+            <?php
+            print_r($tasquesPendents);
                 if (!empty($tasquesPendents)) : ?>
                     <ul>
                         <?php foreach ($tasquesPendents as $tascaPendent) : ?>
