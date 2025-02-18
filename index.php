@@ -56,8 +56,12 @@
                 $dataTasca = $_POST['dataInici'];
                 $descripcioTasca = $_POST['descripcioTasca'];
  
- 
-                crearNovaTasca($idUsuari, $nomTasca, $dataTasca, $descripcioTasca);
+                if(crearNovaTasca($idUsuari, $nomTasca, $dataTasca, $descripcioTasca)){
+                    mostrarIndex();
+                }else {
+                    $error = "No s'ha pogut crear la tasca";
+                    mostrarCreacioTasques($error);
+                }
             }
             elseif (isset($_POST['accio']) && $_POST['accio'] === 'mostrarTasques') {
                 mostrarTasques();

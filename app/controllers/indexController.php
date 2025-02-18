@@ -13,7 +13,8 @@ function mostrarIndex(){
     $tasquesDia = getTasquesDia($pdo, $data);
     require 'app/views/index.php';
 }
-function mostrarCreacioTasques(){
+function mostrarCreacioTasques($error = ""){
+    $error;
     $idUsuari = $_SESSION['id_usuari'];
     require_once 'app/views/creartasca.php';
 }

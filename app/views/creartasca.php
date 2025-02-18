@@ -9,6 +9,11 @@
 <body>
     <h1>Tasqia</h1>
     <section class="formulari">
+        <?php 
+            if ($error != ""):?>
+                <p class="error"><?php echo $error?></p>
+            <?php endif
+        ?>
         <form action="index.php" method="post">
             <label for="nomTasca">Tasca</label>
             <input name="nomTasca" placeholder="Introdueix el nom de la tasca..." type="text" required>

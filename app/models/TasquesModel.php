@@ -64,11 +64,41 @@ function getTasquesDia($pdo, $data) {
     }
 }
 
-function insertTasca(){
+function insertTasca($pdo, $idUsuari, $nomTasca, $dataInici, $descripcio = null){
     try {
-        
+        $date = new DateTime($dataInici);
+        $dataInici = $date->format('Y-m-d H:i:s');
+
+        // Valor per defecte per a l'estat
+        $estat = 'pendent';
+
+        // Construir la consulta SQL segons si hi ha descripció o no
+        if ($descripcio !== null) {
+            $sql = "INSERT INTO tasques (id_usuari, nom, descripcio, data_inici, estat) 
+                    VALUES (:idusuari, :nom, :descripcio, :dataInici, :estat)";
+        } else {
+            $sql = "INSERT INTO tasques (id_usuari, nom, data_inici, estat) 
+                    VALUES (:idusuari, :nom, :dataInici, :estat)";
+        }
+
+        $stmt = $pdo->prepare($sql);
+
+        // Lligar els valors comuns
+        $stmt->bindParam(':idusuari', $idUsuari, PDO::PARAM_INT);
+        $stmt->bindParam(':nom', $nomTasca, PDO::PARAM_STR);
+        $stmt->bindParam(':dataInici', $dataInici, PDO::PARAM_STR);
+        $stmt->bindParam(':estat', $estat, PDO::PARAM_STR);
+
+        // Lligar la descripció només si s'ha definit
+        if ($descripcio !== null) {
+            $stmt->bindParam(':descripcio', $descripcio, PDO::PARAM_STR);
+        }
+
+        return $stmt->execute();
     } catch (PDOException $e) {
         error_log("Error en insertTasca: " . $e->getMessage());
+        return false;
     }
 }
+
 
