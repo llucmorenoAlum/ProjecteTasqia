@@ -16,7 +16,7 @@
             <label for="dataInici">Data</label>
             <input type="datetime-local" placeholder="YYYY-MM-DD hh:mm:ss" name="dataInici" required>
             <label for="descripcioTasca">Descripció</label>
-            <textarea name="descripcioTasca" rows="3">
+            <textarea name="descripcioTasca" rows="3"></textarea>
             <button name="accio" value="novaTasca">Crear</button>
         </form>
     </section>
