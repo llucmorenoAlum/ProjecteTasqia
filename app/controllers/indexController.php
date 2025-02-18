@@ -14,6 +14,7 @@ function mostrarIndex(){
     require 'app/views/index.php';
 }
 function mostrarCreacioTasques(){
+    $idUsuari = $_SESSION['id_usuari'];
     require_once 'app/views/creartasca.php';
 }
 
