@@ -10,14 +10,13 @@
     <h1>Tasqia</h1>
     <section class="formulari">
         <form action="index.php" method="post">
-            <input type="hidden" name="idUsuari" value="<?php echo $idUsuari ?>">
             <label for="nomTasca">Tasca</label>
-            <input name="nomTasca" placeholder="Introdueix el nom de la tasca" type="text" required>
+            <input name="nomTasca" placeholder="Introdueix el nom de la tasca..." type="text" required>
             <label for="dataInici">Data</label>
-            <input type="datetime-local" placeholder="YYYY-MM-DD hh:mm:ss" name="dataInici" required>
+            <input type="datetime-local" name="dataInici" required>
             <label for="descripcioTasca">Descripció</label>
             <textarea name="descripcioTasca" rows="3"></textarea>
-            <button name="accio" value="novaTasca">Crear</button>
+            <button name="accio" aria-placeholder="Introdueix la descripció de la tasca..." value="novaTasca">Crear</button>
         </form>
     </section>
 </body>

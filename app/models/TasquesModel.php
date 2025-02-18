@@ -64,3 +64,11 @@ function getTasquesDia($pdo, $data) {
     }
 }
 
+function insertTasca(){
+    try {
+        
+    } catch (PDOException $e) {
+        error_log("Error en insertTasca: " . $e->getMessage());
+    }
+}
+

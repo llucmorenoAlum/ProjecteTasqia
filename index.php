@@ -1,6 +1,7 @@
 <?php
     require_once 'app/controllers/indexController.php';
     require_once 'app/controllers/loginController.php';
+    require_once 'app/controllers/tasquesController.php';
 
     session_start();
 
@@ -10,6 +11,14 @@
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if(isset($_POST['accio']) && $_POST['accio'] === 'crearTasca'){
                 mostrarCreacioTasques();
+            }
+            elseif (isset($_POST['accio']) && $_POST['accio'] === 'novaTasca') {
+                $idUsuari = $_SESSION['id_usuari'];
+                $nomTasca = $_POST['nomTasca'];
+                $dataTasca = $_POST['dataInici'];
+                $descripcioTasca = $_POST['descripcioTasca'];
+
+                crearNovaTasca($idUsuari, $nomTasca, $dataTasca, $descripcioTasca);
             }
             elseif (isset($_POST['accio']) && $_POST['accio'] === 'mostrarTasques') {
                 mostrarTasques();
