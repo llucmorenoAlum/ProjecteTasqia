@@ -9,27 +9,8 @@
     if (!isset($_SESSION['usuari'])) {
         // Redirigeix a la pàgina de login
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            if(isset($_POST['accio']) && $_POST['accio'] === 'crearTasca'){
-                mostrarCreacioTasques();
-            }
-            elseif (isset($_POST['accio']) && $_POST['accio'] === 'novaTasca') {
-                $idUsuari = $_SESSION['id_usuari'];
-                $nomTasca = $_POST['nomTasca'];
-                $dataTasca = $_POST['dataInici'];
-                $descripcioTasca = $_POST['descripcioTasca'];
-
-                crearNovaTasca($idUsuari, $nomTasca, $dataTasca, $descripcioTasca);
-            }
-            elseif (isset($_POST['accio']) && $_POST['accio'] === 'mostrarTasques') {
-                mostrarTasques();
-            }
-            elseif (isset($_POST['accio']) && $_POST['accio'] === 'mostrarCalendari') {
-                mostrarCalendari();
-            }
-            elseif (isset($_POST['accio']) && $_POST['accio'] === 'mostrarNotes') {
-                mostrarNotes();
-            }
-            elseif (isset($_POST['accio']) && $_POST['accio'] === 'registre') {
+            
+            if (isset($_POST['accio']) && $_POST['accio'] === 'registre') {
                 mostrarRegistre();
             }
             elseif(isset($_POST['accio']) && $_POST['accio'] === 'registrarse'){
@@ -64,6 +45,31 @@
             mostrarlogin();
         }
     }else{
-        mostrarIndex();
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            if(isset($_POST['accio']) && $_POST['accio'] === 'crearTasca'){
+              
+                mostrarCreacioTasques();
+            }
+            elseif (isset($_POST['accio']) && $_POST['accio'] === 'novaTasca') {
+                $idUsuari = $_SESSION['id_usuari'];
+                $nomTasca = $_POST['nomTasca'];
+                $dataTasca = $_POST['dataInici'];
+                $descripcioTasca = $_POST['descripcioTasca'];
+ 
+ 
+                crearNovaTasca($idUsuari, $nomTasca, $dataTasca, $descripcioTasca);
+            }
+            elseif (isset($_POST['accio']) && $_POST['accio'] === 'mostrarTasques') {
+                mostrarTasques();
+            }
+            elseif (isset($_POST['accio']) && $_POST['accio'] === 'mostrarCalendari') {
+                mostrarCalendari();
+            }
+            elseif (isset($_POST['accio']) && $_POST['accio'] === 'mostrarNotes') {
+                mostrarNotes();
+            } 
+        }else{
+            mostrarIndex();
+        }
     }
 ?>
