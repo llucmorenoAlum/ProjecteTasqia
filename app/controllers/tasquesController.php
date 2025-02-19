@@ -3,5 +3,10 @@
 
     function crearNovaTasca($idUsuari, $nomTasca, $dataTasca, $descripcioTasca){
         $pdo = conectarBD();
-        insertTasca($pdo, $idUsuari, $nomTasca, $dataTasca, $descripcioTasca);
+        if(insertTasca($pdo, $idUsuari, $nomTasca, $dataTasca, $descripcioTasca)){
+            return true;
+        }else{
+            return false;
+        }
+
     }
