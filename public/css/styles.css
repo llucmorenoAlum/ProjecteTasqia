@@ -106,8 +106,8 @@ input, textarea {
 }
 input::placeholder,
 textarea::placeholder {
-    color: red;
-    font-style: italic;
+    color: #ccc;
+    font-family: Arial, Helvetica, sans-serif;
     opacity: 0.8; 
 }
 
