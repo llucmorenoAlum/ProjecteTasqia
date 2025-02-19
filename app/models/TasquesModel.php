@@ -51,13 +51,16 @@ function getTasquesCompletades($pdo) {
 
 function getTasquesDia($pdo, $data) {
     try {
-        $sql = "SELECT * FROM tasques WHERE data_inici = :data OR data_limit = :data";
+        $sql = "SELECT * FROM tasques WHERE data_inici LIKE :data";
         $stmt = $pdo->prepare($sql);
+
+        // Afegim el '%' per trobar qualsevol valor que comenci amb la data
+        $data = "$data%"; 
+        
         $stmt->bindParam(':data', $data, PDO::PARAM_STR);
-        
         $stmt->execute();
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
         
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
         error_log("Error en getTasquesDia: " . $e->getMessage());
         return [];
@@ -70,7 +73,7 @@ function insertTasca($pdo, $idUsuari, $nomTasca, $dataInici, $descripcio = null)
         $dataInici = $date->format('Y-m-d H:i:s');
 
         // Valor per defecte per a l'estat
-        $estat = 'pendent';
+        $estat = 'activa';
 
         // Construir la consulta SQL segons si hi ha descripció o no
         if ($descripcio !== null) {
