@@ -100,5 +100,3 @@ function insertTasca($pdo, $idUsuari, $nomTasca, $dataInici, $descripcio = null)
         return false;
     }
 }
-
-
