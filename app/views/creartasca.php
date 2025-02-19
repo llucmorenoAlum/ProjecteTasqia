@@ -20,7 +20,7 @@
             <label for="dataInici">Data</label>
             <input type="datetime-local" name="dataInici" required>
             <label for="descripcioTasca">Descripció</label>
-            <textarea aria-placeholder="Introdueix la descripció de la tasca..." name="descripcioTasca" rows="3"></textarea>
+            <textarea placeholder="Introdueix la descripció de la tasca..." name="descripcioTasca" rows="3"></textarea>
             <button name="accio" value="novaTasca">Crear</button>
         </form>
     </section>
