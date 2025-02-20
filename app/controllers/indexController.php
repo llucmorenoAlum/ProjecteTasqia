@@ -1,5 +1,6 @@
 <?php
 require_once 'app/models/TasquesModel.php';
+require_once 'app/models/NotesModel.php';
 require_once 'config/database.php';
 require_once 'app/helpers/sessionHelper.php';
 require_once 'app/helpers/dateHelper.php';
