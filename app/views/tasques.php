@@ -36,6 +36,7 @@
             <?php else : ?>
                 <p>No tens cap tasca</p>
             <?php endif; ?>
+        </section>
         <section id="tasquesCompletades">
             <h3>Tàsques completades:</h3>
             <?php 
