@@ -12,6 +12,18 @@
         require_once 'app/views/header.php'
     ?>
     <main>
+        <h1>Les teves notes</h1>
+        <?php if (!empty($notes)): ?>
+            <?php foreach ($notes as $nota): ?>
+                <div class="nota">
+                    <div class="titol"><?= htmlspecialchars($nota['titol']) ?></div>
+                    <div class="data"><?= date("d/m/Y H:i", strtotime($nota['data_creacio'])) ?></div>
+                    <div class="contingut"><?= nl2br(htmlspecialchars($nota['contingut'] ?? "Sense contingut")) ?></div>
+                </div>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <p>No tens cap nota.</p>
+        <?php endif; ?>
         <form action="index.php" method="post">
             <button name="accio" value="crearNota" class="btnCrear">+</button>
         </form>

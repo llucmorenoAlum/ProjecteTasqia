@@ -38,6 +38,8 @@ function mostrarTasques(){
     require_once 'app/views/tasques.php';
 }
 function mostrarNotes(){
+    $idUsuari = $_SESSION['id_usuari'];
+    $notes = getNotes($idUsuari);
     require_once 'app/views/notes.php';
 }
 function crearSessio($correu){
