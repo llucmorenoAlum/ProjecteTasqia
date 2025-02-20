@@ -18,6 +18,11 @@ function mostrarCreacioTasques($error = ""){
     $idUsuari = $_SESSION['id_usuari'];
     require_once 'app/views/creartasca.php';
 }
+function mostrarCreacioNotes($error = ""){
+    $error;
+    $idUsuari = $_SESSION['id_usuari'];
+    require_once 'app/views/crearNota.php';
+}
 
 function mostrarCalendari(){
     require_once 'app/views/celendari.php';

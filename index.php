@@ -50,6 +50,9 @@
               
                 mostrarCreacioTasques();
             }
+            if(isset($_POST['accio']) && $_POST['accio'] === 'crearNota'){
+                mostrarCreacioNotes();
+            }
             elseif (isset($_POST['accio']) && $_POST['accio'] === 'novaTasca') {
                 $idUsuari = $_SESSION['id_usuari'];
                 $nomTasca = $_POST['nomTasca'];
@@ -61,6 +64,18 @@
                 }else {
                     $error = "No s'ha pogut crear la tasca";
                     mostrarCreacioTasques($error);
+                }
+            }
+            elseif (isset($_POST['accio']) && $_POST['accio'] === 'novaNota') {
+                $idUsuari = $_SESSION['id_usuari'];
+                $titolNota = $_POST['titol'];
+                $contingutNota = $_POST['contingut'];
+    
+                if(crearNovaNota($idUsuari, $titolNota, $contingutNota)){
+                    mostrarIndex();
+                }else {
+                    $error = "No s'ha pogut crear la tasca";
+                    mostrarCreacioNotes($error);
                 }
             }
             elseif (isset($_POST['accio']) && $_POST['accio'] === 'mostrarTasques') {
