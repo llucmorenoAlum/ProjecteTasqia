@@ -80,7 +80,7 @@
                 ?>
         </section>
         <form action="index.php" method="post">
-            <button name="accio" value="crearTasca" class="btnCrearTasca">+</button>
+            <button name="accio" value="crearTasca" class="btnCrear">+</button>
         </form>
     </main>
 </body>

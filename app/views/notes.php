@@ -12,7 +12,9 @@
         require_once 'app/views/header.php'
     ?>
     <main>
-        <button class="btnCrearNota">+</button>
+        <form action="index.php" method="post">
+            <button name="accio" value="crearNota" class="btnCrear">+</button>
+        </form>
     </main>
 </body>
 </html>

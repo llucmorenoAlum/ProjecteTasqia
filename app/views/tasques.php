@@ -67,7 +67,9 @@
                 <?php endif;
                 ?>
         </section>
-        <button class="btnCrearTasca">+</button>
+        <form action="index.php" method="post">
+            <button name="accio" value="crearTasca" class="btnCrear">+</button>
+        </form>
     </main>
 </body>
 </html>
