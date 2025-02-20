@@ -24,13 +24,26 @@
                                 <?php echo htmlspecialchars($tascaPendent['nom']); ?>
                             </div>
                             <div class="data">
-                                <?php echo formatDataEnCatala(htmlspecialchars($tascaPendent['data_inici']));?>
+                                <?php echo formatDataEnCatala(htmlspecialchars($tascaPendent['data_inici'])); ?>
                             </div>
                             <?php if (!empty($tascaPendent['descripcio'])) : ?>
                                 <div class="descripcio">
                                     <?php echo htmlspecialchars($tascaPendent['descripcio']); ?>
                                 </div>
                             <?php endif; ?>
+
+                            <!-- Botons d'acció amb nous estils -->
+                            <div class="botons">
+                                <form action="completar_tasca.php" method="POST">
+                                    <input type="hidden" name="id_tasca" value="<?php echo $tascaPendent['id']; ?>">
+                                    <button type="submit" class="completar">✔ Completar</button>
+                                </form>
+
+                                <form action="eliminar_tasca.php" method="POST">
+                                    <input type="hidden" name="id_tasca" value="<?php echo $tascaPendent['id']; ?>">
+                                    <button type="submit" class="eliminar">✖ Eliminar</button>
+                                </form>
+                            </div>
                         </div>
                     <?php endforeach; ?>
                 </div>

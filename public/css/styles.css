@@ -105,7 +105,7 @@ section {
 
 .data {
     font-size: 14px;
-    color: #888;
+    color: #e0e0e0;
     margin-bottom: 10px;
 }
 
@@ -114,6 +114,43 @@ section {
     color: #e0e0e0;
 }
 
+.completar {
+    background-color: #4CAF50; 
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.completar:hover {
+    background-color: #45a049;
+}
+
+/* Botó per eliminar la tasca */
+.eliminar {
+    background-color: #e53935; 
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.eliminar:hover {
+    background-color: #c62828;
+}
+
+/* Contenidor dels botons dins la tasca */
+.botons {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
 .error{
     color: rgb(238, 49, 49);
     text-align: center;
