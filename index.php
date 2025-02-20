@@ -72,7 +72,7 @@
                 $contingutNota = $_POST['contingut'];
     
                 if(crearNovaNota($idUsuari, $titolNota, $contingutNota)){
-                    mostrarIndex();
+                    mostrarNotes();
                 }else {
                     $error = "No s'ha pogut crear la tasca";
                     mostrarCreacioNotes($error);

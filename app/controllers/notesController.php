@@ -13,5 +13,6 @@
 
     function getNotes($idUsuari){
         $pdo = conectarBD();
-        
+        $notes = getNotesUsuari($pdo, $idUsuari);
+        return $notes;
     }
