@@ -9,7 +9,8 @@
 <body>
     <?php 
         require_once 'app/controllers/indexController.php';
-        require_once 'app/views/header.php'
+        require_once 'app/views/header.php';
+        require_once 'app/helpers/dateHelper.php';
     ?>
     
     <main>
@@ -23,7 +24,7 @@
                                 <?php echo htmlspecialchars($tascaPendent['nom']); ?>
                             </div>
                             <div class="data">
-                                Inici: <?php echo htmlspecialchars($tascaPendent['data_inici']); ?>
+                                <?php echo formatDataEnCatala(htmlspecialchars($tascaPendent['data_inici']));?>
                             </div>
                             <?php if (!empty($tascaPendent['descripcio'])) : ?>
                                 <div class="descripcio">
