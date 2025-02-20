@@ -70,7 +70,7 @@
             elseif (isset($_POST['accio']) && $_POST['accio'] === 'novaNota') {
                 $idUsuari = $_SESSION['id_usuari'];
                 $titolNota = $_POST['titol'];
-                $contingutNota = $_POST['contingut'];
+                $contingutNota = $_POST['contingutNota'];
     
                 if(crearNovaNota($idUsuari, $titolNota, $contingutNota)){
                     mostrarNotes();
