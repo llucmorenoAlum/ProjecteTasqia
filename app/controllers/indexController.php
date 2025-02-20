@@ -33,7 +33,7 @@ function mostrarTasques(){
     require_once 'app/views/tasques.php';
 }
 function mostrarNotes(){
-    require_once 'app/views/tasques.php';
+    require_once 'app/views/notes.php';
 }
 function crearSessio($correu){
     $pdo = conectarBD();
