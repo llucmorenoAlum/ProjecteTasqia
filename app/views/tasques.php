@@ -15,22 +15,27 @@
     <main>
         <section id="tasquesActives">
             <h3>Tàsques a completar:</h3>
-            <?php
-                if (!empty($tasquesPendents)) : ?>
-                    <ul>
-                        <?php foreach ($tasquesPendents as $tascaPendent) : ?>
-                            <li>
+            <?php if (!empty($tasquesPendents)) : ?>
+                <div class="container">
+                    <?php foreach ($tasquesPendents as $tascaPendent) : ?>
+                        <div class="tasca">
+                            <div class="nom">
                                 <?php echo htmlspecialchars($tascaPendent['nom']); ?>
-                                 - 
-                                <?php echo htmlspecialchars($tascaPendent['descripcio']); ?>
-                            </li>
-                        <?php endforeach; ?>
-                    </ul>
-                <?php else : ?>
-                    <p>No tens cap tasca</p>
-                <?php endif;
-                ?>
-        </section>
+                            </div>
+                            <div class="data">
+                                Inici: <?php echo htmlspecialchars($tascaPendent['data_inici']); ?>
+                            </div>
+                            <?php if (!empty($tascaPendent['descripcio'])) : ?>
+                                <div class="descripcio">
+                                    <?php echo htmlspecialchars($tascaPendent['descripcio']); ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            <?php else : ?>
+                <p>No tens cap tasca</p>
+            <?php endif; ?>
         <section id="tasquesCompletades">
             <h3>Tàsques completades:</h3>
             <?php 
