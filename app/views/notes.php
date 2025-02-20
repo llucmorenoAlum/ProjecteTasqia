@@ -12,7 +12,7 @@
         require_once 'app/views/header.php'
     ?>
     <main>
-        <button class="btnCrearTasca">+</button>
+        <button class="btnCrearNota">+</button>
     </main>
 </body>
 </html>

@@ -6,7 +6,7 @@
 </header>
 <nav>
     <form action="index.php" method="post">
-        <button name="accio" value="mostrarTasques">Tasques</button>
+        <button name="accio" value="mostrarTasques">Tàsques</button>
         <button name="accio" value="mostrarCalendari">Calendari</button>
         <button name="accio" value="mostrarNotes">Notes</button>
     </form>
