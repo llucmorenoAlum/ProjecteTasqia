@@ -9,6 +9,7 @@
 <body>
     <?php 
         require_once 'app/controllers/indexController.php';
+
         require_once 'app/views/header.php'
     ?>
     <!-- <header>
