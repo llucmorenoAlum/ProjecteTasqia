@@ -40,7 +40,8 @@ function mostrarTasques(){
 }
 function mostrarNotes(){
     $idUsuari = $_SESSION['id_usuari'];
-    $notes = getNotes($idUsuari);
+    $pdo = conectarBD();
+    $notes = getNotesUsuari($pdo, $idUsuari);
     require_once 'app/views/notes.php';
 }
 function crearSessio($correu){
