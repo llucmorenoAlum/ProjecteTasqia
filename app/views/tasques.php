@@ -20,28 +20,31 @@
                 <div class="container">
                     <?php foreach ($tasquesPendents as $tascaPendent) : ?>
                         <div class="tasca">
-                            <div class="nom">
-                                <?php echo htmlspecialchars($tascaPendent['nom']); ?>
-                            </div>
-                            <div class="data">
-                                <?php echo formatDataEnCatala(htmlspecialchars($tascaPendent['data_inici'])); ?>
-                            </div>
-                            <?php if (!empty($tascaPendent['descripcio'])) : ?>
-                                <div class="descripcio">
-                                    <?php echo htmlspecialchars($tascaPendent['descripcio']); ?>
+                            <!-- Contenidor del text -->
+                            <div class="tasca-contenidor">
+                                <div class="nom">
+                                    <?php echo htmlspecialchars($tascaPendent['nom']); ?>
                                 </div>
-                            <?php endif; ?>
+                                <div class="data">
+                                    <?php echo formatDataEnCatala(htmlspecialchars($tascaPendent['data_inici'])); ?>
+                                </div>
+                                <?php if (!empty($tascaPendent['descripcio'])) : ?>
+                                    <div class="descripcio">
+                                        <?php echo htmlspecialchars($tascaPendent['descripcio']); ?>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
 
-                            <!-- Botons d'acció amb nous estils -->
+                            <!-- Botons a la dreta -->
                             <div class="botons">
                                 <form action="completar_tasca.php" method="POST">
                                     <input type="hidden" name="id_tasca" value="<?php echo $tascaPendent['id']; ?>">
-                                    <button type="submit" class="completar">✔ Completar</button>
+                                    <button type="submit" class="completar">✔</button>
                                 </form>
 
                                 <form action="eliminar_tasca.php" method="POST">
                                     <input type="hidden" name="id_tasca" value="<?php echo $tascaPendent['id']; ?>">
-                                    <button type="submit" class="eliminar">✖ Eliminar</button>
+                                    <button type="submit" class="eliminar">✖</button>
                                 </form>
                             </div>
                         </div>

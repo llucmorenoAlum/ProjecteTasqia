@@ -89,7 +89,13 @@ section {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
     border-left: 5px solid #bb86fc;
     transition: transform 0.2s ease-in-out;
+    
+    /* Ajustos per posicionar els botons a la dreta */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
 
 .tasca:hover {
     transform: scale(1.05);
@@ -147,10 +153,11 @@ section {
 
 /* Contenidor dels botons dins la tasca */
 .botons {
-    margin-top: 10px;
     display: flex;
-    gap: 10px;
+    flex-direction: column; /* Fa que els botons es posin un sota l'altre */
+    gap: 8px;
 }
+
 .error{
     color: rgb(238, 49, 49);
     text-align: center;
