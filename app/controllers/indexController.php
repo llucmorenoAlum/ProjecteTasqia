@@ -10,7 +10,7 @@ function mostrarIndex(){
     $tasquesPendents = getTasquesActives($pdo, $idUsuari);
     $tasquesCompletades = getTasquesCompletades($pdo);
     $data = obtenirDataActual();
-    $tasquesDia = getTasquesDia($pdo, $data);
+    $tasquesAvui = getTasquesDia($pdo, $data);
     require 'app/views/index.php';
 }
 function mostrarCreacioTasques($error = ""){

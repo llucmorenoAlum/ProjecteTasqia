@@ -9,8 +9,9 @@
 <body>
     <?php 
         require_once 'app/controllers/indexController.php';
+        require_once 'app/views/header.php'
     ?>
-    <header>
+    <!-- <header>
         <div><img src="public/media/menu.webp" alt=""></div>
         <h1>Tasqia</h1>
         <img src="https://ui-avatars.com/api?rounded=true&name=Lluc+Moreno" alt="Perfil">
@@ -21,7 +22,7 @@
             <button name="accio" value="mostrarCalendari">Calendari</button>
             <button name="accio" value="mostrarNotes">Notes</button>
         </form>
-    </nav>
+    </nav> -->
     <main>
         <section id="tasquesActives">
             <h3>Tàsques a completar:</h3>
@@ -62,13 +63,13 @@
         <section id="tasquesDia">
             <h3>Avui | Dilluns 3 de Febrer de 2025</h3>
             <?php 
-                if (!empty($tasquesAvui)) : ?>
+                if (!empty($tasquesDia)) : ?>
                     <ul>
-                        <?php foreach ($tasquesAvui as $tascaAvui) : ?>
+                        <?php foreach ($tasquesDia as $tascaDia) : ?>
                             <li>
-                                <?php echo htmlspecialchars($tascaAvui['nom']); ?>
+                                <?php echo htmlspecialchars($tascaDia['nom']); ?>
                                  - 
-                                <?php echo htmlspecialchars($tascaAvui['descripcio']); ?>
+                                <?php echo htmlspecialchars($tascaDia['descripcio']); ?>
                             </li>
                         <?php endforeach; ?>
                     </ul>
