@@ -2,6 +2,7 @@
     require_once 'app/controllers/indexController.php';
     require_once 'app/controllers/loginController.php';
     require_once 'app/controllers/tasquesController.php';
+    require_once 'app/controllers/notesController.php';
 
     session_start();
 
