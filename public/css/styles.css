@@ -157,6 +157,26 @@ button:hover {
     transition: background-color 0.3s ease;
 }
 
+.nota { 
+    border: 1px solid #ccc; 
+    padding: 10px; 
+    margin-bottom: 10px; 
+    border-radius: 5px; 
+    background: #f9f9f9; 
+}
+.titol { 
+    font-weight: bold; 
+    font-size: 18px; 
+    color: #333; 
+}
+.data { 
+    font-size: 14px; 
+    color: #666; 
+}
+.contingut { 
+    margin-top: 5px; 
+}
+
 /* Estils per a pantalles grans */
 @media (min-width: 768px) {
     .formulari {

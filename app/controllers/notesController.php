@@ -12,5 +12,6 @@
     }
 
     function getNotes($idUsuari){
-
+        $pdo = conectarBD();
+        
     }
