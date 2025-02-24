@@ -90,15 +90,17 @@
             }
             elseif (isset($_POST('eliminarTasca'))) {
                 $idTasca = $_POST['eliminarTasca'];
-                if(eliminarTasca($idTasca)){
-                    mostrarTasques();
-                }
+                // if(eliminarTasca($idTasca)){
+                //     mostrarTasques();
+                // }
+                mostrarIndex();
             }
-            elseif(isset($_POST['tascaCompletada'])){
+            elseif (isset($_POST['tascaCompletada'])){
                 $idTasca = $_POST['tascaCompletada'];
-                if(tascaCompletada($idTasca)){
-                    mostrarTasques();
-                }
+                // if(tascaCompletada($idTasca)){
+                //     mostrarTasques();
+                // }
+                mostrarIndex();
             }
         }else{
             mostrarIndex();
