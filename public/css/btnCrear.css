@@ -42,7 +42,7 @@
   }
   /* hover effect on button width */
   .Btn:hover {
-    width: 200px;
+    width: 180px;
     transition-duration: .3s;
   }
   

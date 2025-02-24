@@ -96,7 +96,7 @@
             <!-- From Uiverse.io by Yaya12085 --> 
             <button name="accio" value="crearTasca" class="Btn">
                 <div class="sign">+</div>        
-                <div class="text">Crear tasca</div>
+                <div class="text">Tasca</div>
             </button>
         </form>
     </main>
