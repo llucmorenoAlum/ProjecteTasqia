@@ -94,7 +94,7 @@
         <form action="index.php" method="post">
             <!-- <button name="accio" value="crearTasca" class="btnCrear">+</button> -->
             <!-- From Uiverse.io by Yaya12085 --> 
-            <button class="Btn">
+            <button name="accio" value="crearTasca" class="Btn">
                 <div class="sign">+</div>        
                 <div class="text">Crear tasca</div>
             </button>

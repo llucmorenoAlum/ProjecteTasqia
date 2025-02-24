@@ -7,9 +7,9 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    width: 45px;
-    height: 45px;
-    border-radius: calc(45px/2);
+    width: 70px;
+    height: 70px;
+    border-radius: calc(70px/2);
     border: none;
     cursor: pointer;
     /* position: relative; */
@@ -42,7 +42,7 @@
   }
   /* hover effect on button width */
   .Btn:hover {
-    width: 125px;
+    width: 200px;
     transition-duration: .3s;
   }
   
