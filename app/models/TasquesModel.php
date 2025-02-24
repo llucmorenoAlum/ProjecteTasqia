@@ -103,3 +103,32 @@ function insertTasca($pdo, $idUsuari, $nomTasca, $dataInici, $descripcio = null)
         return false;
     }
 }
+
+function deleteTasca($pdo, $idTasca){
+    try {
+        $sql = "DELETE FROM tasques WHERE id_tasca = :idTasca";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(':idTasca', $idTasca, PDO::PARAM_INT);
+        $stmt->execute();
+
+        return $stmt->rowCount() > 0;
+    } catch (PDOException $e) {
+        error_log("Error en deleteTasca: " . $e->getMessage());
+        return false;
+    }
+}
+
+function completarTasca($pdo, $idTasca) {
+    try {
+        $sql = "UPDATE tasques SET estat = 'completada' WHERE id_tasca = :idTasca";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(':idTasca', $idTasca, PDO::PARAM_INT);
+        $stmt->execute();
+
+        return $stmt->rowCount() > 0; // Retorna true si s'ha actualitzat alguna fila
+    } catch (PDOException $e) {
+        error_log("Error en completarTasca: " . $e->getMessage());
+        return false;
+    }
+}
+

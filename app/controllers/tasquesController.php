@@ -3,10 +3,14 @@
 
     function crearNovaTasca($idUsuari, $nomTasca, $dataTasca, $descripcioTasca){
         $pdo = conectarBD();
-        if(insertTasca($pdo, $idUsuari, $nomTasca, $dataTasca, $descripcioTasca)){
-            return true;
-        }else{
-            return false;
-        }
+        return insertTasca($pdo, $idUsuari, $nomTasca, $dataTasca, $descripcioTasca);
+    }
+    function tascaCompletada($idTasca){
+        $pdo = conectarBD();
+        return completarTasca($pdo, $idTasca);
+    }
 
+    function eliminarTasca($idTasca){
+        $pdo = conectarBD();
+        return deleteTasca($pdo, $idTasca);
     }

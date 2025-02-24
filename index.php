@@ -87,7 +87,15 @@
             }
             elseif (isset($_POST['accio']) && $_POST['accio'] === 'mostrarNotes') {
                 mostrarNotes();
-            } 
+            }
+            elseif (isset($_POST('eliminarTasca'))) {
+                $idTasca = $_POST['eliminarTasca'];
+                eliminarTasca($idTasca);
+            }
+            elseif(isset($_POST['tascaCompletada'])){
+                $idTasca = $_POST['tascaCompletada'];
+                tascaCompletada($idTasca);
+            }
         }else{
             mostrarIndex();
         }

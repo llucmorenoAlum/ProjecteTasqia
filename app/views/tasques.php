@@ -37,13 +37,13 @@
 
                             <!-- Botons a la dreta -->
                             <div class="botons">
-                                <form action="completar_tasca.php" method="POST">
-                                    <input type="hidden" name="id_tasca" value="<?php echo $tascaPendent['id']; ?>">
+                                <form action="index.php" method="POST">
+                                    <input type="hidden" name="tascaCompletada" value="<?php echo $tascaPendent['id']; ?>">
                                     <button type="submit" class="completar"><img src="public/media/comprobado.png" alt="✔"></button>
                                 </form>
 
-                                <form action="eliminar_tasca.php" method="POST">
-                                    <input type="hidden" name="id_tasca" value="<?php echo $tascaPendent['id']; ?>">
+                                <form action="index.php" method="POST">
+                                    <input type="hidden" name="eliminarTasca" value="<?php echo $tascaPendent['id']; ?>">
                                     <button type="submit" class="eliminar"><img src="public/media/borrar.png" alt="✖"></button>
                                 </form>
                             </div>
