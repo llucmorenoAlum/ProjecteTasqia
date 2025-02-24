@@ -119,43 +119,13 @@ section {
     font-size: 16px;
     color: #e0e0e0;
 }
-.completar{
+.completar, .eliminar, .completar:hover, .eliminar:hover{
     background-color: #444;
+    padding: 0px;
+    margin-bottom: 0px;
 }
-.completar img{
+.completar img, .eliminar img{
     width: 20px;
-    /* background-color: #4CAF50; 
-    color: white;
-    padding: 10px;
-    font-size: 14px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.2s; */
-}
-
-.completar:hover {
-    /* background-color: #45a049; */
-}
-
-/* Botó per eliminar la tasca */
-.eliminar{
-    background-color: #444;
-}
-.eliminar img{
-    width: 20px;
-    /* background-color: #e53935; 
-    color: white;
-    padding: 10px;
-    font-size: 14px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.2s; */
-}
-
-.eliminar:hover {
-    /* background-color: #c62828; */
 }
 
 /* Contenidor dels botons dins la tasca */
