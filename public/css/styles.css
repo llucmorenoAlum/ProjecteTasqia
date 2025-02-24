@@ -79,7 +79,7 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 15px;
-    padding: 20px;
+    
 }
 
 .tasca {
@@ -121,34 +121,36 @@ section {
 }
 
 .completar {
-    background-color: #4CAF50; 
+    width: 20px;
+    /* background-color: #4CAF50; 
     color: white;
     padding: 10px;
     font-size: 14px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.2s; */
 }
 
 .completar:hover {
-    background-color: #45a049;
+    /* background-color: #45a049; */
 }
 
 /* Botó per eliminar la tasca */
 .eliminar {
-    background-color: #e53935; 
+    width: 20px;
+    /* background-color: #e53935; 
     color: white;
     padding: 10px;
     font-size: 14px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.2s; */
 }
 
 .eliminar:hover {
-    background-color: #c62828;
+    /* background-color: #c62828; */
 }
 
 /* Contenidor dels botons dins la tasca */
