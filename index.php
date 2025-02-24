@@ -90,11 +90,15 @@
             }
             elseif (isset($_POST('eliminarTasca'))) {
                 $idTasca = $_POST['eliminarTasca'];
-                eliminarTasca($idTasca);
+                if(eliminarTasca($idTasca)){
+                    mostrarTasques();
+                }
             }
             elseif(isset($_POST['tascaCompletada'])){
                 $idTasca = $_POST['tascaCompletada'];
-                tascaCompletada($idTasca);
+                if(tascaCompletada($idTasca)){
+                    mostrarTasques();
+                }
             }
         }else{
             mostrarIndex();
