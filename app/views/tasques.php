@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tasqia</title>
-    <link rel="stylesheet" href="./public/css/styles.css">
+    <link rel="stylesheet" href="public/css/styles.css">
+    <link rel="stylesheet" href="public/css/btnCrear.css">
 </head>
 <body>
     <?php 
@@ -91,7 +92,12 @@
                 ?>
         </section>
         <form action="index.php" method="post">
-            <button name="accio" value="crearTasca" class="btnCrear">+</button>
+            <!-- <button name="accio" value="crearTasca" class="btnCrear">+</button> -->
+            <!-- From Uiverse.io by Yaya12085 --> 
+            <button class="Btn">
+                <div class="sign">+</div>        
+                <div class="text">Crear tasca</div>
+            </button>
         </form>
     </main>
 </body>
