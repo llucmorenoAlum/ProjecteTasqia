@@ -92,11 +92,16 @@
                 $idTasca = $_POST['eliminarTasca'];
                 if(eliminarTasca($idTasca)){
                     mostrarTasques();
+                }else{
+                    mostrarTasques();
                 }
             }
             elseif (isset($_POST['tascaCompletada'])){
                 $idTasca = $_POST['tascaCompletada'];
                 if(tascaCompletada($idTasca)){
+                    mostrarTasques();
+                }
+                else{
                     mostrarTasques();
                 }
             }
