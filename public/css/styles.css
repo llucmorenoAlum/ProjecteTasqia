@@ -119,8 +119,10 @@ section {
     font-size: 16px;
     color: #e0e0e0;
 }
-
-.completar {
+.completar{
+    background-color: #444;
+}
+.completar img{
     width: 20px;
     /* background-color: #4CAF50; 
     color: white;
@@ -137,7 +139,10 @@ section {
 }
 
 /* Botó per eliminar la tasca */
-.eliminar {
+.eliminar{
+    background-color: #444;
+}
+.eliminar img{
     width: 20px;
     /* background-color: #e53935; 
     color: white;
