@@ -88,7 +88,7 @@
             elseif (isset($_POST['accio']) && $_POST['accio'] === 'mostrarNotes') {
                 mostrarNotes();
             }
-            elseif (isset($_POST('eliminarTasca'))) {
+            elseif (isset($_POST['eliminarTasca'])) {
                 $idTasca = $_POST['eliminarTasca'];
                 if(eliminarTasca($idTasca)){
                     mostrarTasques();
