@@ -25,8 +25,8 @@
                             <div class="tasca-contenidor">
                                 <form action="index.php" method="post">
                                     <input type="hidden" name="editarTasca" value="<?php echo $tascaPendent['nom'] ?>">
-                                    <input type="hidden" name="editarTasca" value="<?php echo $tascaPendent['data_inici'] ?>">
-                                    <input type="hidden" name="editarTasca" value="<?php echo $tascaPendent['descripcio'] ?>">
+                                    <input type="hidden" name="editarTascaData" value="<?php echo $tascaPendent['data_inici'] ?>">
+                                    <input type="hidden" name="editarTascaDesc" value="<?php echo $tascaPendent['descripcio'] ?>">
                                     <button class="botoInvisible" type="submit">
                                         <div class="nom">
                                             <?php echo htmlspecialchars($tascaPendent['nom']); ?>
