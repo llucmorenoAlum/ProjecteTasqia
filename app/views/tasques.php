@@ -23,17 +23,22 @@
                         <div class="tasca">
                             <!-- Contenidor del text -->
                             <div class="tasca-contenidor">
-                                <div class="nom">
-                                    <?php echo htmlspecialchars($tascaPendent['nom']); ?>
-                                </div>
-                                <div class="data">
-                                    <?php echo formatDataEnCatala(htmlspecialchars($tascaPendent['data_inici'])); ?>
-                                </div>
-                                <?php if (!empty($tascaPendent['descripcio'])) : ?>
-                                    <div class="descripcio">
-                                        <?php echo htmlspecialchars($tascaPendent['descripcio']); ?>
-                                    </div>
-                                <?php endif; ?>
+                                <form action="index.php" method="post">
+                                    <input type="hidden" name="editarTasca" value="<?php echo $tascaPendent; ?>">
+                                    <button class="botoInvisible" type="submit">
+                                        <div class="nom">
+                                            <?php echo htmlspecialchars($tascaPendent['nom']); ?>
+                                        </div>
+                                        <div class="data">
+                                            <?php echo formatDataEnCatala(htmlspecialchars($tascaPendent['data_inici'])); ?>
+                                        </div>
+                                        <?php if (!empty($tascaPendent['descripcio'])) : ?>
+                                            <div class="descripcio">
+                                                <?php echo htmlspecialchars($tascaPendent['descripcio']); ?>
+                                            </div>
+                                        <?php endif; ?>
+                                    </button>
+                                </form>
                             </div>
 
                             <!-- Botons a la dreta -->

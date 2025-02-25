@@ -127,6 +127,11 @@ section {
 .completar img, .eliminar img{
     width: 30px;
 }
+.botoInvisible{
+    background-color: #444;
+    padding: 0px;
+    margin-bottom: 0px;
+}
 
 /* Contenidor dels botons dins la tasca */
 .botons {
@@ -224,6 +229,7 @@ button:hover {
     border-radius: 5px;
     background: #1e1e1e;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    max-width: 80%;
 }
 
 .titol {
@@ -234,7 +240,7 @@ button:hover {
 
 .data {
     font-size: 14px;
-    color: #888;
+    color: #CCC;
 }
 
 .contingut {

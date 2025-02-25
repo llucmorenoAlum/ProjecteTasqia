@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tasqia</title>
-    <link rel="stylesheet" href="./public/css/styles.css">
+    <link rel="stylesheet" href="public/css/styles.css">
+    <link rel="stylesheet" href="public/css/btnCrear.css">
 </head>
 <body>
     <?php 
@@ -25,7 +26,11 @@
             <p>No tens cap nota.</p>
         <?php endif; ?>
         <form action="index.php" method="post">
-            <button name="accio" value="crearNota" class="btnCrear">+</button>
+            <!-- <button name="accio" value="crearNota" class="btnCrear">+</button> -->
+            <button name="accio" value="crearTasca" class="Btn">
+                <div class="sign">+</div>        
+                <div class="text">Nota</div>
+            </button>
         </form>
     </main>
 </body>
