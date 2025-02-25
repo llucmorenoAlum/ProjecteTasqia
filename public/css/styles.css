@@ -131,6 +131,10 @@ section {
     background-color: #444;
     padding: 0px;
     margin-bottom: 0px;
+    text-align: left;
+}
+.botoInvisible:hover{
+    background-color: #444;
 }
 
 /* Contenidor dels botons dins la tasca */

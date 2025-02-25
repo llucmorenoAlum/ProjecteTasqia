@@ -89,8 +89,10 @@
                 mostrarNotes();
             }
             elseif(isset($_POST['editarTasca'])){
-                $tasca = $_POST['editarTasca'];
-                mostrarEditorTasca($tasca);
+                $nomTasca = $_POST['editarTasca'];
+                $dataTasca = $_POST['editarTascaData'];
+                $descripcioTasca = $_POST['editarTascaDesc'];
+                mostrarEditorTasca($nomTasca, $dataTasca, $descripcioTasca);
             }
             elseif (isset($_POST['eliminarTasca'])) {
                 $idTasca = $_POST['eliminarTasca'];

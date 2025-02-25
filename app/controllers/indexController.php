@@ -44,8 +44,10 @@ function mostrarNotes(){
     $notes = getNotesUsuari($pdo, $idUsuari);
     require_once 'app/views/notes.php';
 }
-function mostrarEditorTasca($tasca){
-    $tasca;
+function mostrarEditorTasca($nomTasca, $dataTasca, $desctasca){
+    $nomTasca;
+    $dataTasca;
+    $desctasca;
     require_once 'app/views/editarTasca.php';
 }
 function crearSessio($correu){
