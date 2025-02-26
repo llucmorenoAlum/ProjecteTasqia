@@ -119,14 +119,7 @@ section {
     font-size: 16px;
     color: #e0e0e0;
 }
-.completar, .eliminar, .completar:hover, .eliminar:hover{
-    background-color: #444;
-    padding: 0px;
-    margin-bottom: 0px;
-}
-.completar img, .eliminar img{
-    width: 30px;
-}
+
 .botoInvisible{
     background-color: #444;
     padding: 0px;
@@ -139,10 +132,10 @@ section {
 
 
 
-.deshacer, .eliminar {
+.deshacer, .eliminar, .completar {
     width: 30px; 
     height: 30px;
-    background-color: #303030; 
+    background-color: #bb86fc; 
     border: none;
     border-radius: 50%; 
     display: flex;
@@ -150,14 +143,30 @@ section {
     justify-content: center;
     cursor: pointer;
 }
-  
+
+.completar img{
+    width: 12px;
+    height: auto;
+}
 .deshacer img {
 width: 12px; 
 height: auto;
 }
 
+.eliminar img{
+    width: 18px;
+    height: auto;
+}
+
+.eliminar:hover{
+    background-color: #2da72d;
+}
 .deshacer:hover {
-background-color: rgb(64, 182, 255); 
+    background-color: #40b6ff; 
+}
+
+.eliminar:hover{
+    background-color: #ff2a2a;
 }
   
 

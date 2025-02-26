@@ -47,12 +47,12 @@
                             <div class="botons">
                                 <form action="index.php" method="POST">
                                     <input type="hidden" name="tascaCompletada" value="<?php echo $tascaPendent['id_tasca']; ?>">
-                                    <button type="submit" class="completar"><img src="public/media/comprobado.png" alt="✔"></button>
+                                    <button type="submit" class="completar"><img src="public/media/completado.webp" alt="✔"></button>
                                 </form>
 
                                 <form action="index.php" method="POST">
                                     <input type="hidden" name="eliminarTasca" value="<?php echo $tascaPendent['id_tasca']; ?>">
-                                    <button type="submit" class="eliminar"><img src="public/media/borrar.png" alt="✖"></button>
+                                    <button type="submit" class="eliminar"><img src="public/media/borrar.webp" alt="✖"></button>
                                 </form>
                             </div>
                         </div>
@@ -66,7 +66,6 @@
             <h3>Tàsques completades:</h3>
             <?php 
                 if (!empty($tasquesCompletades)) : ?>
-                    <ul>
                         <?php foreach ($tasquesCompletades as $tasca) : ?>
                             <div class="tasca">
                             <!-- Contenidor del text -->
@@ -105,7 +104,6 @@
                             </div>
                         </div>
                         <?php endforeach; ?>
-                    </ul>
                 <?php else : ?>
                     <p>No tens cap tasca</p>
                 <?php endif;
