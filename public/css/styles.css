@@ -147,16 +147,16 @@ section {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-  }
+}
   
-  .deshacer img {
-    width: 60%; 
-    height: auto;
-  }
-  
-  .deshacer:hover {
-    background-color: rgb(64, 182, 255); 
-  }
+.deshacer img {
+width: 60%; 
+height: auto;
+}
+
+.deshacer:hover {
+background-color: rgb(64, 182, 255); 
+}
   
 
 /* Contenidor dels botons dins la tasca */
