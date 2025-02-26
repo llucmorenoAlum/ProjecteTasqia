@@ -100,7 +100,7 @@
 
                                 <form action="index.php" method="POST">
                                     <input type="hidden" name="eliminarTasca" value="<?php echo $tasca['id_tasca']; ?>">
-                                    <button type="submit" class="eliminar"><img src="public/media/borrar.png" alt="✖"></button>
+                                    <button type="submit" class="eliminar"><img src="public/media/borrar.webp" alt="✖"></button>
                                 </form>
                             </div>
                         </div>

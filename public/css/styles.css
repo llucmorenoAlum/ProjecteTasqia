@@ -137,10 +137,12 @@ section {
     background-color: #444;
 }
 
-.deshacer {
+
+
+.deshacer, .eliminar {
     width: 30px; 
     height: 30px;
-    background-color: #222; 
+    background-color: #303030; 
     border: none;
     border-radius: 50%; 
     display: flex;
@@ -150,7 +152,7 @@ section {
 }
   
 .deshacer img {
-width: 60%; 
+width: 12px; 
 height: auto;
 }
 
