@@ -67,12 +67,43 @@
             <?php 
                 if (!empty($tasquesCompletades)) : ?>
                     <ul>
-                        <?php foreach ($tasquesCompletades as $tascaCompletada) : ?>
-                            <li>
-                                <?php echo htmlspecialchars($tascaCompletada['nom']); ?>
-                                 - 
-                                <?php echo htmlspecialchars($tascaCompletada['descripcio']); ?>
-                            </li>
+                        <?php foreach ($tasquesCompletades as $tasca) : ?>
+                            <div class="tasca">
+                            <!-- Contenidor del text -->
+                            <div class="tasca-contenidor">
+                                <form action="index.php" method="post">
+                                    <input type="hidden" name="editarTasca" value="<?php echo $tasca['nom'] ?>">
+                                    <input type="hidden" name="editarTascaData" value="<?php echo $tasca['data_inici'] ?>">
+                                    <input type="hidden" name="editarTascaDesc" value="<?php echo $tasca['descripcio'] ?>">
+                                    <button class="botoInvisible" type="submit">
+                                        <div class="nom">
+                                            <?php echo htmlspecialchars($tasca['nom']); ?>
+                                        </div>
+                                        <div class="data">
+                                            <?php echo formatDataEnCatala(htmlspecialchars($tasca['data_inici'])); ?>
+                                        </div>
+                                        <?php if (!empty($tasca['descripcio'])) : ?>
+                                            <div class="descripcio">
+                                                <?php echo htmlspecialchars($tasca['descripcio']); ?>
+                                            </div>
+                                        <?php endif; ?>
+                                    </button>
+                                </form>
+                            </div>
+
+                            <!-- Botons a la dreta -->
+                            <div class="botons">
+                                <form action="index.php" method="POST">
+                                    <input type="hidden" name="tascaCompletada" value="<?php echo $tasca['id_tasca']; ?>">
+                                    <button type="submit" class="deshacer"><img src="public/media/deshacer.webp" alt="<-"></button>
+                                </form>
+
+                                <form action="index.php" method="POST">
+                                    <input type="hidden" name="eliminarTasca" value="<?php echo $tasca['id_tasca']; ?>">
+                                    <button type="submit" class="eliminar"><img src="public/media/borrar.png" alt="✖"></button>
+                                </form>
+                            </div>
+                        </div>
                         <?php endforeach; ?>
                     </ul>
                 <?php else : ?>

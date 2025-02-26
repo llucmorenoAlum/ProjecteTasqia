@@ -38,18 +38,21 @@ function mostrarTasques(){
     $tasquesDia = getTasquesDia($pdo, $data);
     require_once 'app/views/tasques.php';
 }
+
 function mostrarNotes(){
     $idUsuari = $_SESSION['id_usuari'];
     $pdo = conectarBD();
     $notes = getNotesUsuari($pdo, $idUsuari);
     require_once 'app/views/notes.php';
 }
+
 function mostrarEditorTasca($nomTasca, $dataTasca, $descTasca){
     $nomTasca;
     $dataTasca;
     $descTasca;
     require_once 'app/views/editarTasca.php';
 }
+
 function crearSessio($correu){
     $pdo = conectarBD();
     $dades = getDadesUsuari($pdo, $correu);
