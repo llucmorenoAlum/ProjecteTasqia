@@ -277,11 +277,12 @@ button:hover {
     font-weight: bold;
     font-size: 18px;
     color: #bb86fc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-
-.data {
-    font-size: 14px;
-    color: #CCC;
+.titol button{
+    margin-left: 20px;
 }
 
 .contingut {

@@ -13,10 +13,10 @@
         require_once 'app/views/header.php'
     ?>
     <main class="notes">
-        <section>
+        <div>
             <h1>Les teves notes</h1>
-        </section>
-        <section>
+        </div>
+        <div>
             <?php if (!empty($notes)): ?>
                 <?php foreach ($notes as $nota): ?>
                     <div class="nota">
@@ -33,7 +33,7 @@
             <?php else: ?>
                 <p>No tens cap nota.</p>
             <?php endif; ?>
-        </section>
+        </div>
         
         <form action="index.php" method="post">
             <!-- <button name="accio" value="crearNota" class="btnCrear">+</button> -->
