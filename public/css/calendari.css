@@ -50,6 +50,10 @@ button:hover {
     display: grid;
     gap: 5px;
 }
+#calendar div{
+    width: 30px;
+    height: 30px;
+}
 
 .day-view, .week-view, .month-view {
     display: grid;
