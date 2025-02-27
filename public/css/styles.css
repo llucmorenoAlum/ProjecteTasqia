@@ -87,6 +87,9 @@ section {
     align-items: center;
 }
 
+.tasca-contenidor{
+    margin-right: 10px;
+}
 
 .tasca:hover {
     transform: scale(1.05);
@@ -268,12 +271,11 @@ button:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     flex-grow: 1;
     gap: 20px;
+    padding: 20px;
 }
-
-
 
 .nota {
     border: 1px solid #333;

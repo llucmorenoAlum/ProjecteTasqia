@@ -76,6 +76,8 @@
                                     <input type="hidden" name="editarTasca" value="<?php echo $tasca['nom'] ?>">
                                     <input type="hidden" name="editarTascaData" value="<?php echo $tasca['data_inici'] ?>">
                                     <input type="hidden" name="editarTascaDesc" value="<?php echo $tasca['descripcio'] ?>">
+                                    <input type="hidden" name="editarTascaId" value="<?php echo $tasca['id_tasca']?>"/>
+
                                     <button class="botoInvisible" type="submit">
                                         <div class="nom">
                                             <?php echo htmlspecialchars($tasca['nom']); ?>
