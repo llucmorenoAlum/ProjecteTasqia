@@ -19,24 +19,25 @@
             <h3>Tàsques a completar:</h3>
             <?php if (!empty($tasquesPendents)) : ?>
                 <div class="container">
-                    <?php foreach ($tasquesPendents as $tascaPendent) : ?>
+                    <?php foreach ($tasquesPendents as $tasca) : ?>
                         <div class="tasca">
                             <!-- Contenidor del text -->
                             <div class="tasca-contenidor">
                                 <form action="index.php" method="post">
-                                    <input type="hidden" name="editarTasca" value="<?php echo $tascaPendent['nom'] ?>">
-                                    <input type="hidden" name="editarTascaData" value="<?php echo $tascaPendent['data_inici'] ?>">
-                                    <input type="hidden" name="editarTascaDesc" value="<?php echo $tascaPendent['descripcio'] ?>">
+                                    <input type="hidden" name="editarTasca" value="<?php echo $tasca['nom'] ?>">
+                                    <input type="hidden" name="editarTascaData" value="<?php echo $tasca['data_inici'] ?>">
+                                    <input type="hidden" name="editarTascaDesc" value="<?php echo $tasca['descripcio'] ?>">
+                                    <input type="hidden" name="editarTascaId" value="<?php echo $tasca['id_tasca']?>"/>
                                     <button class="botoInvisible" type="submit">
                                         <div class="nom">
-                                            <?php echo htmlspecialchars($tascaPendent['nom']); ?>
+                                            <?php echo htmlspecialchars($tasca['nom']); ?>
                                         </div>
                                         <div class="data">
-                                            <?php echo formatDataEnCatala(htmlspecialchars($tascaPendent['data_inici'])); ?>
+                                            <?php echo formatDataEnCatala(htmlspecialchars($tasca['data_inici'])); ?>
                                         </div>
-                                        <?php if (!empty($tascaPendent['descripcio'])) : ?>
+                                        <?php if (!empty($tasca['descripcio'])) : ?>
                                             <div class="descripcio">
-                                                <?php echo htmlspecialchars($tascaPendent['descripcio']); ?>
+                                                <?php echo htmlspecialchars($tasca['descripcio']); ?>
                                             </div>
                                         <?php endif; ?>
                                     </button>
@@ -46,12 +47,12 @@
                             <!-- Botons a la dreta -->
                             <div class="botons">
                                 <form action="index.php" method="POST">
-                                    <input type="hidden" name="tascaCompletada" value="<?php echo $tascaPendent['id_tasca']; ?>">
+                                    <input type="hidden" name="tascaCompletada" value="<?php echo $tasca['id_tasca']; ?>">
                                     <button type="submit" class="completar"><img src="public/media/completado.webp" alt="✔"></button>
                                 </form>
 
                                 <form action="index.php" method="POST">
-                                    <input type="hidden" name="eliminarTasca" value="<?php echo $tascaPendent['id_tasca']; ?>">
+                                    <input type="hidden" name="eliminarTasca" value="<?php echo $tasca['id_tasca']; ?>">
                                     <button type="submit" class="eliminar"><img src="public/media/borrar.webp" alt="✖"></button>
                                 </form>
                             </div>

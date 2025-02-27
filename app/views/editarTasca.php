@@ -21,7 +21,7 @@
                 <input type="datetime-local" value="<?php echo $dataTasca ?>" name="dataInici" required>
                 <label for="descripcioTasca">Descripció</label>
                 <textarea placeholder="Introdueix la descripció de la tasca..." name="descripcioTasca" rows="3"><?php echo $descTasca ?></textarea>
-                <button name="accio" value="updateTasca">Guardar</button>
+                <button name="updateTasca" value="<?php echo $idTasca?>">Guardar</button>
             </form>
         </section>
     </body>

@@ -27,3 +27,13 @@
             return false;
         }
     }
+
+    function modificarTasca($idTasca, $nomTasca, $dataTasca, $descripcioTasca){
+        $pdo = conectarBD();
+        if (updateTasca()) {
+            return true;
+        } else {
+            return false;
+        }
+        
+    }

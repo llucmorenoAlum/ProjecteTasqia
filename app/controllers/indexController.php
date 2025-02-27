@@ -46,7 +46,8 @@ function mostrarNotes(){
     require_once 'app/views/notes.php';
 }
 
-function mostrarEditorTasca($nomTasca, $dataTasca, $descTasca){
+function mostrarEditorTasca($idTasca, $nomTasca, $dataTasca, $descTasca){
+    $idTasca
     $nomTasca;
     $dataTasca;
     $descTasca;
