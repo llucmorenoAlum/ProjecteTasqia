@@ -46,4 +46,34 @@
             return [];
         }
     }
+
+    function deleteNota($pdo, $idNota){
+        try {
+            $sql = "DELETE FROM notes WHERE id_notes = :idNota";
+            $stmt = $pdo->prepare($sql);
+            $stmt->bindParam(':idNota', $idNota, PDO::PARAM_INT);
+            $stmt->execute();
+    
+            return $stmt->rowCount() > 0;
+        } catch (PDOException $e) {
+            error_log("Error en deleteNota: " . $e->getMessage());
+            return false;
+        }
+    }
+
+    function updateNota($pdo, $idNota, $titolNota, $contingutNota){
+        try {
+            $sql = "UPDATE notes SET titol = :titol, contingut = :contingut WHERE id_notes = :idNota";
+            
+            $stmt = $pdo->prepare($sql);
+            $stmt->bindParam(':titol', $titolNota, PDO::PARAM_STR);
+            $stmt->bindParam(':contigut', $contingutNota, PDO::PARAM_STR);
+            $stmt->bindParam(':idNota', $idNota, PDO::PARAM_INT);
+            
+            return $stmt->execute();
+        } catch (PDOException $e) {
+            error_log("Error en modificarNota: " . $e->getMessage());
+            return false;
+        }
+    }
     

@@ -111,6 +111,16 @@
                 $contingutNota = $_POST['contingutNota'];
                 mostrarEditorNota($idNota, $titolNota, $contingutNota);
             }
+            elseif(isset($_POST['updateNota'])){
+                $idNota = $_POST['updateNota'];
+                $titolNota = $_POST['titolNota'];
+                $contingutNota = $_POST['contingutNota'];
+                if(modificarNota($idNota, $titolNota, $contingutNota)){
+
+                }else{
+
+                }
+            }
             elseif (isset($_POST['eliminarTasca'])) {
                 $idTasca = $_POST['eliminarTasca'];
                 if(eliminarTasca($idTasca)){

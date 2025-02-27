@@ -15,11 +15,12 @@
                 <?php endif
             ?>
             <form action="index.php" method="post">
+                <input type="hidden" name="modificarNota" value="<?php echo $idNota ?>">
                 <label for="titol">Títol</label>
-                <input name="titol" placeholder="Introdueix el títol de la nota..." type="text" value="<?php echo $titolNota ?>" required>
+                <input name="titolNota" placeholder="Introdueix el títol de la nota..." type="text" value="<?php echo $titolNota ?>" required>
                 <label for="contingutNota">Contingut</label>
                 <textarea name="contingutNota" rows="10"><?php echo $contingutNota ?></textarea>
-                <button name="accio" value="novaNota">Crear</button>
+                <button type="submit">Guardar</button>
             </form>
         </section>
     </body>
