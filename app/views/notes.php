@@ -47,8 +47,7 @@
                             <input type="hidden" name="titolNota" value="<?php echo $nota['titol']?>">
                             <input type="hidden" name="dataNota" value="<?php echo $nota['data_creacio']?>">
                             <input type="hidden" name="contingutNota" value="<?php echo $nota['contingut']?>">
-                            
-                            </div>
+
                             <button class="botoInvisible" type="submit">
                                 <div class="data"><?= date("d/m/Y H:i", strtotime($nota['data_creacio'])) ?></div>
                                 <div class="contingut"><?= nl2br(htmlspecialchars($nota['contingut'] ?? "Sense contingut")) ?></div>
