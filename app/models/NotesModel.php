@@ -67,12 +67,12 @@
             
             $stmt = $pdo->prepare($sql);
             $stmt->bindParam(':titol', $titolNota, PDO::PARAM_STR);
-            $stmt->bindParam(':contigut', $contingutNota, PDO::PARAM_STR);
+            $stmt->bindParam(':contingut', $contingutNota, PDO::PARAM_STR);
             $stmt->bindParam(':idNota', $idNota, PDO::PARAM_INT);
             
             return $stmt->execute();
         } catch (PDOException $e) {
-            error_log("Error en modificarNota: " . $e->getMessage());
+            error_log("Error en updateNota: " . $e->getMessage());
             return false;
         }
     }
