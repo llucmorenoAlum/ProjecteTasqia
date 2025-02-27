@@ -30,7 +30,7 @@
 
     function modificarTasca($idTasca, $nomTasca, $dataTasca, $descripcioTasca){
         $pdo = conectarBD();
-        if (updateTasca($idTasca, $nomTasca, $dataTasca, $descripcioTasca)) {
+        if (updateTasca($pdo, $idTasca, $nomTasca, $dataTasca, $descripcioTasca)) {
             return true;
         } else {
             return false;

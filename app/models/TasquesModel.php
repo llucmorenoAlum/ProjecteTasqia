@@ -132,14 +132,14 @@ function completarTasca($pdo, $idTasca) {
     }
 }
 
-function updateTasca($idTasca, $nomTasca, $dataTasca, $descripcioTasca){
+function updateTasca($pdo, $idTasca, $nomTasca, $dataTasca, $descripcioTasca){
     try {
         $sql = "UPDATE tasques SET nom = :nom, descripcio = :descripcio, data_inici = :dataInici WHERE id_tasca = :idTasca";
         
         $stmt = $pdo->prepare($sql);
-        $stmt->bindParam(':nom', $nom, PDO::PARAM_STR);
-        $stmt->bindParam(':descripcio', $descripcio, PDO::PARAM_STR);
-        $stmt->bindParam(':dataInici', $dataInici, PDO::PARAM_STR);
+        $stmt->bindParam(':nom', $nomTasca, PDO::PARAM_STR);
+        $stmt->bindParam(':descripcio', $descripcioTasca, PDO::PARAM_STR);
+        $stmt->bindParam(':dataInici', $dataTasca, PDO::PARAM_STR);
         $stmt->bindParam(':idTasca', $idTasca, PDO::PARAM_INT);
         
         return $stmt->execute();
