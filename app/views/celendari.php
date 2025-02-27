@@ -12,7 +12,20 @@
         require_once 'app/views/header.php'
     ?>
     <main>
-        
+        <div class="calendar-container">
+            <div class="calendar-header">
+                <button id="prevBtn">◀</button>
+                <h2 id="calendarTitle"></h2>
+                <button id="nextBtn">▶</button>
+            </div>
+            <div class="calendar-controls">
+                <button data-view="day">Dia</button>
+                <button data-view="week">Setmana</button>
+                <button data-view="month">Mes</button>
+            </div>
+            <div id="calendar"></div>
+        </div>
+        <script src="script.js"></script>
     </main>
 </body>
 </html>
