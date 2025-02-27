@@ -147,6 +147,14 @@
                 else{
                     mostrarTasques();
                 }
+            }elseif(isset($_POST['tascaNoCompletada'])){
+                $idTasca = $_POST['tascaCompletada'];
+                if(tascaNoCompletada($idTasca)){
+                    mostrarTasques();
+                }
+                else{
+                    mostrarTasques();
+                }
             }
         }else{
             mostrarIndex();

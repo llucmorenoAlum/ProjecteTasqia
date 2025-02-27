@@ -65,6 +65,10 @@
         try {
             $sql = "UPDATE notes SET titol = :titol, contingut = :contingut WHERE id_notes = :idNota";
             
+            if($contingutNota == "" || $contingutNota == null){
+                $contingutNota = "Sense contingut";
+            }
+
             $stmt = $pdo->prepare($sql);
             $stmt->bindParam(':titol', $titolNota, PDO::PARAM_STR);
             $stmt->bindParam(':contingut', $contingutNota, PDO::PARAM_STR);

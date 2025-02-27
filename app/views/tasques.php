@@ -110,7 +110,7 @@
                             <!-- Botons a la dreta -->
                             <div class="botons">
                                 <form action="index.php" method="POST">
-                                    <input type="hidden" name="tascaCompletada" value="<?php echo $tasca['id_tasca']; ?>">
+                                    <input type="hidden" name="tascaNoCompletada" value="<?php echo $tasca['id_tasca']; ?>">
                                     <button type="submit" class="deshacer"><img src="public/media/deshacer.webp" alt="<-"></button>
                                 </form>
 

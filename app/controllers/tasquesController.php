@@ -9,10 +9,19 @@
             return false;
         }
     }
-    
+
     function tascaCompletada($idTasca){
         $pdo = conectarBD();
         if(completarTasca($pdo, $idTasca)){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    function tascaNoCompletada($idTasca){
+        $pdo = conectarBD();
+        if(noCompletarTasca($pdo, $idTasca)){
             return true;
         }else{
             return false;

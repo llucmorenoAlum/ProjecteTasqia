@@ -132,6 +132,20 @@ function completarTasca($pdo, $idTasca) {
     }
 }
 
+function noCompletarTasca($pdo, $idTasca) {
+    try {
+        $sql = "UPDATE tasques SET estat = 'activa' WHERE id_tasca = :idTasca";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(':idTasca', $idTasca, PDO::PARAM_INT);
+        $stmt->execute();
+
+        return $stmt->rowCount() > 0; // Retorna true si s'ha actualitzat alguna fila
+    } catch (PDOException $e) {
+        error_log("Error en completarTasca: " . $e->getMessage());
+        return false;
+    }
+}
+
 function updateTasca($pdo, $idTasca, $nomTasca, $dataTasca, $descripcioTasca){
     try {
         $sql = "UPDATE tasques SET nom = :nom, descripcio = :descripcio, data_inici = :dataInici WHERE id_tasca = :idTasca";
