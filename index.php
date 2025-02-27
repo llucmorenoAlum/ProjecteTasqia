@@ -105,6 +105,11 @@
                     $error = "No s'ha pogut modificar la tasca";
                     mostrarEditorTasca($idTasca, $nomTasca, $dataTasca, $descripcioTasca, $error);
                 }
+            }elseif (isset($_POST['actualitzarNota'])) {
+                $idNota = $_POST['actualitzarNota'];
+                $titolNota = $_POST['titolNota'];
+                $contingutNota = $_POST['contingutNota'];
+                mostrarEditorNota($idNota, $titolNota, $contingutNota);
             }
             elseif (isset($_POST['eliminarTasca'])) {
                 $idTasca = $_POST['eliminarTasca'];

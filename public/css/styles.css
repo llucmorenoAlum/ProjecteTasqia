@@ -244,7 +244,7 @@ button:hover {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 1000; /* Assegura que estigui per sobre d'altres elements */
+    z-index: 1000;
     /* background-color: #007bff; */
     color: white;
     border: none;
@@ -265,12 +265,12 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 5px;
 }
 .contenidorNotes{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     /* align-items: center; */
     flex-grow: 1;
     gap: 20px;

@@ -54,6 +54,13 @@ function mostrarEditorTasca($idTasca, $nomTasca, $dataTasca, $descTasca, $error 
     require_once 'app/views/editarTasca.php';
 }
 
+function mostrarEditorNota($idNota, $titolNota, $contingutNota){
+    $idNota;
+    $titolNota;
+    $contingutNota;
+    require_once 'app/views/editarNota.php';
+}
+
 function crearSessio($correu){
     $pdo = conectarBD();
     $dades = getDadesUsuari($pdo, $correu);
