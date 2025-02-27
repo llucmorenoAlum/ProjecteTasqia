@@ -47,6 +47,7 @@ function mostrarNotes(){
 }
 
 function mostrarEditorTasca($idTasca, $nomTasca, $dataTasca, $descTasca, $error = ""){
+    $error;
     $idTasca;
     $nomTasca;
     $dataTasca;
@@ -54,7 +55,8 @@ function mostrarEditorTasca($idTasca, $nomTasca, $dataTasca, $descTasca, $error 
     require_once 'app/views/editarTasca.php';
 }
 
-function mostrarEditorNota($idNota, $titolNota, $contingutNota){
+function mostrarEditorNota($idNota, $titolNota, $contingutNota, $error = ""){
+    $error;
     $idNota;
     $titolNota;
     $contingutNota;

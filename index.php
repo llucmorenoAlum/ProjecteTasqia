@@ -116,9 +116,10 @@
                 $titolNota = $_POST['titolNota'];
                 $contingutNota = $_POST['contingutNota'];
                 if(modificarNota($idNota, $titolNota, $contingutNota)){
-
+                    mostrarNotes();
                 }else{
-
+                    $error = "No s'ha pogut modificar la nota";
+                    mostrarEditorNota($idNota, $titolNota, $contingutNota, $error);
                 }
             }
             elseif (isset($_POST['eliminarTasca'])) {

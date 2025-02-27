@@ -16,3 +16,12 @@
         $notes = getNotesUsuari($pdo, $idUsuari);
         return $notes;
     }
+
+    function modificarTasca($idTasca, $nomTasca, $dataTasca, $descripcioTasca){
+        $pdo = conectarBD();
+        if (updateTasca($pdo, $idTasca, $nomTasca, $dataTasca, $descripcioTasca)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
