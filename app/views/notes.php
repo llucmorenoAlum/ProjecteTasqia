@@ -24,7 +24,7 @@
                             <input type="hidden" name="modificarNota" value="<?php echo $nota['id_notes']?>">
                             <input type="hidden" name="titolNota" value="<?php echo $nota['titol']?>">
                             <input type="hidden" name="dataNota" value="<?php echo $nota['data_creacio']?>">
-                            <input type="hidden" name="ContingutNota" value="<?php echo $nota['contingut']?>">
+                            <input type="hidden" name="contingutNota" value="<?php echo $nota['contingut']?>">
                             <div class="titol">
                             <?= htmlspecialchars($nota['titol']) ?>
                             <button class="eliminar">
