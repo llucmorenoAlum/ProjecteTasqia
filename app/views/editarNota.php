@@ -15,7 +15,7 @@
                 <?php endif
             ?>
             <form action="index.php" method="post">
-                <input type="hidden" name="modificarNota" value="<?php echo $idNota ?>">
+                <input type="hidden" name="updateNota" value="<?php echo $idNota ?>">
                 <label for="titol">Títol</label>
                 <input name="titolNota" placeholder="Introdueix el títol de la nota..." type="text" value="<?php echo $titolNota ?>" required>
                 <label for="contingutNota">Contingut</label>
