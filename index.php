@@ -104,7 +104,6 @@
                 }else{
                     $error = "No s'ha pogut modificar la tasca";
                     mostrarEditorTasca($idTasca, $nomTasca, $dataTasca, $descripcioTasca, $error);
-                    
                 }
             }
             elseif (isset($_POST['eliminarTasca'])) {
