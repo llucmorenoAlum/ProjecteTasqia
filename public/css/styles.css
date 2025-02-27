@@ -263,6 +263,11 @@ button:hover {
     transition: background-color 0.3s ease;
 }
 
+.notes{
+    display: flex;
+    
+}
+
 .nota {
     border: 1px solid #333;
     padding: 10px;
