@@ -25,3 +25,12 @@
             return false;
         }
     }
+
+    function eliminarNota($idNota){
+        $pdo = conectarBD();
+        if(deleteNota($pdo, $idNota)){
+            return true;
+        }else{
+            return false;
+        }
+    }

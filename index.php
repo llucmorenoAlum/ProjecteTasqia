@@ -130,6 +130,15 @@
                     mostrarTasques();
                 }
             }
+            elseif(isset($_POST['eliminarNota'])){
+                $idNota = $_POST['eliminarNota'];
+                if (eliminarNota($idNota)) {
+                    mostrarNotes();
+                }else{
+                    $error = "No s'ha pogut eliminar la nota";
+                    mostrarNotes($error);
+                }
+            }
             elseif (isset($_POST['tascaCompletada'])){
                 $idTasca = $_POST['tascaCompletada'];
                 if(tascaCompletada($idTasca)){

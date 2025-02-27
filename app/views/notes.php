@@ -20,16 +20,20 @@
             <?php if (!empty($notes)): ?>
                 <?php foreach ($notes as $nota): ?>
                     <div class="nota">
+                    <div class="titol">
+                            <?= htmlspecialchars($nota['titol']) ?>
+                            <form action="index.php" method="post">
+                                <input type="hidden" name="eliminarNota" value="<?php echo $nota['id_notes']?>">
+                                <button type="submit" class="eliminar">
+                                    <img src="public/media/borrar.webp" alt="Borrar">
+                                </button>
+                            </form>
                         <form action="index.php" method="post">
                             <input type="hidden" name="modificarNota" value="<?php echo $nota['id_notes']?>">
                             <input type="hidden" name="titolNota" value="<?php echo $nota['titol']?>">
                             <input type="hidden" name="dataNota" value="<?php echo $nota['data_creacio']?>">
                             <input type="hidden" name="contingutNota" value="<?php echo $nota['contingut']?>">
-                            <div class="titol">
-                            <?= htmlspecialchars($nota['titol']) ?>
-                            <button class="eliminar">
-                                <img src="public/media/borrar.webp" alt="Borrar">
-                            </button>
+                            
                             </div>
                             <button class="botoInvisible" type="submit">
                                 <div class="data"><?= date("d/m/Y H:i", strtotime($nota['data_creacio'])) ?></div>
