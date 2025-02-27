@@ -47,7 +47,7 @@ function mostrarNotes(){
 }
 
 function mostrarEditorTasca($idTasca, $nomTasca, $dataTasca, $descTasca){
-    $idTasca
+    $idTasca;
     $nomTasca;
     $dataTasca;
     $descTasca;
