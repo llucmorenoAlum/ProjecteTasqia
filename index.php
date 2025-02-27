@@ -94,10 +94,10 @@
                 $descripcioTasca = $_POST['editarTascaDesc'];
                 $idTasca = $_POST['editarTascaId'];
                 mostrarEditorTasca($idTasca, $nomTasca, $dataTasca, $descripcioTasca);
-            }elseif (isset($_POST['updateTasca'])) {
+            }elseif(isset($_POST['updateTasca'])) {
                 $idTasca = $_POST['updateTasca'];
                 $nomTasca = $_POST['nomTasca'];
-                $dataTasca = $_POST['data_inici'];
+                $dataTasca = $_POST['dataInici'];
                 $descripcioTasca = $_POST['descripcioTasca'];
                 if(modificarTasca($idTasca, $nomTasca, $dataTasca, $descripcioTasca)){
                     mostrarTasques();
