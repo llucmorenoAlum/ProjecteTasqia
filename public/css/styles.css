@@ -265,8 +265,21 @@ button:hover {
 
 .notes{
     display: flex;
-    
+
 }
+.titolNotes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenidorNotes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+
 
 .nota {
     border: 1px solid #333;

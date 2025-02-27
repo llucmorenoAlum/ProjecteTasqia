@@ -13,10 +13,10 @@
         require_once 'app/views/header.php'
     ?>
     <main class="notes">
-        <div>
+        <div class="titolNotes">
             <h1>Les teves notes</h1>
         </div>
-        <div>
+        <div class="contenidorNotes">
             <?php if (!empty($notes)): ?>
                 <?php foreach ($notes as $nota): ?>
                     <div class="nota">
