@@ -67,6 +67,7 @@
             <h3>Tàsques completades:</h3>
             <?php 
                 if (!empty($tasquesCompletades)) : ?>
+                    <div class="container">
                         <?php foreach ($tasquesCompletades as $tasca) : ?>
                             <div class="tasca">
                             <!-- Contenidor del text -->
@@ -105,6 +106,7 @@
                             </div>
                         </div>
                         <?php endforeach; ?>
+                    </div>
                 <?php else : ?>
                     <p>No tens cap tasca</p>
                 <?php endif;

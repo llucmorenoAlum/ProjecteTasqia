@@ -8,8 +8,8 @@
         }else{
             return false;
         }
-
     }
+    
     function tascaCompletada($idTasca){
         $pdo = conectarBD();
         if(completarTasca($pdo, $idTasca)){
