@@ -25,7 +25,7 @@
             </div>
             <div id="calendar"></div>
         </div>
-        <script src="script.js"></script>
+        <script src="public/js/calendari.js"></script>
     </main>
 </body>
 </html>
