@@ -11,8 +11,7 @@
 </head>
 <body>
     <h1>Tasqia</h1>
-    <section class="formulari">
-        <?php 
+    <?php 
             if ($error != ""):?>
                 <div class="errorWarning">
                     <div class="error__icon">
@@ -23,6 +22,7 @@
                 </div>
             <?php endif
         ?>
+    <section class="formulari">
         <form action="index.php" method="post">
             <h1>Inicia sessió</h1>
             <label for="email">Correu electrònic:</label>
