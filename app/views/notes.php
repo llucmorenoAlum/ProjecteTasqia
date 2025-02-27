@@ -33,7 +33,7 @@
             <?php if (!empty($notes)): ?>
                 <?php foreach ($notes as $nota): ?>
                     <div class="nota">
-                    <div class="titol">
+                        <div class="titol">
                             <?= htmlspecialchars($nota['titol']) ?>
                             <form action="index.php" method="post">
                                 <input type="hidden" name="eliminarNota" value="<?php echo $nota['id_notes']?>">
@@ -41,6 +41,7 @@
                                     <img src="public/media/borrar.webp" alt="Borrar">
                                 </button>
                             </form>
+                        </div>
                         <form action="index.php" method="post">
                             <input type="hidden" name="modificarNota" value="<?php echo $nota['id_notes']?>">
                             <input type="hidden" name="titolNota" value="<?php echo $nota['titol']?>">
@@ -53,7 +54,6 @@
                                 <div class="contingut"><?= nl2br(htmlspecialchars($nota['contingut'] ?? "Sense contingut")) ?></div>
                             </button>
                         </form>
-                        
                     </div>
                 <?php endforeach; ?>
             <?php else: ?>
