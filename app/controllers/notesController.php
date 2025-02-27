@@ -17,9 +17,9 @@
         return $notes;
     }
 
-    function modificarTasca($idTasca, $nomTasca, $dataTasca, $descripcioTasca){
+    function modificarNota($idNota, $titolNota, $contingutNota){
         $pdo = conectarBD();
-        if (updateTasca($pdo, $idTasca, $nomTasca, $dataTasca, $descripcioTasca)) {
+        if (updateNota($pdo, $idNota, $titolNota, $contingutNota)) {
             return true;
         } else {
             return false;

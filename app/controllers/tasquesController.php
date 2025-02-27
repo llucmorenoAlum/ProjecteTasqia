@@ -9,7 +9,7 @@
             return false;
         }
     }
-
+    
     function tascaCompletada($idTasca){
         $pdo = conectarBD();
         if(completarTasca($pdo, $idTasca)){
@@ -28,11 +28,12 @@
         }
     }
 
-    function modificarNota($idNota, $titolNota, $contingutNota){
+    function modificarTasca($idTasca, $nomTasca, $dataTasca, $descripcioTasca){
         $pdo = conectarBD();
-        if (updateNota($pdo, $idNota, $titolNota, $contingutNota)) {
+        if (updateTasca($pdo, $idTasca, $nomTasca, $dataTasca, $descripcioTasca)) {
             return true;
         } else {
             return false;
         }
+        
     }
