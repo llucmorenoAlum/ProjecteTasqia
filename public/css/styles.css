@@ -142,6 +142,7 @@ section {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transition: transform 0.2s ease-in-out;
 }
 
 .completar img{
@@ -160,13 +161,16 @@ height: auto;
 
 .completar:hover{
     background-color: #2da72d;
+    transform: scale(1.05);
 }
 .deshacer:hover {
-    background-color: #40b6ff; 
+    background-color: #40b6ff;
+    transform: scale(1.05);
 }
 
 .eliminar:hover{
     background-color: #ff2a2a;
+    transform: scale(1.05);
 }
   
 
