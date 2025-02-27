@@ -99,7 +99,13 @@
                 $nomTasca = $_POST['nomTasca'];
                 $dataTasca = $_POST['data_inici'];
                 $descripcioTasca = $_POST['descripcioTasca'];
-                modificarTasca($idTasca, $nomTasca, $dataTasca, $descripcioTasca);
+                if(modificarTasca($idTasca, $nomTasca, $dataTasca, $descripcioTasca)){
+                    mostrarTasques();
+                }else{
+                    $error = "No s'ha pogut modificar la tasca";
+                    mostrarEditorTasca($idTasca, $nomTasca, $dataTasca, $descripcioTasca, $error);
+                    
+                }
             }
             elseif (isset($_POST['eliminarTasca'])) {
                 $idTasca = $_POST['eliminarTasca'];
