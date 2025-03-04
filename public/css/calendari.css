@@ -55,8 +55,8 @@ button:hover {
 }
 
 #calendar div{
-    display: flex;
-    flex-grow: 1;
+    width: 60px;
+    height: 100px;
 }
 
 /* Vista mensual */
