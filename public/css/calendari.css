@@ -54,6 +54,11 @@ button:hover {
     padding: 10px;
 }
 
+#calendar div{
+    display: flex;
+    flex-grow: 1;
+}
+
 /* Vista mensual */
 .month-view {
     grid-template-columns: repeat(7, 1fr);
@@ -74,7 +79,6 @@ button:hover {
 
 /* Caselles dels dies */
 .calendar-day {
-    background: white;
     border: 1px solid #ddd;
     padding: 10px;
     display: flex;
@@ -87,5 +91,5 @@ button:hover {
 }
 
 .calendar-day:hover {
-    background-color: #e0e0e0;
+    background-color: #444;
 }
