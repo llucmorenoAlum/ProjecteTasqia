@@ -67,6 +67,7 @@ button:hover {
 
 .month-view div {
     border: 1px solid #ddd;
+    padding: 5px;
 }
 
 /* Vista setmanal */
