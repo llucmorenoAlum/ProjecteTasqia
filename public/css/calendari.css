@@ -75,6 +75,10 @@ button:hover {
     grid-template-rows: 1fr;
 }
 
+.week-view div {
+    border: 1px solid #ddd;
+}
+
 /* Vista diària */
 .day-view {
     grid-template-columns: 1fr;
@@ -92,8 +96,4 @@ button:hover {
     font-size: 18px;
     min-height: 150px; /* Evitem que siguin massa petites */
     overflow: hidden;
-}
-
-.calendar-day:hover {
-    background-color: #444;
 }
