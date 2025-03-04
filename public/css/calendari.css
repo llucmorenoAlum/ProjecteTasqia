@@ -13,6 +13,7 @@
     align-items: center;
     padding: 20px;
     height: 100vh; /* Ocupa tota la pantalla */
+    width: 90%;
 }
 
 .calendar-header {
@@ -56,10 +57,16 @@ button:hover {
     grid-auto-rows: minmax(150px, auto); /* Files amb mida mínima de 150px però poden créixer */
 }
 
+
+
 /* Vista mensual */
 .month-view {
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(6, 1fr);
+}
+
+.month-view div {
+    border: 1px solid #ddd;
 }
 
 /* Vista setmanal */
