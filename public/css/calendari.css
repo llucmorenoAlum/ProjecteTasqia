@@ -12,6 +12,7 @@
     justify-content: center;
     align-items: center;
     padding: 20px;
+    height: 100vh; /* Ocupa tota la pantalla */
 }
 
 .calendar-header {
@@ -52,11 +53,7 @@ button:hover {
     display: grid;
     gap: 2px;
     padding: 10px;
-}
-
-#calendar div{
-    width: 60px;
-    height: 100px;
+    grid-auto-rows: minmax(150px, auto); /* Files amb mida mínima de 150px però poden créixer */
 }
 
 /* Vista mensual */
@@ -86,7 +83,7 @@ button:hover {
     justify-content: flex-start;
     align-items: flex-start;
     font-size: 18px;
-    min-height: 100px;
+    min-height: 150px; /* Evitem que siguin massa petites */
     overflow: hidden;
 }
 
