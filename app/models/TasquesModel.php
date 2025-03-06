@@ -33,13 +33,13 @@ function getTasquesActives($pdo, $idUsuari) {
     }
 }
 
-function getTasquesCompletades($pdo) {
+function getTasquesCompletades($pdo, $idUsuari) {
     try {  
-        $sql = "SELECT * FROM tasques WHERE estat = :estat";
+        $sql = "SELECT * FROM tasques WHERE estat = :estat AND id_usuari = :idUsuari";
         $stmt = $pdo->prepare($sql);
         $estat = 'completada';
         $stmt->bindParam(':estat', $estat, PDO::PARAM_STR);
-        
+        $stmt->bindParam(':idUsuari', $idUsuari, PDO::PARAM_STR);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
         

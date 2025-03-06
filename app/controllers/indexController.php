@@ -9,7 +9,7 @@ function mostrarIndex(){
     $pdo = conectarBD();
     $idUsuari = $_SESSION['id_usuari'];
     $tasquesPendents = getTasquesActives($pdo, $idUsuari);
-    $tasquesCompletades = getTasquesCompletades($pdo);
+    $tasquesCompletades = getTasquesCompletades($pdo, $idUsuari);
     $data = obtenirDataActual();
     $tasquesAvui = getTasquesDia($pdo, $data);
     require 'app/views/index.php';
@@ -33,7 +33,7 @@ function mostrarTasques(){
     $pdo = conectarBD();
     $idUsuari = $_SESSION['id_usuari'];
     $tasquesPendents = getTasquesActives($pdo, $idUsuari);
-    $tasquesCompletades = getTasquesCompletades($pdo);
+    $tasquesCompletades = getTasquesCompletades($pdo, $idUsuari);
     $data = obtenirDataActual();
     $tasquesDia = getTasquesDia($pdo, $data);
     require_once 'app/views/tasques.php';
