@@ -20,17 +20,6 @@
     font-size: 24px;
 }
 
-button {
-    background-color: #7d3c98;
-    color: white;
-    padding: 10px 15px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 5px;
-}
-
 button:hover {
     background-color: #6a3283;
 }
