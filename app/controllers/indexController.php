@@ -1,5 +1,6 @@
 <?php
 require_once 'app/models/TasquesModel.php';
+require_once 'app/models/RutinesModel.php';
 require_once 'app/models/NotesModel.php';
 require_once 'config/database.php';
 require_once 'app/helpers/sessionHelper.php';
@@ -37,6 +38,13 @@ function mostrarTasques(){
     $data = obtenirDataActual();
     $tasquesDia = getTasquesDia($pdo, $data);
     require_once 'app/views/tasques.php';
+}
+
+function mostrarRutines(){
+    $pdo = conectarBD();
+    $idUsuari = $_SESSION['id_usuari'];
+    $rutines = getRutines($pdo, $idUsuari);
+    require_once 'app/views/rutines.php';
 }
 
 function mostrarNotes(){

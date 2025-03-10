@@ -82,6 +82,9 @@
             elseif (isset($_POST['accio']) && $_POST['accio'] === 'mostrarTasques') {
                 mostrarTasques();
             }
+            elseif (isset($_POST['accio']) && $_POST['accio'] === 'mostrarRutines') {
+                mostrarRutines();
+            }
             elseif (isset($_POST['accio']) && $_POST['accio'] === 'mostrarCalendari') {
                 mostrarCalendari();
             }
