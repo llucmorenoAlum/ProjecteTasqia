@@ -27,7 +27,18 @@
                 <?php endif;
             endif;
         ?>
-        <section></section>
+        <section>
+            <h3>Rutines</h3>
+            <?php 
+                if (!empty($rutines)):?>
+                    <div class="container">
+                        <?php foreach ($tasquesCompletades as $tasca) : ?>
+                            
+
+                        <?php endforeach; ?>
+                    </div>        
+                <?php endif; ?>
+        </section>
         <form action="index.php" method="post">
             <button name="accio" value="crearTasca" class="Btn">
                 <div class="sign">+</div>        
