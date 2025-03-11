@@ -32,7 +32,7 @@
             <button type="submit" name="accio" value="login">Iniciar sessió</button>
         </form>
         <form class="formRegistre" action="index.php" method="post">
-            <button name="accio" value="registre">Registrar-se</button>
+            <button class="btnRegistre" name="accio" value="registre">Registrar-se</button>
         </form>
     </section>
 </body>

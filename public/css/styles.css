@@ -282,6 +282,14 @@ button:hover {
     cursor: pointer;
 }
 
+.btnRegistre{
+    background-color: #bb86fc;
+}
+
+.btnRegistre:hover{
+    background-color: #6a3283;
+}
+
 .btnCrear{
     position: fixed;
     bottom: 20px;
