@@ -36,11 +36,13 @@
                             
 
                         <?php endforeach; ?>
-                    </div>        
+                    </div>
+                <?php else:?>
+                    <p>No tens cap rutina</p>
                 <?php endif; ?>
         </section>
         <form action="index.php" method="post">
-            <button name="accio" value="crearTasca" class="Btn">
+            <button name="accio" value="crearRutina" class="Btn">
                 <div class="sign">+</div>        
                 <div class="text">Rutina</div>
             </button>

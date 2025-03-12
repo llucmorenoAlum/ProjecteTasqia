@@ -48,10 +48,12 @@
     }else{
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if(isset($_POST['accio']) && $_POST['accio'] === 'crearTasca'){
-              
                 mostrarCreacioTasques();
             }
-            if(isset($_POST['accio']) && $_POST['accio'] === 'crearNota'){
+            elseif (isset($_POST['accio']) && $_POST['accio'] === 'crearRutina') {
+                mostrarCreacioRutines();
+            }
+            elseif(isset($_POST['accio']) && $_POST['accio'] === 'crearNota'){
                 mostrarCreacioNotes();
             }
             elseif (isset($_POST['accio']) && $_POST['accio'] === 'novaTasca') {

@@ -26,6 +26,12 @@ function mostrarCreacioNotes($error = ""){
     require_once 'app/views/crearNota.php';
 }
 
+function mostrarCreacioRutines($error = ""){
+    $error;
+    $idUsuari = $_SESSION['id_usuari'];
+    require_once 'app/views/crearRutina.php';
+}
+
 function mostrarCalendari(){
     require_once 'app/views/celendari.php';
 }
