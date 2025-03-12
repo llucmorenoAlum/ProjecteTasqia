@@ -237,7 +237,7 @@ label {
     font-weight: bold;
 }
 
-input, textarea {
+input, textarea, select {
     background-color: #555;
     color: #f0f0f0;
     border: 1px solid #777;
