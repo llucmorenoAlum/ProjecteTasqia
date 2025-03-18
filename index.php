@@ -69,6 +69,19 @@
                     mostrarCreacioTasques($error);
                 }
             }
+            elseif(isset($_POST['accio']) && $_POST['accio'] === 'novaRutina'){
+                $idUsuari = $_SESSION['id_usuari'];
+                $nomRutina = $_POST['nomRutina'];
+                // $dataRutina = $_POST['dataInici'];
+                $descripcioRutina = $_POST['descripcioRutina'];
+                $recurrencia = $_POST['recurrencia'];
+                $dies_personalitzats = $_POST['dies[]'];
+                if (crearRutina($idUsuari, $nomRutina, $descripcioRutina, $recurrencia, $dies_personalitzats)) {
+                    mostrarRutines();
+                }else{
+                    mostrarRutines($error = "No s'ha pogut crear la rutina");
+                }
+            }
             elseif (isset($_POST['accio']) && $_POST['accio'] === 'novaNota') {
                 $idUsuari = $_SESSION['id_usuari'];
                 $titolNota = $_POST['titol'];

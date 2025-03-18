@@ -31,9 +31,6 @@
             <label for="nomRutina">Rutina</label>
             <input name="nomRutina" placeholder="Introdueix el nom de la rutina..." type="text" required>
             
-            <label for="dataInici">Data</label>
-            <input type="datetime-local" name="dataInici" required>
-            
             <label for="descripcioRutina">Descripció</label>
             <textarea placeholder="Introdueix la descripció de la rutina..." name="descripcioRutina" rows="3"></textarea>
             
@@ -46,7 +43,7 @@
 
             <!-- Dies de la setmana ocults per defecte -->
             <div id="dies-setmana" class="dies-setmana" style="display: none;">
-                <label>Dies de la setmana:</label>
+                <label>Dies de la setmana:</label><br>
                 <input type="checkbox" name="dies[]" value="dilluns"> Dilluns
                 <input type="checkbox" name="dies[]" value="dimarts"> Dimarts
                 <input type="checkbox" name="dies[]" value="dimecres"> Dimecres
