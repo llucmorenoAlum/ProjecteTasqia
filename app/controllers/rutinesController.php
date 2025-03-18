@@ -1,7 +1,9 @@
 <?php
 
-function getRutines(){
-    
+function getRutines($idUsuari){
+    $pdo = conectarBD();
+    $rutines = obtenirRutines($pdo, $idUsuari);
+    return $rutines;
 }
 
 function crearRutina($idUsuari, $nom, $descripcio, $recurrencia, $diesPersonalitzats){

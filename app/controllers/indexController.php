@@ -49,7 +49,7 @@ function mostrarTasques(){
 function mostrarRutines(){
     $pdo = conectarBD();
     $idUsuari = $_SESSION['id_usuari'];
-    $rutines = getRutines($pdo, $idUsuari);
+    $rutines = getRutines($idUsuari);
     require_once 'app/views/rutines.php';
 }
 
