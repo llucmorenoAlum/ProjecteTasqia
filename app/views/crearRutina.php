@@ -35,7 +35,7 @@
             <textarea placeholder="Introdueix la descripció de la rutina..." name="descripcioRutina" rows="3"></textarea>
             
             <label for="recurrencia">Repetició</label>
-            <select name="repeticio" id="recurrencia">
+            <select name="recurrencia" id="recurrencia">
                 <option value="diaria">Diària</option>
                 <option value="setmanal">Setmanal</option>
                 <option value="personalitzada">Personalitzada</option>
