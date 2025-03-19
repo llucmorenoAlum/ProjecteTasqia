@@ -1,7 +1,7 @@
 <?php
 function obtenirRutines($pdo, $idUsuari) {
     try {
-        $sql = "SELECT * FROM rutina WHERE id_usuari = :idUsuari";
+        $sql = "SELECT * FROM rutines WHERE id_usuari = :idUsuari";
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(':idUsuari', $idUsuari, PDO::PARAM_INT);
         $stmt->execute();
@@ -33,7 +33,7 @@ function insertRutina($pdo, $idUsuari, $nom, $descripcio, $recurrencia, $diesPer
         $pdo->beginTransaction();  // Comença la transacció
 
         // Crear la rutina principal
-        $sql = "INSERT INTO rutina (id_usuari, nom, descripcio, recurrencia)
+        $sql = "INSERT INTO rutines (id_usuari, nom, descripcio, recurrencia)
                 VALUES (:idUsuari, :nom, :descripcio, :recurrencia)";
         $stmt = $pdo->prepare($sql);
         $stmt->execute([
