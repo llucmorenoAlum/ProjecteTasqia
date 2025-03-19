@@ -3,6 +3,7 @@
     require_once 'app/controllers/loginController.php';
     require_once 'app/controllers/tasquesController.php';
     require_once 'app/controllers/notesController.php';
+    require_once 'app/controllers/rutinesController.php';
 
     session_start();
 
@@ -69,19 +70,21 @@
                     mostrarCreacioTasques($error);
                 }
             }
-            elseif(isset($_POST['accio']) && $_POST['accio'] === 'novaRutina'){
+            elseif (isset($_POST['accio']) && $_POST['accio'] === 'novaRutina') {
                 $idUsuari = $_SESSION['id_usuari'];
                 $nomRutina = $_POST['nomRutina'];
-                // $dataRutina = $_POST['dataInici'];
                 $descripcioRutina = $_POST['descripcioRutina'];
                 $recurrencia = $_POST['recurrencia'];
-                $dies_personalitzats = $_POST['dies[]'];
+                
+                // Comprovar si 'dies' existeix per evitar errors
+                $dies_personalitzats = isset($_POST['dies']) ? $_POST['dies'] : [];
+            
                 if (crearRutina($idUsuari, $nomRutina, $descripcioRutina, $recurrencia, $dies_personalitzats)) {
                     mostrarRutines();
-                }else{
+                } else {
                     mostrarRutines($error = "No s'ha pogut crear la rutina");
                 }
-            }
+            }            
             elseif (isset($_POST['accio']) && $_POST['accio'] === 'novaNota') {
                 $idUsuari = $_SESSION['id_usuari'];
                 $titolNota = $_POST['titol'];
