@@ -56,7 +56,6 @@
             <button name="accio" value="novaRutina">Crear</button>
         </form>
     </section>
-
     <script>
         // Captura del select i del div amb els dies
         const recurrenciaSelect = document.getElementById("recurrencia");

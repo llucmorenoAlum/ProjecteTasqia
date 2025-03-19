@@ -27,20 +27,62 @@
                 <?php endif;
             endif;
         ?>
-        <section>
-            <h3>Rutines</h3>
+        <section id="rutinesUsuari">
+            <h3>Rutines:</h3>
             <?php 
-                if (!empty($rutines)):?>
+                if (!empty($rutines)) : ?>
                     <div class="container">
-                        <?php foreach ($tasquesCompletades as $tasca) : ?>
-                            
+                        <?php foreach ($rutines as $rutina) : ?>
+                            <div class="tasca">
+                                <!-- Contenidor del text -->
+                                <div class="tasca-contenidor">
+                                    <form action="index.php" method="post">
+                                        <input type="hidden" name="editarRutinaId" value="<?php echo $rutina['id_rutina'] ?>">
+                                        <input type="hidden" name="editarRutinaNom" value="<?php echo $rutina['nom'] ?>">
+                                        <input type="hidden" name="editarRutinaDataInici" value="<?php echo $rutina['data_inici'] ?>">
+                                        <input type="hidden" name="editarRutinaDesc" value="<?php echo $rutina['descripcio'] ?>">
+                                        <input type="hidden" name="editarRutinaRecurrencia" value="<?php echo $rutina['recurrencia'] ?>">
 
+                                        <button class="botoInvisible" type="submit">
+                                            <div class="nom">
+                                                <?php echo htmlspecialchars($rutina['nom']); ?>
+                                            </div>
+                                            <div class="data">
+                                                <?php echo formatDataEnCatala(htmlspecialchars($rutina['data_inici'])); ?>
+                                            </div>
+                                            <?php if (!empty($rutina['descripcio'])) : ?>
+                                                <div class="descripcio">
+                                                    <?php echo htmlspecialchars($rutina['descripcio']); ?>
+                                                </div>
+                                            <?php endif; ?>
+                                            <div class="recurrencia">
+                                                <strong>Recurrència:</strong> <?php echo htmlspecialchars($rutina['recurrencia']); ?>
+                                            </div>
+                                            <?php if (!empty($rutina['dies_personalitzats'])) : ?>
+                                                <div class="dies">
+                                                    <strong>Dies:</strong> <?php echo implode(", ", $rutina['dies_personalitzats']); ?>
+                                                </div>
+                                            <?php endif; ?>
+                                        </button>
+                                    </form>
+                                </div>
+
+                                <!-- Botons a la dreta -->
+                                <div class="botons">
+                                    <form action="index.php" method="POST">
+                                        <input type="hidden" name="eliminarRutina" value="<?php echo $rutina['id_rutina']; ?>">
+                                        <button type="submit" class="eliminar"><img src="public/media/borrar.webp" alt="✖"></button>
+                                    </form>
+                                </div>
+                            </div>
                         <?php endforeach; ?>
                     </div>
-                <?php else:?>
+                <?php else : ?>
                     <p>No tens cap rutina</p>
-                <?php endif; ?>
+                <?php endif;
+            ?>
         </section>
+
         <form action="index.php" method="post">
             <button name="accio" value="crearRutina" class="Btn">
                 <div class="sign">+</div>        
