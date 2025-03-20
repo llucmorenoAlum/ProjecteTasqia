@@ -39,7 +39,7 @@
                                     <form action="index.php" method="post">
                                         <input type="hidden" name="editarRutinaId" value="<?php echo $rutina['id_rutina'] ?>">
                                         <input type="hidden" name="editarRutinaNom" value="<?php echo $rutina['nom'] ?>">
-                                        <input type="hidden" name="editarRutinaDataInici" value="<?php echo $rutina['data_inici'] ?>">
+                                        <input type="hidden" name="editarRutinaHora" value="<?php echo $rutina['hora'] ?>">
                                         <input type="hidden" name="editarRutinaDesc" value="<?php echo $rutina['descripcio'] ?>">
                                         <input type="hidden" name="editarRutinaRecurrencia" value="<?php echo $rutina['recurrencia'] ?>">
 
@@ -47,8 +47,8 @@
                                             <div class="nom">
                                                 <?php echo htmlspecialchars($rutina['nom']); ?>
                                             </div>
-                                            <div class="data">
-                                                <?php echo formatDataEnCatala(htmlspecialchars($rutina['data_inici'])); ?>
+                                            <div>
+                                                <?php echo htmlspecialchars($rutina['hora'])?>
                                             </div>
                                             <?php if (!empty($rutina['descripcio'])) : ?>
                                                 <div class="descripcio">
