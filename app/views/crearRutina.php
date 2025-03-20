@@ -38,7 +38,7 @@
             <textarea placeholder="Introdueix la descripció de la rutina..." name="descripcioRutina" rows="3"></textarea>
 
             <!-- Dies de la setmana ocults per defecte -->
-            <div id="dies-setmana" class="dies-setmana" style="display: none;">
+            <div id="dies-setmana" class="dies-setmana">
                 <label>Dies de la setmana:</label><br>
                 <div class="checkbox-wrapper-46">
                     <input type="checkbox" id="cbx-46" class="inp-cbx" name="dies" value="Dilluns"/>
