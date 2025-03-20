@@ -42,7 +42,7 @@
             <div id="dies-setmana" class="dies-setmana">
             <label>Dies de la setmana:</label><br>
             <div class="checkbox-wrapper-46">
-                <input type="checkbox" id="cbx-46-1" class="inp-cbx" name="dies" value="Dilluns"/>
+                <input type="checkbox" id="cbx-46-1" class="inp-cbx" name="dies[]" value="Dilluns"/>
                 <label for="cbx-46-1" class="cbx">
                     <span>
                         <svg viewBox="0 0 12 10" height="10px" width="12px">
@@ -53,7 +53,7 @@
                 </label>
             </div>
             <div class="checkbox-wrapper-46">
-                <input type="checkbox" id="cbx-46-2" class="inp-cbx" name="dies" value="Dimarts"/>
+                <input type="checkbox" id="cbx-46-2" class="inp-cbx" name="dies[]" value="Dimarts"/>
                 <label for="cbx-46-2" class="cbx">
                     <span>
                         <svg viewBox="0 0 12 10" height="10px" width="12px">
@@ -64,7 +64,7 @@
                 </label>
             </div>
             <div class="checkbox-wrapper-46">
-                <input type="checkbox" id="cbx-46-3" class="inp-cbx" name="dies" value="Dimecres"/>
+                <input type="checkbox" id="cbx-46-3" class="inp-cbx" name="dies[]" value="Dimecres"/>
                 <label for="cbx-46-3" class="cbx">
                     <span>
                         <svg viewBox="0 0 12 10" height="10px" width="12px">
@@ -75,7 +75,7 @@
                 </label>
             </div>
             <div class="checkbox-wrapper-46">
-                <input type="checkbox" id="cbx-46-4" class="inp-cbx" name="dies" value="Dijous"/>
+                <input type="checkbox" id="cbx-46-4" class="inp-cbx" name="dies[]" value="Dijous"/>
                 <label for="cbx-46-4" class="cbx">
                     <span>
                         <svg viewBox="0 0 12 10" height="10px" width="12px">
@@ -86,7 +86,7 @@
                 </label>
             </div>
             <div class="checkbox-wrapper-46">
-                <input type="checkbox" id="cbx-46-5" class="inp-cbx" name="dies" value="Divendres"/>
+                <input type="checkbox" id="cbx-46-5" class="inp-cbx" name="dies[]" value="Divendres"/>
                 <label for="cbx-46-5" class="cbx">
                     <span>
                         <svg viewBox="0 0 12 10" height="10px" width="12px">
@@ -97,7 +97,7 @@
                 </label>
             </div>
             <div class="checkbox-wrapper-46">
-                <input type="checkbox" id="cbx-46-6" class="inp-cbx" name="dies" value="Dissabte"/>
+                <input type="checkbox" id="cbx-46-6" class="inp-cbx" name="dies[]" value="Dissabte"/>
                 <label for="cbx-46-6" class="cbx">
                     <span>
                         <svg viewBox="0 0 12 10" height="10px" width="12px">
@@ -108,7 +108,7 @@
                 </label>
             </div>
             <div class="checkbox-wrapper-46">
-                <input type="checkbox" id="cbx-46-7" class="inp-cbx" name="dies" value="Diumenge"/>
+                <input type="checkbox" id="cbx-46-7" class="inp-cbx" name="dies[]" value="Diumenge"/>
                 <label for="cbx-46-7" class="cbx">
                     <span>
                         <svg viewBox="0 0 12 10" height="10px" width="12px">
