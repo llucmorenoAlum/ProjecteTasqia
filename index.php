@@ -74,14 +74,14 @@
                 $idUsuari = $_SESSION['id_usuari'];
                 $nomRutina = $_POST['nomRutina'];
                 $hora = $_POST['hora'];
-                $hora = $hora . ':00';
+                $horaCompleta = $hora . ':00';
                 $descripcioRutina = $_POST['descripcioRutina'];
                 $recurrencia = $_POST['recurrencia'];
                 
                 // Comprovar si 'dies' existeix per evitar errors
                 $dies_personalitzats = isset($_POST['dies']) ? $_POST['dies'] : [];
             
-                if (crearRutina($idUsuari, $nomRutina, $descripcioRutina, $recurrencia, $dies_personalitzats)) {
+                if (crearRutina($idUsuari, $nomRutina, $descripcioRutina, $recurrencia, $horaCompleta,$dies_personalitzats)) {
                     mostrarRutines();
                 } else {
                     mostrarRutines($error = "No s'ha pogut crear la rutina");
