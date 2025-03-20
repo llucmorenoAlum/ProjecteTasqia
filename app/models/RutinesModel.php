@@ -28,19 +28,20 @@ function obtenirRutines($pdo, $idUsuari) {
     }
 }
 
-function insertRutina($pdo, $idUsuari, $nom, $descripcio, $recurrencia, $diesPersonalitzats = []) {
+function insertRutina($pdo, $idUsuari, $nom, $descripcio, $recurrencia, $hora, $diesPersonalitzats = []) {
     try {
         $pdo->beginTransaction();  // Comença la transacció
 
         // Crear la rutina principal
-        $sql = "INSERT INTO rutines (id_usuari, nom, descripcio, recurrencia)
-                VALUES (:idUsuari, :nom, :descripcio, :recurrencia)";
+        $sql = "INSERT INTO rutines (id_usuari, nom, descripcio, recurrencia, hora)
+                VALUES (:idUsuari, :nom, :descripcio, :recurrencia, :hora)";
         $stmt = $pdo->prepare($sql);
         $stmt->execute([
             ':idUsuari' => $idUsuari,
             ':nom' => $nom,
             ':descripcio' => $descripcio,
-            ':recurrencia' => $recurrencia
+            ':recurrencia' => $recurrencia,
+            ':hora' => $hora
         ]);
 
         $idRutina = $pdo->lastInsertId();
