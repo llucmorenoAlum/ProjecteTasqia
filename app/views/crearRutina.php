@@ -36,42 +36,84 @@
 
             <label for="descripcioRutina">Descripció</label>
             <textarea placeholder="Introdueix la descripció de la rutina..." name="descripcioRutina" rows="3"></textarea>
-            
-            <label for="recurrencia">Repetició</label>
-            <select name="recurrencia" id="recurrencia">
-                <option value="diaria">Diària</option>
-                <option value="setmanal">Setmanal</option>
-                <option value="personalitzada">Personalitzada</option>
-            </select>
 
             <!-- Dies de la setmana ocults per defecte -->
             <div id="dies-setmana" class="dies-setmana" style="display: none;">
                 <label>Dies de la setmana:</label><br>
-                <input type="checkbox" name="dies[]" value="dilluns"> Dilluns
+                <div class="checkbox-wrapper-46">
+                    <input type="checkbox" id="cbx-46" class="inp-cbx" name="dies" value="Dilluns"/>
+                    <label for="cbx-46" class="cbx"
+                        ><span>
+                        <svg viewBox="0 0 12 10" height="10px" width="12px">
+                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></span
+                        ><span>Dilluns</span>
+                    </label>
+                </div>
+                <div class="checkbox-wrapper-46">
+                    <input type="checkbox" id="cbx-46" class="inp-cbx" name="dies" value="Dimarts"/>
+                    <label for="cbx-46" class="cbx"
+                        ><span>
+                        <svg viewBox="0 0 12 10" height="10px" width="12px">
+                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></span
+                        ><span>Dimarts</span>
+                    </label>
+                </div>
+                <div class="checkbox-wrapper-46">
+                    <input type="checkbox" id="cbx-46" class="inp-cbx" name="dies" value="Dimecres"/>
+                    <label for="cbx-46" class="cbx"
+                        ><span>
+                        <svg viewBox="0 0 12 10" height="10px" width="12px">
+                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></span
+                        ><span>Dimecres</span>
+                    </label>
+                </div>
+                <div class="checkbox-wrapper-46">
+                    <input type="checkbox" id="cbx-46" class="inp-cbx" name="dies" value="Dijous"/>
+                    <label for="cbx-46" class="cbx"
+                        ><span>
+                        <svg viewBox="0 0 12 10" height="10px" width="12px">
+                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></span
+                        ><span>Dijous</span>
+                    </label>
+                </div>
+                <div class="checkbox-wrapper-46">
+                    <input type="checkbox" id="cbx-46" class="inp-cbx" name="dies" value="Divendres"/>
+                    <label for="cbx-46" class="cbx"
+                        ><span>
+                        <svg viewBox="0 0 12 10" height="10px" width="12px">
+                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></span
+                        ><span>Divendres</span>
+                    </label>
+                </div>
+                <div class="checkbox-wrapper-46">
+                    <input type="checkbox" id="cbx-46" class="inp-cbx" name="dies" value="Dissabte"/>
+                    <label for="cbx-46" class="cbx"
+                        ><span>
+                        <svg viewBox="0 0 12 10" height="10px" width="12px">
+                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></span
+                        ><span>Dissabte</span>
+                    </label>
+                </div>
+                <div class="checkbox-wrapper-46">
+                    <input type="checkbox" id="cbx-46" class="inp-cbx" name="dies" value="Diumenge"/>
+                    <label for="cbx-46" class="cbx"
+                        ><span>
+                        <svg viewBox="0 0 12 10" height="10px" width="12px">
+                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></span
+                        ><span>Diumenge</span>
+                    </label>
+                </div>
+                <!-- <input type="checkbox" name="dies[]" value="dilluns"> Dilluns
                 <input type="checkbox" name="dies[]" value="dimarts"> Dimarts
                 <input type="checkbox" name="dies[]" value="dimecres"> Dimecres
                 <input type="checkbox" name="dies[]" value="dijous"> Dijous
                 <input type="checkbox" name="dies[]" value="divendres"> Divendres
                 <input type="checkbox" name="dies[]" value="dissabte"> Dissabte
-                <input type="checkbox" name="dies[]" value="diumenge"> Diumenge
+                <input type="checkbox" name="dies[]" value="diumenge"> Diumenge -->
             </div>
 
             <button name="accio" value="novaRutina">Crear</button>
         </form>
     </section>
-    <script>
-        // Captura del select i del div amb els dies
-        const recurrenciaSelect = document.getElementById("recurrencia");
-        const diesSetmanaDiv = document.getElementById("dies-setmana");
-
-        // Funció per mostrar o amagar els dies segons l'opció seleccionada
-        recurrenciaSelect.addEventListener("change", function() {
-            if (this.value === "personalitzada") {
-                diesSetmanaDiv.style.display = "block"; // Mostra els dies
-            } else {
-                diesSetmanaDiv.style.display = "none";  // Oculta els dies
-            }
-        });
-    </script>
 </body>
 </html>

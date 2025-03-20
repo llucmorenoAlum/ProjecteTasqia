@@ -9,15 +9,13 @@ function obtenirRutines($pdo, $idUsuari) {
 
         // Afegir els dies personalitzats si cal
         foreach ($rutines as &$rutina) {
-            if ($rutina['recurrencia'] === 'personalitzada') {
-                $sqlDies = "SELECT dia_setmana FROM dies_rutina WHERE id_rutina = :idRutina";
-                $stmtDies = $pdo->prepare($sqlDies);
-                $stmtDies->bindParam(':idRutina', $rutina['id_rutina'], PDO::PARAM_INT);
-                $stmtDies->execute();
-                $dies = $stmtDies->fetchAll(PDO::FETCH_COLUMN);
-                if($dies){
-                    $rutina['dies_personalitzats'] = $dies;
-                }
+            $sqlDies = "SELECT dia_setmana FROM dies_rutina WHERE id_rutina = :idRutina";
+            $stmtDies = $pdo->prepare($sqlDies);
+            $stmtDies->bindParam(':idRutina', $rutina['id_rutina'], PDO::PARAM_INT);
+            $stmtDies->execute();
+            $dies = $stmtDies->fetchAll(PDO::FETCH_COLUMN);
+            if($dies){
+                $rutina['dies'] = $dies;
             }
         }
 

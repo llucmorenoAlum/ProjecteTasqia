@@ -52,12 +52,9 @@
                                                     <?php echo htmlspecialchars($rutina['descripcio']); ?>
                                                 </div>
                                             <?php endif; ?>
-                                            <div class="recurrencia">
-                                                <strong>Recurrència:</strong> <?php echo htmlspecialchars($rutina['recurrencia']); ?>
-                                            </div>
-                                            <?php if (!empty($rutina['dies_personalitzats'])) : ?>
+                                            <?php if (!empty($rutina['dies'])) : ?>
                                                 <div class="dies">
-                                                    <strong>Dies:</strong> <?php echo implode(", ", $rutina['dies_personalitzats']); ?>
+                                                    <strong>Dies:</strong> <?php echo implode(", ", $rutina['dies']); ?>
                                                 </div>
                                             <?php endif; ?>
                                         </button>
