@@ -45,16 +45,17 @@
                                             <div class="nom">
                                                 <?php echo htmlspecialchars($rutina['nom']) . ' | ' . substr(htmlspecialchars($rutina['hora']), 0, 5); ?>
                                             </div>
-                                            <?php if (!empty($rutina['descripcio'])) : ?>
-                                                <div class="descripcio">
-                                                    <?php echo htmlspecialchars($rutina['descripcio']); ?>
-                                                </div>
-                                            <?php endif; ?>
                                             <?php if (!empty($rutina['dies'])) : ?>
                                                 <div class="dies">
                                                     <strong>Dies:</strong> <?php echo implode(", ", $rutina['dies']); ?>
                                                 </div>
                                             <?php endif; ?>
+                                            <?php if (!empty($rutina['descripcio'])) : ?>
+                                                <div class="descripcio">
+                                                    <?php echo htmlspecialchars($rutina['descripcio']); ?>
+                                                </div>
+                                            <?php endif; ?>
+                                            
                                         </button>
                                     </form>
                                 </div>
