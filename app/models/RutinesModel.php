@@ -7,7 +7,6 @@ function obtenirRutines($pdo, $idUsuari) {
         $stmt->execute();
         $rutines = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-        // Afegir els dies personalitzats si cal
         foreach ($rutines as &$rutina) {
             $sqlDies = "SELECT dia_setmana FROM dies_rutina WHERE id_rutina = :idRutina";
             $stmtDies = $pdo->prepare($sqlDies);
@@ -26,34 +25,31 @@ function obtenirRutines($pdo, $idUsuari) {
     }
 }
 
-function insertRutina($pdo, $idUsuari, $nom, $descripcio, $recurrencia, $hora, $diesPersonalitzats = []) {
+function insertRutina($pdo, $idUsuari, $nom, $descripcio, $hora, $dies = []) {
     try {
         $pdo->beginTransaction();  // Comença la transacció
 
         // Crear la rutina principal
-        $sql = "INSERT INTO rutines (id_usuari, nom, descripcio, recurrencia, hora)
-                VALUES (:idUsuari, :nom, :descripcio, :recurrencia, :hora)";
+        $sql = "INSERT INTO rutines (id_usuari, nom, descripcio, hora)
+                VALUES (:idUsuari, :nom, :descripcio, :hora)";
         $stmt = $pdo->prepare($sql);
         $stmt->execute([
             ':idUsuari' => $idUsuari,
             ':nom' => $nom,
             ':descripcio' => $descripcio,
-            ':recurrencia' => $recurrencia,
             ':hora' => $hora
         ]);
 
         $idRutina = $pdo->lastInsertId();
 
         // Afegir els dies personalitzats si la recurrència és "personalitzada"
-        if ($recurrencia === 'personalitzada' && !empty($diesPersonalitzats)) {
-            $sqlDies = "INSERT INTO dies_rutina (id_rutina, dia_setmana) VALUES (:idRutina, :diaSetmana)";
-            $stmtDies = $pdo->prepare($sqlDies);
-            foreach ($diesPersonalitzats as $dia) {
-                $stmtDies->execute([
-                    ':idRutina' => $idRutina,
-                    ':diaSetmana' => $dia
-                ]);
-            }
+        $sqlDies = "INSERT INTO dies_rutina (id_rutina, dia_setmana) VALUES (:idRutina, :diaSetmana)";
+        $stmtDies = $pdo->prepare($sqlDies);
+        foreach ($dies as $dia) {
+            $stmtDies->execute([
+                ':idRutina' => $idRutina,
+                ':diaSetmana' => $dia
+            ]);
         }
 
         $pdo->commit();  // Confirma la transacció
