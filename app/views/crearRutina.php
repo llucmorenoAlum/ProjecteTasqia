@@ -40,70 +40,85 @@
 
             <!-- Dies de la setmana ocults per defecte -->
             <div id="dies-setmana" class="dies-setmana">
-                <label>Dies de la setmana:</label><br>
-                <div class="checkbox-wrapper-46">
-                    <input type="checkbox" id="cbx-46" class="inp-cbx" name="dies" value="Dilluns"/>
-                    <label for="cbx-46" class="cbx"
-                        ><span>
+            <label>Dies de la setmana:</label><br>
+            <div class="checkbox-wrapper-46">
+                <input type="checkbox" id="cbx-46-1" class="inp-cbx" name="dies" value="Dilluns"/>
+                <label for="cbx-46-1" class="cbx">
+                    <span>
                         <svg viewBox="0 0 12 10" height="10px" width="12px">
-                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></span
-                        ><span>Dilluns</span>
-                    </label>
-                </div>
-                <div class="checkbox-wrapper-46">
-                    <input type="checkbox" id="cbx-46" class="inp-cbx" name="dies" value="Dimarts"/>
-                    <label for="cbx-46" class="cbx"
-                        ><span>
+                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg>
+                    </span>
+                    <span>Dilluns</span>
+                </label>
+            </div>
+            <div class="checkbox-wrapper-46">
+                <input type="checkbox" id="cbx-46-2" class="inp-cbx" name="dies" value="Dimarts"/>
+                <label for="cbx-46-2" class="cbx">
+                    <span>
                         <svg viewBox="0 0 12 10" height="10px" width="12px">
-                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></span
-                        ><span>Dimarts</span>
-                    </label>
-                </div>
-                <div class="checkbox-wrapper-46">
-                    <input type="checkbox" id="cbx-46" class="inp-cbx" name="dies" value="Dimecres"/>
-                    <label for="cbx-46" class="cbx"
-                        ><span>
+                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg>
+                    </span>
+                    <span>Dimarts</span>
+                </label>
+            </div>
+            <div class="checkbox-wrapper-46">
+                <input type="checkbox" id="cbx-46-3" class="inp-cbx" name="dies" value="Dimecres"/>
+                <label for="cbx-46-3" class="cbx">
+                    <span>
                         <svg viewBox="0 0 12 10" height="10px" width="12px">
-                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></span
-                        ><span>Dimecres</span>
-                    </label>
-                </div>
-                <div class="checkbox-wrapper-46">
-                    <input type="checkbox" id="cbx-46" class="inp-cbx" name="dies" value="Dijous"/>
-                    <label for="cbx-46" class="cbx"
-                        ><span>
+                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg>
+                    </span>
+                    <span>Dimecres</span>
+                </label>
+            </div>
+            <div class="checkbox-wrapper-46">
+                <input type="checkbox" id="cbx-46-4" class="inp-cbx" name="dies" value="Dijous"/>
+                <label for="cbx-46-4" class="cbx">
+                    <span>
                         <svg viewBox="0 0 12 10" height="10px" width="12px">
-                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></span
-                        ><span>Dijous</span>
-                    </label>
-                </div>
-                <div class="checkbox-wrapper-46">
-                    <input type="checkbox" id="cbx-46" class="inp-cbx" name="dies" value="Divendres"/>
-                    <label for="cbx-46" class="cbx"
-                        ><span>
+                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg>
+                    </span>
+                    <span>Dijous</span>
+                </label>
+            </div>
+            <div class="checkbox-wrapper-46">
+                <input type="checkbox" id="cbx-46-5" class="inp-cbx" name="dies" value="Divendres"/>
+                <label for="cbx-46-5" class="cbx">
+                    <span>
                         <svg viewBox="0 0 12 10" height="10px" width="12px">
-                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></span
-                        ><span>Divendres</span>
-                    </label>
-                </div>
-                <div class="checkbox-wrapper-46">
-                    <input type="checkbox" id="cbx-46" class="inp-cbx" name="dies" value="Dissabte"/>
-                    <label for="cbx-46" class="cbx"
-                        ><span>
+                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg>
+                    </span>
+                    <span>Divendres</span>
+                </label>
+            </div>
+            <div class="checkbox-wrapper-46">
+                <input type="checkbox" id="cbx-46-6" class="inp-cbx" name="dies" value="Dissabte"/>
+                <label for="cbx-46-6" class="cbx">
+                    <span>
                         <svg viewBox="0 0 12 10" height="10px" width="12px">
-                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></span
-                        ><span>Dissabte</span>
-                    </label>
-                </div>
-                <div class="checkbox-wrapper-46">
-                    <input type="checkbox" id="cbx-46" class="inp-cbx" name="dies" value="Diumenge"/>
-                    <label for="cbx-46" class="cbx"
-                        ><span>
+                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg>
+                    </span>
+                    <span>Dissabte</span>
+                </label>
+            </div>
+            <div class="checkbox-wrapper-46">
+                <input type="checkbox" id="cbx-46-7" class="inp-cbx" name="dies" value="Diumenge"/>
+                <label for="cbx-46-7" class="cbx">
+                    <span>
                         <svg viewBox="0 0 12 10" height="10px" width="12px">
-                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></span
-                        ><span>Diumenge</span>
-                    </label>
-                </div>
+                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg>
+                    </span>
+                    <span>Diumenge</span>
+                </label>
+            </div>
+
                 <!-- <input type="checkbox" name="dies[]" value="dilluns"> Dilluns
                 <input type="checkbox" name="dies[]" value="dimarts"> Dimarts
                 <input type="checkbox" name="dies[]" value="dimecres"> Dimecres
