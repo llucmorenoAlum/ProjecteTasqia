@@ -41,8 +41,6 @@
                                         <input type="hidden" name="editarRutinaNom" value="<?php echo $rutina['nom'] ?>">
                                         <input type="hidden" name="editarRutinaHora" value="<?php echo $rutina['hora'] ?>">
                                         <input type="hidden" name="editarRutinaDesc" value="<?php echo $rutina['descripcio'] ?>">
-                                        <input type="hidden" name="editarRutinaRecurrencia" value="<?php echo $rutina['recurrencia'] ?>">
-
                                         <button class="botoInvisible" type="submit">
                                             <div class="nom">
                                                 <?php echo htmlspecialchars($rutina['nom']) . ' | ' . substr(htmlspecialchars($rutina['hora']), 0, 5); ?>
