@@ -45,7 +45,7 @@
 
                                         <button class="botoInvisible" type="submit">
                                             <div class="nom">
-                                                <?php echo htmlspecialchars($rutina['nom']) . ' | ' . htmlspecialchars($rutina['hora']); ?>
+                                                <?php echo htmlspecialchars($rutina['nom']) . ' | ' . substr(htmlspecialchars($rutina['hora']), 0, 5); ?>
                                             </div>
                                             <?php if (!empty($rutina['descripcio'])) : ?>
                                                 <div class="descripcio">
