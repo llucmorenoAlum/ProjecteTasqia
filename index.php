@@ -73,6 +73,8 @@
             elseif (isset($_POST['accio']) && $_POST['accio'] === 'novaRutina') {
                 $idUsuari = $_SESSION['id_usuari'];
                 $nomRutina = $_POST['nomRutina'];
+                $hora = $_POST['hora'];
+                $hora = $hora . ':00';
                 $descripcioRutina = $_POST['descripcioRutina'];
                 $recurrencia = $_POST['recurrencia'];
                 
