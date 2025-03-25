@@ -84,19 +84,38 @@ function deleteRutina($pdo, $idRutina) {
 }
 
 
-function updateTasca($pdo, $idTasca, $nomTasca, $dataTasca, $descripcioTasca){
+function updateRutina($pdo, $idRutina, $nomRutina, $descripcioRutina, $hora, $diesPersonalitzats) {
     try {
-        $sql = "UPDATE tasques SET nom = :nom, descripcio = :descripcio, data_inici = :dataInici WHERE id_tasca = :idTasca";
-        
+        // Actualitzar la rutina principal
+        $sql = "UPDATE rutines 
+                SET nom = :nom, descripcio = :descripcio, hora = :hora
+                WHERE id_rutina = :idRutina";
+
         $stmt = $pdo->prepare($sql);
-        $stmt->bindParam(':nom', $nomTasca, PDO::PARAM_STR);
-        $stmt->bindParam(':descripcio', $descripcioTasca, PDO::PARAM_STR);
-        $stmt->bindParam(':dataInici', $dataTasca, PDO::PARAM_STR);
-        $stmt->bindParam(':idTasca', $idTasca, PDO::PARAM_INT);
-        
-        return $stmt->execute();
+        $stmt->bindParam(':nom', $nomRutina, PDO::PARAM_STR);
+        $stmt->bindParam(':descripcio', $descripcioRutina, PDO::PARAM_STR);
+        $stmt->bindParam(':hora', $hora, PDO::PARAM_STR);
+        $stmt->bindParam(':idRutina', $idRutina, PDO::PARAM_INT);
+        $stmt->execute();
+
+        // Eliminar els dies anteriors associats a la rutina
+        $sqlDeleteDies = "DELETE FROM dies_rutina WHERE id_rutina = :idRutina";
+        $stmtDeleteDies = $pdo->prepare($sqlDeleteDies);
+        $stmtDeleteDies->bindParam(':idRutina', $idRutina, PDO::PARAM_INT);
+        $stmtDeleteDies->execute();
+
+        // Inserir els nous dies seleccionats
+        $sqlInsertDies = "INSERT INTO dies_rutina (id_rutina, dia_setmana) VALUES (:idRutina, :dia)";
+        $stmtInsertDies = $pdo->prepare($sqlInsertDies);
+        foreach ($diesPersonalitzats as $dia) {
+            $stmtInsertDies->bindParam(':idRutina', $idRutina, PDO::PARAM_INT);
+            $stmtInsertDies->bindParam(':dia', $dia, PDO::PARAM_STR);
+            $stmtInsertDies->execute();
+        }
+
+        return true;
     } catch (PDOException $e) {
-        error_log("Error en modificarTasca: " . $e->getMessage());
+        error_log("Error en updateRutina: " . $e->getMessage());
         return false;
     }
 }
