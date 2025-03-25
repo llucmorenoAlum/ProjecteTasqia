@@ -38,7 +38,7 @@
                                 <div class="tasca-contenidor">
                                     <form action="index.php" method="post">
                                         <input type="hidden" name="editarRutinaId" value="<?php echo $rutina['id_rutina'] ?>">
-                                        <input type="hidden" name="editarRutinaNom" value="<?php echo $rutina['nom'] ?>">
+                                        <input type="hidden" name="editarRutina" value="<?php echo $rutina['nom'] ?>">
                                         <input type="hidden" name="editarRutinaHora" value="<?php echo $rutina['hora'] ?>">
                                         <input type="hidden" name="editarRutinaDesc" value="<?php echo $rutina['descripcio'] ?>">
                                         <input type="hidden" name="editarRutinaDies" value="<?php $rutina['dies']?>">
@@ -49,7 +49,7 @@
                                             </div>
                                             <?php if (!empty($rutina['dies'])) : ?>
                                                 <div class="dies">
-                                                    Dies:<?php echo implode(", ", $rutina['dies']); ?>
+                                                    Dies: <?php echo implode(", ", $rutina['dies']); ?>
                                                 </div>
                                             <?php endif; ?>
                                             <?php if (!empty($rutina['descripcio'])) : ?>
