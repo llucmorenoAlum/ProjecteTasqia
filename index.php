@@ -152,6 +152,14 @@
                     mostrarTasques();
                 }
             }
+            elseif (isset($_POST['eliminarRutina'])) {
+                $idRutina = $_POST['eliminarRutina'];
+                if(eliminarRutina($idRutina)){
+                    mostrarRutines();
+                }else{
+                    mostrarRutines($error = "No s'ha pogut eliminar la rutina");
+                }
+            }
             elseif(isset($_POST['eliminarNota'])){
                 $idNota = $_POST['eliminarNota'];
                 if (eliminarNota($idNota)) {

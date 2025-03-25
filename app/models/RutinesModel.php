@@ -60,3 +60,44 @@ function insertRutina($pdo, $idUsuari, $nom, $descripcio, $hora, $dies = []) {
         return false;
     }
 }
+
+function deleteRutina($pdo, $idRutina) {
+    try {
+        // Eliminar els dies associats a la rutina
+        $sqlDies = "DELETE FROM dies_rutina WHERE id_rutina = :idRutina";
+        $stmtDies = $pdo->prepare($sqlDies);
+        $stmtDies->bindParam(':idRutina', $idRutina, PDO::PARAM_INT);
+        $stmtDies->execute();
+        
+        // Ara eliminar la rutina principal
+        $sqlRutina = "DELETE FROM rutines WHERE id_rutina = :idRutina";
+        $stmtRutina = $pdo->prepare($sqlRutina);
+        $stmtRutina->bindParam(':idRutina', $idRutina, PDO::PARAM_INT);
+        $stmtRutina->execute();
+        
+        // Retorna true si s'ha eliminat la rutina
+        return $stmtRutina->rowCount() > 0;
+    } catch (PDOException $e) {
+        error_log("Error en deleteRutina: " . $e->getMessage());
+        return false;
+    }
+}
+
+
+function updateTasca($pdo, $idTasca, $nomTasca, $dataTasca, $descripcioTasca){
+    try {
+        $sql = "UPDATE tasques SET nom = :nom, descripcio = :descripcio, data_inici = :dataInici WHERE id_tasca = :idTasca";
+        
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(':nom', $nomTasca, PDO::PARAM_STR);
+        $stmt->bindParam(':descripcio', $descripcioTasca, PDO::PARAM_STR);
+        $stmt->bindParam(':dataInici', $dataTasca, PDO::PARAM_STR);
+        $stmt->bindParam(':idTasca', $idTasca, PDO::PARAM_INT);
+        
+        return $stmt->execute();
+    } catch (PDOException $e) {
+        error_log("Error en modificarTasca: " . $e->getMessage());
+        return false;
+    }
+}
+

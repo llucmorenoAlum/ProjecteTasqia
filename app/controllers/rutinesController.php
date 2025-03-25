@@ -8,3 +8,13 @@ function crearRutina($idUsuari, $nom, $descripcio, $hora, $diesPersonalitzats){
         return false;
     }
 }
+
+function eliminarRutina($idRutina){
+    $pdo = conectarBD();
+    if (deleteRutina($pdo, $idRutina)) {
+        return true;
+    } else {
+        return false;
+    }
+    
+}
