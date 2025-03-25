@@ -39,7 +39,7 @@
                                     <form action="index.php" method="post">
                                         <input type="hidden" name="editarRutinaId" value="<?php echo $rutina['id_rutina'] ?>">
                                         <input type="hidden" name="editarRutina" value="<?php echo $rutina['nom'] ?>">
-                                        <input type="hidden" name="editarRutinaHora" value="<?php echo $rutina['hora'] ?>">
+                                        <input type="hidden" name="editarHora" value="<?php echo $rutina['hora'] ?>">
                                         <input type="hidden" name="editarRutinaDesc" value="<?php echo $rutina['descripcio'] ?>">
                                         <input type="hidden" name="editarRutinaDies" value="<?php $rutina['dies']?>">
                                         

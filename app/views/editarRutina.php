@@ -41,7 +41,7 @@
                 <?php 
                     $diesSetmana = ["Dilluns", "Dimarts", "Dimecres", "Dijous", "Divendres", "Dissabte", "Diumenge"];
                     foreach ($diesSetmana as $index => $dia):
-                        $checked = in_array($dia, $diesPersonalitzats) ? 'checked' : '';
+                        $checked = in_array($dia, $diesRutina) ? 'checked' : '';
                 ?>
                     <div class="checkbox-wrapper-46">
                         <input type="checkbox" id="cbx-46-<?php echo $index + 1; ?>" class="inp-cbx" name="dies[]" value="<?php echo $dia; ?>" <?php echo $checked; ?> />
