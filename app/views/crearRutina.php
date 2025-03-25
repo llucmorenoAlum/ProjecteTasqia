@@ -118,14 +118,6 @@
                     <span>Diumenge</span>
                 </label>
             </div>
-
-                <!-- <input type="checkbox" name="dies[]" value="dilluns"> Dilluns
-                <input type="checkbox" name="dies[]" value="dimarts"> Dimarts
-                <input type="checkbox" name="dies[]" value="dimecres"> Dimecres
-                <input type="checkbox" name="dies[]" value="dijous"> Dijous
-                <input type="checkbox" name="dies[]" value="divendres"> Divendres
-                <input type="checkbox" name="dies[]" value="dissabte"> Dissabte
-                <input type="checkbox" name="dies[]" value="diumenge"> Diumenge -->
             </div>
 
             <button name="accio" value="novaRutina">Crear</button>

@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tasqia</title>
+    <title>Editar Rutina - Tasqia</title>
     <link rel="stylesheet" href="public/css/styles.css">
     <link rel="stylesheet" href="public/css/checkbox.css">
 </head>
 <body>
-    <h1>Tasqia</h1>
+    <h1>Editar Rutina</h1>
     <?php 
         $error = $error ?? "";
         if ($error != ""): ?>
@@ -19,108 +19,45 @@
                     </svg>
                 </div>
                 <div class="error__title"><?php echo $error; ?></div>
-                <div class="error__close">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20" height="20">
-                        <path fill="#393a37" d="m15.8333 5.34166-1.175-1.175-4.6583 4.65834-4.65833-4.65834-1.175 1.175 4.65833 4.65834-4.65833 4.6583 1.175 1.175 4.65833-4.6583 4.6583 4.6583 1.175-1.175-4.6583-4.6583z"></path>
-                    </svg>
-                </div>
             </div>
     <?php endif; ?>
-    
+
     <section class="formulari">
         <form action="index.php" method="post">
-            <label for="nomRutina">Rutina</label>
-            <input name="nomRutina" placeholder="Introdueix el nom de la rutina..." type="text" value="<?php echo $editarRutina?>" required>
+            <input type="hidden" name="updateRutina" value="<?php echo $idRutina; ?>">
             
-            <label for="hora">Hora</label>
-            <input type="time" name="hora" id="hora" value="<?php echo $editarRutinaHora?>">
+            <label for="nomRutina">Rutina</label>
+            <input name="nomRutina" placeholder="Introdueix el nom de la rutina..." type="text" required value="<?php echo $nomRutina; ?>">
+            
+            <label for="horaRutina">Hora</label>
+            <input type="time" name="horaRutina" id="hora" value="<?php echo $horaRutina; ?>">
 
             <label for="descripcioRutina">Descripció</label>
-            <textarea placeholder="Introdueix la descripció de la rutina..." name="descripcioRutina" rows="3"><?php echo $editarRutinadesc?></textarea>
+            <textarea placeholder="Introdueix la descripció de la rutina..." name="descripcioRutina" rows="3"><?php echo $descripcioRutina; ?></textarea>
 
-            <!-- Dies de la setmana ocults per defecte -->
+            <!-- Dies de la setmana -->
             <div id="dies-setmana" class="dies-setmana">
-            <label>Dies de la setmana:</label><br>
-            <div class="checkbox-wrapper-46">
-                <input type="checkbox" id="cbx-46-1" class="inp-cbx" name="dies[]" value="Dilluns"/>
-                <label for="cbx-46-1" class="cbx">
-                    <span>
-                        <svg viewBox="0 0 12 10" height="10px" width="12px">
-                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                        </svg>
-                    </span>
-                    <span>Dilluns</span>
-                </label>
-            </div>
-            <div class="checkbox-wrapper-46">
-                <input type="checkbox" id="cbx-46-2" class="inp-cbx" name="dies[]" value="Dimarts"/>
-                <label for="cbx-46-2" class="cbx">
-                    <span>
-                        <svg viewBox="0 0 12 10" height="10px" width="12px">
-                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                        </svg>
-                    </span>
-                    <span>Dimarts</span>
-                </label>
-            </div>
-            <div class="checkbox-wrapper-46">
-                <input type="checkbox" id="cbx-46-3" class="inp-cbx" name="dies[]" value="Dimecres"/>
-                <label for="cbx-46-3" class="cbx">
-                    <span>
-                        <svg viewBox="0 0 12 10" height="10px" width="12px">
-                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                        </svg>
-                    </span>
-                    <span>Dimecres</span>
-                </label>
-            </div>
-            <div class="checkbox-wrapper-46">
-                <input type="checkbox" id="cbx-46-4" class="inp-cbx" name="dies[]" value="Dijous"/>
-                <label for="cbx-46-4" class="cbx">
-                    <span>
-                        <svg viewBox="0 0 12 10" height="10px" width="12px">
-                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                        </svg>
-                    </span>
-                    <span>Dijous</span>
-                </label>
-            </div>
-            <div class="checkbox-wrapper-46">
-                <input type="checkbox" id="cbx-46-5" class="inp-cbx" name="dies[]" value="Divendres"/>
-                <label for="cbx-46-5" class="cbx">
-                    <span>
-                        <svg viewBox="0 0 12 10" height="10px" width="12px">
-                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                        </svg>
-                    </span>
-                    <span>Divendres</span>
-                </label>
-            </div>
-            <div class="checkbox-wrapper-46">
-                <input type="checkbox" id="cbx-46-6" class="inp-cbx" name="dies[]" value="Dissabte"/>
-                <label for="cbx-46-6" class="cbx">
-                    <span>
-                        <svg viewBox="0 0 12 10" height="10px" width="12px">
-                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                        </svg>
-                    </span>
-                    <span>Dissabte</span>
-                </label>
-            </div>
-            <div class="checkbox-wrapper-46">
-                <input type="checkbox" id="cbx-46-7" class="inp-cbx" name="dies[]" value="Diumenge"/>
-                <label for="cbx-46-7" class="cbx">
-                    <span>
-                        <svg viewBox="0 0 12 10" height="10px" width="12px">
-                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                        </svg>
-                    </span>
-                    <span>Diumenge</span>
-                </label>
-            </div>
+                <label>Dies de la setmana:</label><br>
+                <?php 
+                    $diesSetmana = ["Dilluns", "Dimarts", "Dimecres", "Dijous", "Divendres", "Dissabte", "Diumenge"];
+                    foreach ($diesSetmana as $index => $dia):
+                        $checked = in_array($dia, $diesPersonalitzats) ? 'checked' : '';
+                ?>
+                    <div class="checkbox-wrapper-46">
+                        <input type="checkbox" id="cbx-46-<?php echo $index + 1; ?>" class="inp-cbx" name="dies[]" value="<?php echo $dia; ?>" <?php echo $checked; ?> />
+                        <label for="cbx-46-<?php echo $index + 1; ?>" class="cbx">
+                            <span>
+                                <svg viewBox="0 0 12 10" height="10px" width="12px">
+                                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                </svg>
+                            </span>
+                            <span><?php echo $dia; ?></span>
+                        </label>
+                    </div>
+                <?php endforeach; ?>
             </div>
 
-            <button name="accio" value="novaRutina">Crear</button>
+            <button type="submit">Guardar Canvis</button>
         </form>
     </section>
 </body>
