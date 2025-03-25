@@ -92,7 +92,7 @@ function deleteRutina($pdo, $idRutina) {
 }
 
 
-function updateRutina($pdo, $idRutina, $nomRutina, $descripcioRutina, $hora, $diesPersonalitzats) {
+function updateRutina($pdo, $idRutina, $nomRutina, $descripcioRutina, $hora, $diesRutina) {
     try {
         // Actualitzar la rutina principal
         $sql = "UPDATE rutines 
@@ -115,7 +115,7 @@ function updateRutina($pdo, $idRutina, $nomRutina, $descripcioRutina, $hora, $di
         // Inserir els nous dies seleccionats
         $sqlInsertDies = "INSERT INTO dies_rutina (id_rutina, dia_setmana) VALUES (:idRutina, :dia)";
         $stmtInsertDies = $pdo->prepare($sqlInsertDies);
-        foreach ($diesPersonalitzats as $dia) {
+        foreach ($diesRutina as $dia) {
             $stmtInsertDies->bindParam(':idRutina', $idRutina, PDO::PARAM_INT);
             $stmtInsertDies->bindParam(':dia', $dia, PDO::PARAM_STR);
             $stmtInsertDies->execute();

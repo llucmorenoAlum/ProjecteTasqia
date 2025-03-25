@@ -19,6 +19,15 @@ function crearRutina($idUsuari, $nom, $descripcio, $hora, $diesPersonalitzats){
     }
 }
 
+function modificarRutina($idRutina, $nomRutina, $descripcioRutina, $hora, $diesRutina){
+    $pdo = conectarBD();
+    if(updateRutina($pdo, $idRutina, $nomRutina, $descripcioRutina, $hora, $diesRutina)){
+        return true;
+    }else{
+        return false;
+    }
+}
+
 function eliminarRutina($idRutina){
     $pdo = conectarBD();
     if (deleteRutina($pdo, $idRutina)) {

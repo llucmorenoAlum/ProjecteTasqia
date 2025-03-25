@@ -149,7 +149,7 @@
                 // Comprova si s'han seleccionat dies (si no, assigna un array buit)
                 $diesRutina = isset($_POST['dies']) ? $_POST['dies'] : [];
             
-                if(updateRutina($pdo, $idRutina, $nomRutina, $descripcioRutina, $horaRutina, $diesPersonalitzats)){
+                if(modificarRutina($idRutina, $nomRutina, $descripcioRutina, $horaRutina, $diesRutina)){
                     mostrarRutines();
                 } else {
                     mostrarRutines($error= "No s'ha pogut modificar la rutina");
