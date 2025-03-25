@@ -1,6 +1,7 @@
 .checkbox-wrapper-46 input[type="checkbox"] {
     display: none;
     visibility: hidden;
+    margin: 5px 10px;
   }
   
   .checkbox-wrapper-46 .cbx {

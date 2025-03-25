@@ -57,11 +57,9 @@
                                                     <?php echo htmlspecialchars($rutina['descripcio']); ?>
                                                 </div>
                                             <?php endif; ?>
-                                            
                                         </button>
                                     </form>
                                 </div>
-
                                 <!-- Botons a la dreta -->
                                 <div class="botons">
                                     <form action="index.php" method="POST">
