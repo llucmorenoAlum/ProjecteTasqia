@@ -46,8 +46,10 @@ function mostrarTasques(){
     require_once 'app/views/tasques.php';
 }
 
-function mostrarRutines(){
+function mostrarRutines($error = "", $missatge = ""){
     $pdo = conectarBD();
+    $error;
+    $missatge;
     $idUsuari = $_SESSION['id_usuari'];
     $rutines = obtenirRutines($pdo, $idUsuari);
     require_once 'app/views/rutines.php';
