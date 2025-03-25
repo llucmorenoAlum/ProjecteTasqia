@@ -25,8 +25,7 @@ function obtenirRutines($pdo, $idUsuari) {
     }
 }
 
-function obtenirDiesRutina($idRutina) {
-    global $pdo;
+function obtenirDiesRutina($pdo, $idRutina) {
     $sql = "SELECT dia_setmana FROM dies_rutina WHERE id_rutina = :idRutina";
     $stmt = $pdo->prepare($sql);
     $stmt->bindParam(':idRutina', $idRutina, PDO::PARAM_INT);
