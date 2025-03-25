@@ -39,7 +39,7 @@
             <div id="dies-setmana" class="dies-setmana">
                 <label>Dies de la setmana:</label><br>
                 <?php 
-                    $diesSetmana = ["Dilluns", "Dimarts", "Dimecres", "Dijous", "Divendres", "Dissabte", "Diumenge"];
+                    $diesSetmana = ["dilluns", "dimarts", "dimecres", "dijous", "divendres", "dissabte", "diumenge"];
                     foreach ($diesSetmana as $index => $dia):
                         $checked = in_array($dia, $diesRutina) ? 'checked' : '';
                 ?>
