@@ -127,7 +127,35 @@
                     $error = "No s'ha pogut modificar la tasca";
                     mostrarEditorTasca($idTasca, $nomTasca, $dataTasca, $descripcioTasca, $error);
                 }
-            }elseif (isset($_POST['modificarNota'])) {
+            }
+            elseif(isset($_POST['editarRutina'])){
+                $nomRutina = $_POST['editarRutina'];
+                $horaRutina = $_POST['editarHora'];
+                $descripcioRutina = $_POST['editarRutinaDesc'];
+                $idRutina = $_POST['editarRutinaId'];
+            
+                // Recuperar els dies seleccionats de la base de dades
+                $diesRutina = getDiesRutina($idRutina);
+                
+                // Mostrar l'editor amb els dies seleccionats
+                mostrarEditorRutina($idRutina, $nomRutina, $horaRutina, $descripcioRutina, $diesPersonalitzats);
+            
+            } elseif(isset($_POST['updateRutina'])) {
+                $idRutina = $_POST['updateRutina'];
+                $nomRutina = $_POST['nomRutina'];
+                $horaRutina = $_POST['horaRutina'];
+                $descripcioRutina = $_POST['descripcioRutina'];
+            
+                // Comprova si s'han seleccionat dies (si no, assigna un array buit)
+                $diesRutina = isset($_POST['dies']) ? $_POST['dies'] : [];
+            
+                if(updateRutina($pdo, $idRutina, $nomRutina, $descripcioRutina, $horaRutina, $diesPersonalitzats)){
+                    mostrarRutines();
+                } else {
+                    mostrarRutines($error= "No s'ha pogut modificar la rutina");
+                }
+            }            
+            elseif (isset($_POST['modificarNota'])) {
                 $idNota = $_POST['modificarNota'];
                 $titolNota = $_POST['titolNota'];
                 $contingutNota = $_POST['contingutNota'];

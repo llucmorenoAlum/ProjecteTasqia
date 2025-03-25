@@ -69,6 +69,15 @@ function mostrarEditorTasca($idTasca, $nomTasca, $dataTasca, $descTasca, $error 
     require_once 'app/views/editarTasca.php';
 }
 
+function mostrarEditorRutina($idRutina, $nomRutina, $horaRutina, $descripcioRutina, $diesRutina){
+    $idRutina;
+    $nomRutina;
+    $horaRutina;
+    $descripcioRutina;
+    $diesRutina;
+    require_once 'app/views/editarRutina.php';
+}
+
 function mostrarEditorNota($idNota, $titolNota, $contingutNota, $error = ""){
     $error;
     $idNota;

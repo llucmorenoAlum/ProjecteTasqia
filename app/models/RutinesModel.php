@@ -25,6 +25,15 @@ function obtenirRutines($pdo, $idUsuari) {
     }
 }
 
+function obtenirDiesRutina($idRutina) {
+    global $pdo;
+    $sql = "SELECT dia_setmana FROM dies_rutina WHERE id_rutina = :idRutina";
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(':idRutina', $idRutina, PDO::PARAM_INT);
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_COLUMN);
+}
+
 function insertRutina($pdo, $idUsuari, $nom, $descripcio, $hora, $dies = []) {
     try {
         $pdo->beginTransaction();  // Comença la transacció
@@ -119,4 +128,7 @@ function updateRutina($pdo, $idRutina, $nomRutina, $descripcioRutina, $hora, $di
         return false;
     }
 }
+
+
+
 

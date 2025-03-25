@@ -1,5 +1,14 @@
 <?php
 
+function getDiesRutina($idRutina){
+    $pdo = conectarBD();
+    if(obtenirDiesRutina($pdo, $idRutina)){
+        return true;
+    }else{
+        return false;
+    }
+}
+
 function crearRutina($idUsuari, $nom, $descripcio, $hora, $diesPersonalitzats){
     $pdo = conectarBD();
     if(insertRutina($pdo, $idUsuari, $nom, $descripcio, $hora, $diesPersonalitzats)){
