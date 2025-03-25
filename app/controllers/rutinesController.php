@@ -2,11 +2,12 @@
 
 function getDiesRutina($idRutina){
     $pdo = conectarBD();
-    if(obtenirDiesRutina($pdo, $idRutina)){
-        return true;
-    }else{
-        return false;
-    }
+    // if(obtenirDiesRutina($pdo, $idRutina)){
+    //     return true;
+    // }else{
+    //     return false;
+    // }
+    return obtenirDiesRutina($pdo, $idRutina);
 }
 
 function crearRutina($idUsuari, $nom, $descripcio, $hora, $diesPersonalitzats){
