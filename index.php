@@ -81,7 +81,7 @@
                 $dies_personalitzats = isset($_POST['dies']) ? $_POST['dies'] : [];
             
                 if (crearRutina($idUsuari, $nomRutina, $descripcioRutina,$horaCompleta,$dies_personalitzats)) {
-                    mostrarRutines();
+                    mostrarRutines($missatge = "La rutina s'ha eliminat correctament.");
                 } else {
                     mostrarRutines($error = "No s'ha pogut crear la rutina");
                 }
@@ -150,7 +150,7 @@
                 $diesRutina = isset($_POST['dies']) ? $_POST['dies'] : [];
             
                 if(modificarRutina($idRutina, $nomRutina, $descripcioRutina, $horaRutina, $diesRutina)){
-                    mostrarRutines();
+                    mostrarRutines($missatge = "La rutina s'ha modificat correctament.");
                 } else {
                     mostrarRutines($error= "No s'ha pogut modificar la rutina");
                 }
@@ -183,7 +183,7 @@
             elseif (isset($_POST['eliminarRutina'])) {
                 $idRutina = $_POST['eliminarRutina'];
                 if(eliminarRutina($idRutina)){
-                    mostrarRutines($missatge = "La rutina s'ha creat correctament.");
+                    mostrarRutines($missatge = "La rutina s'ha eliminat correctament.");
                 }else{
                     mostrarRutines($error = "No s'ha pogut eliminar la rutina");
                 }
