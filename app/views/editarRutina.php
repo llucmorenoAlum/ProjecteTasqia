@@ -30,13 +30,13 @@
     <section class="formulari">
         <form action="index.php" method="post">
             <label for="nomRutina">Rutina</label>
-            <input name="nomRutina" placeholder="Introdueix el nom de la rutina..." type="text" value="<?php echo $editarRutinaHora?>" required>
+            <input name="nomRutina" placeholder="Introdueix el nom de la rutina..." type="text" value="<?php echo $editarRutina?>" required>
             
             <label for="hora">Hora</label>
             <input type="time" name="hora" id="hora" value="<?php echo $editarRutinaHora?>">
 
             <label for="descripcioRutina">Descripció</label>
-            <textarea placeholder="Introdueix la descripció de la rutina..." name="descripcioRutina" rows="3"></textarea>
+            <textarea placeholder="Introdueix la descripció de la rutina..." name="descripcioRutina" rows="3"><?php echo $editarRutinadesc?></textarea>
 
             <!-- Dies de la setmana ocults per defecte -->
             <div id="dies-setmana" class="dies-setmana">
