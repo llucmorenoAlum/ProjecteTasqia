@@ -138,7 +138,7 @@
                 $diesRutina = getDiesRutina($idRutina);
                 
                 // Mostrar l'editor amb els dies seleccionats
-                mostrarEditorRutina($idRutina, $nomRutina, $horaRutina, $descripcioRutina, $diesPersonalitzats);
+                mostrarEditorRutina($idRutina, $nomRutina, $horaRutina, $descripcioRutina, $diesRutina);
             
             } elseif(isset($_POST['updateRutina'])) {
                 $idRutina = $_POST['updateRutina'];
