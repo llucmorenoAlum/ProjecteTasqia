@@ -183,7 +183,7 @@
             elseif (isset($_POST['eliminarRutina'])) {
                 $idRutina = $_POST['eliminarRutina'];
                 if(eliminarRutina($idRutina)){
-                    mostrarRutines();
+                    mostrarRutines($missatge = "La rutina s'ha creat correctament.");
                 }else{
                     mostrarRutines($error = "No s'ha pogut eliminar la rutina");
                 }
