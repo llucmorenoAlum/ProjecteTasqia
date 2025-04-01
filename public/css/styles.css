@@ -48,6 +48,10 @@ header img{
     text-align: left;
 }
 
+#imgLogout{
+    width: 30px;
+}
+
 #dropdown-menu button:hover {
     background: #444;
 }

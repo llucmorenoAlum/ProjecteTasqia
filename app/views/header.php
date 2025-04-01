@@ -8,7 +8,7 @@
              id="avatar">
         <div id="dropdown-menu" class="hidden">
             <form action="index.php" method="post">
-                <button name="accio" value="logout">Tancar sessió</button>
+                <button name="accio" value="logout"><img id="imgLogout" src="public/media/logout.png" alt="">Tancar sessió</button>
             </form>
         </div>
     </div>
