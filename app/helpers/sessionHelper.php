@@ -4,3 +4,8 @@
         $_SESSION['id_usuari'] = $dades['id_usuari'];
         $_SESSION['nom'] = $dades['nom'];
     }
+
+    function logout(){
+        session_unset(); 
+        session_destroy();
+    }

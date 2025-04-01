@@ -4,6 +4,7 @@
     require_once 'app/controllers/tasquesController.php';
     require_once 'app/controllers/notesController.php';
     require_once 'app/controllers/rutinesController.php';
+    require_once 'app/helpers/sessionHelper.php';
 
     session_start();
 
@@ -48,7 +49,11 @@
         }
     }else{
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            if(isset($_POST['accio']) && $_POST['accio'] === 'crearTasca'){
+            if(isset($_POST['accio']) && $_POST['accio']=== 'logout'){
+                logout();
+                mostrarlogin();
+            }
+            elseif(isset($_POST['accio']) && $_POST['accio'] === 'crearTasca'){
                 mostrarCreacioTasques();
             }
             elseif (isset($_POST['accio']) && $_POST['accio'] === 'crearRutina') {
