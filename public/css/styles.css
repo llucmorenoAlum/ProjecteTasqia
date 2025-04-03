@@ -131,7 +131,7 @@ section {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
     border-left: 5px solid #bb86fc;
     transition: transform 0.2s ease-in-out;
-    margin: 15px;
+    margin: 5px;
     /* Ajustos per posicionar els botons a la dreta */
     display: flex;
     justify-content: space-between;
