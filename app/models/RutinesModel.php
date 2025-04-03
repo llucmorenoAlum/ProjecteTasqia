@@ -33,17 +33,32 @@ function obtenirDiesRutina($pdo, $idRutina) {
     return $stmt->fetchAll(PDO::FETCH_COLUMN);
 }
 
-function getRutinesDia($pdo, $dia) {
+function getRutinesDia($pdo, $dia, $idUsuari) {
     try {
         $sql = "SELECT r.* FROM rutines r
-                INNER JOIN dies_rutina dr ON r.id = dr.id_rutina
-                WHERE dr.dia = :dia";
+                INNER JOIN dies_rutina dr ON r.id_rutina = dr.id_rutina
+                WHERE dr.dia_setmana = :dia AND r.id_usuari = :idUsuari";
 
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(':dia', $dia, PDO::PARAM_STR);
+        $stmt->bindParam(':idUsuari', $idUsuari, PDO::PARAM_INT);
         $stmt->execute();
+        $rutines = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        // Afegir els dies de cada rutina
+        foreach ($rutines as &$rutina) {
+            $sqlDies = "SELECT dia_setmana FROM dies_rutina WHERE id_rutina = :idRutina";
+            $stmtDies = $pdo->prepare($sqlDies);
+            $stmtDies->bindParam(':idRutina', $rutina['id_rutina'], PDO::PARAM_INT);
+            $stmtDies->execute();
+            $dies = $stmtDies->fetchAll(PDO::FETCH_COLUMN);
+
+            if ($dies) {
+                $rutina['dies'] = $dies;
+            }
+        }
+
+        return $rutines;
     } catch (PDOException $e) {
         error_log("Error en getRutinesDia: " . $e->getMessage());
         return [];
