@@ -15,6 +15,8 @@ function obtenirRutines($pdo, $idUsuari) {
             $dies = $stmtDies->fetchAll(PDO::FETCH_COLUMN);
             if($dies){
                 $rutina['dies'] = $dies;
+            }else{
+                $rutina['dies'] = [];
             }
         }
 
@@ -55,6 +57,8 @@ function getRutinesDia($pdo, $dia, $idUsuari) {
 
             if ($dies) {
                 $rutina['dies'] = $dies;
+            }else{
+                $rutina['dies'] = [];
             }
         }
 
@@ -64,7 +68,6 @@ function getRutinesDia($pdo, $dia, $idUsuari) {
         return [];
     }
 }
-
 
 function insertRutina($pdo, $idUsuari, $nom, $descripcio, $hora, $dies = []) {
     try {
