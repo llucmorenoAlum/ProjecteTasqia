@@ -11,6 +11,8 @@ function mostrarIndex(){
     $idUsuari = $_SESSION['id_usuari'];
     $data = obtenirDataActual();
     $dia = obtenirDiaActual();
+    setlocale(LC_TIME, 'ca_ES.UTF-8'); 
+    $titolDia = obtenirDiaActualComplet();
     $tasquesAvui = getTasquesDia($pdo, $data);
     $rutinesAvui  = getRutinesDia($pdo, $dia, $idUsuari);
     $tasquesPendents = getTasquesActives($pdo, $idUsuari);

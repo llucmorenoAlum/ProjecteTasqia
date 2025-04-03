@@ -15,6 +15,17 @@
         return $diesCatalans[$numeroDia];
     }
     
+    function obtenirDiaActualComplet(){
+        $dies = ['diumenge', 'dilluns', 'dimarts', 'dimecres', 'dijous', 'divendres', 'dissabte'];
+        $mesos = ['gener', 'febrer', 'març', 'abril', 'maig', 'juny', 'juliol', 'agost', 'setembre', 'octubre', 'novembre', 'desembre'];
+
+        $now = new DateTime();
+        $diaSetmana = $dies[$now->format('w')]; // Obté el nom del dia
+        $dia = $now->format('j'); // Obté el dia del mes
+        $mes = $mesos[$now->format('n') - 1]; // Obté el mes
+
+        return ucfirst("$diaSetmana, $dia de $mes");
+    }
     
     function formatDataEnCatala($dataString) {
         $data = new DateTime($dataString);

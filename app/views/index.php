@@ -29,7 +29,7 @@
             endif;
         ?>
         <section id="tasquesAvui">
-            <h3 id="dia">Per fer avui:</h3>
+            <h3 id="dia"><?php echo $titolDia ?></h3>
                 <?php if (!empty($tasquesAvui)):?>
                     <div class="container">
                     <?php foreach ($tasquesAvui as $tasca) : ?>

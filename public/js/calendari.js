@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         calendarTitle.textContent = currentDate.toLocaleDateString("ca-ES", { weekday: 'long', day: 'numeric', month: 'long' });
         calendar.className = "day-view";
         const dayDiv = document.createElement("div");
-        dayDiv.textContent = currentDate.toDateString();
+        dayDiv.textContent = currentDate.toLocaleDateString("ca-ES", { weekday: 'long', day: 'numeric', month: 'long' });
         dayDiv.className = "calendar-day";
         calendar.appendChild(dayDiv);
     }

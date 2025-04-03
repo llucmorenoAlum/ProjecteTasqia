@@ -33,7 +33,7 @@
             <input name="nomRutina" placeholder="Introdueix el nom de la rutina..." type="text" required>
             
             <label for="hora">Hora</label>
-            <input type="time" name="hora" id="hora">
+            <input type="time" name="hora" id="hora" required>
 
             <label for="descripcioRutina">Descripció</label>
             <textarea placeholder="Introdueix la descripció de la rutina..." name="descripcioRutina" rows="3"></textarea>
