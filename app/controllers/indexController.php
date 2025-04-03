@@ -9,10 +9,13 @@ require_once 'app/helpers/dateHelper.php';
 function mostrarIndex(){
     $pdo = conectarBD();
     $idUsuari = $_SESSION['id_usuari'];
+    $data = obtenirDataActual();
+    $dia = obtenirDiaActual();
+    $tasquesAvui = getTasquesDia($pdo, $data);
+    $rutines  = getRutinesDia($pdo, $dia);
     $tasquesPendents = getTasquesActives($pdo, $idUsuari);
     $tasquesCompletades = getTasquesCompletades($pdo, $idUsuari);
-    $data = obtenirDataActual();
-    $tasquesAvui = getTasquesDia($pdo, $data);
+    
     require 'app/views/index.php';
 }
 function mostrarCreacioTasques($error = ""){

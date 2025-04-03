@@ -33,6 +33,24 @@ function obtenirDiesRutina($pdo, $idRutina) {
     return $stmt->fetchAll(PDO::FETCH_COLUMN);
 }
 
+function getRutinesDia($pdo, $dia) {
+    try {
+        $sql = "SELECT r.* FROM rutines r
+                INNER JOIN dies_rutina dr ON r.id = dr.id_rutina
+                WHERE dr.dia = :dia";
+
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(':dia', $dia, PDO::PARAM_STR);
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    } catch (PDOException $e) {
+        error_log("Error en getRutinesDia: " . $e->getMessage());
+        return [];
+    }
+}
+
+
 function insertRutina($pdo, $idUsuari, $nom, $descripcio, $hora, $dies = []) {
     try {
         $pdo->beginTransaction();  // Comença la transacció

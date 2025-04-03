@@ -3,6 +3,18 @@
     function obtenirDataActual() {
         return date("Y-m-d"); // Format: 2025-02-11
     }
+
+    function obtenirDiaActual() {
+        // Definir els noms dels dies en català
+        $diesCatalans = ["diumenge", "dilluns", "dimarts", "dimecres", "dijous", "divendres", "dissabte"];
+        
+        // Obtenir el número del dia de la setmana (0 = diumenge, 1 = dilluns, ..., 6 = dissabte)
+        $numeroDia = date("w");
+    
+        // Retornar el nom del dia en català
+        return $diesCatalans[$numeroDia];
+    }
+    
     
     function formatDataEnCatala($dataString) {
         $data = new DateTime($dataString);

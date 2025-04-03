@@ -28,6 +28,97 @@
                 <?php endif;
             endif;
         ?>
+        <section id="tasquesAvui">
+            <h3 id="dia"></h3>
+            <?php
+                if (!empty($tasquesAvui)):?>
+                    <div class="container">
+                    <?php foreach ($tasquesAvui as $tasca) : ?>
+                        <div class="tasca">
+                            <!-- Contenidor del text -->
+                            <div class="tasca-contenidor">
+                                <form action="index.php" method="post">
+                                    <input type="hidden" name="editarTasca" value="<?php echo $tasca['nom'] ?>">
+                                    <input type="hidden" name="editarTascaData" value="<?php echo $tasca['data_inici'] ?>">
+                                    <input type="hidden" name="editarTascaDesc" value="<?php echo $tasca['descripcio'] ?>">
+                                    <input type="hidden" name="editarTascaId" value="<?php echo $tasca['id_tasca']?>"/>
+                                    <button class="botoInvisible" type="submit">
+                                        <div class="nom">
+                                            <?php echo htmlspecialchars($tasca['nom']); ?>
+                                        </div>
+                                        <div class="data">
+                                            <?php echo formatDataEnCatala(htmlspecialchars($tasca['data_inici'])); ?>
+                                        </div>
+                                        <?php if (!empty($tasca['descripcio'])) : ?>
+                                            <div class="descripcio">
+                                                <?php echo htmlspecialchars($tasca['descripcio']); ?>
+                                            </div>
+                                        <?php endif; ?>
+                                    </button>
+                                </form>
+                            </div>
+
+                            <!-- Botons a la dreta -->
+                            <div class="botons">
+                                <form action="index.php" method="POST">
+                                    <input type="hidden" name="tascaCompletada" value="<?php echo $tasca['id_tasca']; ?>">
+                                    <button type="submit" class="completar"><img src="public/media/completado.webp" alt="✔"></button>
+                                </form>
+
+                                <form action="index.php" method="POST">
+                                    <input type="hidden" name="eliminarTasca" value="<?php echo $tasca['id_tasca']; ?>">
+                                    <button type="submit" class="eliminar"><img src="public/media/borrar.webp" alt="✖"></button>
+                                </form>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                    </div>
+                <?php endif
+            ?>
+            <?php
+                if (!empty($rutinesAvui)):?>
+                    <div class="container">
+                    <?php foreach ($rutinesAvui as $rutina) : ?>
+                            <div class="tasca">
+                                <!-- Contenidor del text -->
+                                <div class="tasca-contenidor">
+                                    <form action="index.php" method="post">
+                                        <input type="hidden" name="editarRutinaId" value="<?php echo $rutina['id_rutina'] ?>">
+                                        <input type="hidden" name="editarRutina" value="<?php echo $rutina['nom'] ?>">
+                                        <input type="hidden" name="editarHora" value="<?php echo $rutina['hora'] ?>">
+                                        <input type="hidden" name="editarRutinaDesc" value="<?php echo $rutina['descripcio'] ?>">
+                                        <input type="hidden" name="editarRutinaDies" value="<?php $rutina['dies']?>">
+                                        
+                                        <button class="botoInvisible" type="submit">
+                                            <div class="nom">
+                                                <?php echo htmlspecialchars($rutina['nom']) . ' | ' . substr(htmlspecialchars($rutina['hora']), 0, 5); ?>
+                                            </div>
+                                            <?php if (!empty($rutina['dies'])) : ?>
+                                                <div class="dies">
+                                                    Dies: <?php echo implode(", ", $rutina['dies']); ?>
+                                                </div>
+                                            <?php endif; ?>
+                                            <?php if (!empty($rutina['descripcio'])) : ?>
+                                                <div class="descripcio">
+                                                    <?php echo htmlspecialchars($rutina['descripcio']); ?>
+                                                </div>
+                                            <?php endif; ?>
+                                        </button>
+                                    </form>
+                                </div>
+                                <!-- Botons a la dreta -->
+                                <div class="botons">
+                                    <form action="index.php" method="POST">
+                                        <input type="hidden" name="eliminarRutina" value="<?php echo $rutina['id_rutina']; ?>">
+                                        <button type="submit" class="eliminar"><img src="public/media/borrar.webp" alt="✖"></button>
+                                    </form>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif
+            ?>
+        </section>
         <section id="tasquesActives">
             <h3>Tàsques a completar:</h3>
             <?php if (!empty($tasquesPendents)) : ?>

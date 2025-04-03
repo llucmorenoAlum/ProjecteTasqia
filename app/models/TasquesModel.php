@@ -53,11 +53,10 @@ function getTasquesDia($pdo, $data) {
     try {
         $sql = "SELECT * FROM tasques WHERE data_inici LIKE :data";
         $stmt = $pdo->prepare($sql);
-
-        // Afegim el '%' per trobar qualsevol valor que comenci amb la data
-        $data = "$data%"; 
         
+        $data = $data . '%';
         $stmt->bindParam(':data', $data, PDO::PARAM_STR);
+
         $stmt->execute();
         
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
