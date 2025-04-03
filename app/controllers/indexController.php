@@ -12,7 +12,7 @@ function mostrarIndex(){
     $data = obtenirDataActual();
     $dia = obtenirDiaActual();
     $tasquesAvui = getTasquesDia($pdo, $data);
-    $rutines  = getRutinesDia($pdo, $dia, $idUsuari);
+    $rutinesAvui  = getRutinesDia($pdo, $dia, $idUsuari);
     $tasquesPendents = getTasquesActives($pdo, $idUsuari);
     $tasquesCompletades = getTasquesCompletades($pdo, $idUsuari);
     
