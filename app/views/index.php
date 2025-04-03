@@ -114,7 +114,7 @@
                         <?php endforeach; ?>
                     </div>
                 <?php endif ?>
-            <?php if (!empty($tasquesAvui) && !empty($rutinesAvui)):?>
+            <?php if (empty($tasquesAvui) && empty($rutinesAvui)):?>
                 <p>No tens cap tasca per avui.</p>
             <?php endif?>
         </section>
