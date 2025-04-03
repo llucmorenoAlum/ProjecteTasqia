@@ -19,6 +19,9 @@ header{
 header img{
     width: 45px;
     padding: 0px 10px;
+    &:hover{
+        cursor: pointer;
+    }
 }
 
 #logoTasqia{
