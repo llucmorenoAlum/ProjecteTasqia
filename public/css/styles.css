@@ -162,11 +162,10 @@ section {
     padding: 0px;
     margin-bottom: 0px;
     text-align: left;
+    &:hover{
+        background-color: #444;
+    }
 }
-.botoInvisible:hover{
-    background-color: #444;
-}
-
 
 .deshacer, .eliminar, .completar {
     width: 30px; 

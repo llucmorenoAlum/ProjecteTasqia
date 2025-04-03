@@ -86,7 +86,7 @@
                 $dies_personalitzats = isset($_POST['dies']) ? $_POST['dies'] : [];
             
                 if (crearRutina($idUsuari, $nomRutina, $descripcioRutina,$horaCompleta,$dies_personalitzats)) {
-                    mostrarRutines($missatge = "La rutina s'ha eliminat correctament.");
+                    mostrarRutines($missatge = "La rutina s'ha creat correctament.");
                 } else {
                     mostrarRutines($error = "No s'ha pogut crear la rutina");
                 }

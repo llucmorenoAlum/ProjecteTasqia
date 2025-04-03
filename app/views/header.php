@@ -1,7 +1,12 @@
 
 <header>
     <div><img src="public/media/menu.webp" alt=""></div>
-    <h1>Tasqia</h1>
+    <form action="index.php" method="post">
+        <button class="botoInvisible" type="submit">
+            <input type="hidden" name="accio" value="mostrarIndex">
+            <img src="public/media/logoTasqia5.png" alt="Tasqia">
+        </button>
+    </form>
     <div class="avatar-container">
         <img src="https://ui-avatars.com/api?rounded=true&name=<?php echo $_SESSION['nom']?>" 
              alt="Perfil" 
