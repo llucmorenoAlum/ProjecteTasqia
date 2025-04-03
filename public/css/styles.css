@@ -21,6 +21,11 @@ header img{
     padding: 0px 10px;
 }
 
+#logoTasqia{
+    width: 150px;
+    margin: 10px;
+}
+
 .avatar-container {
     position: relative;
     display: inline-block;
@@ -164,6 +169,16 @@ section {
     text-align: left;
     &:hover{
         background-color: #444;
+    }
+}
+
+.botoInvisibleHeader{
+    background-color: #333;
+    padding: 0px;
+    margin-bottom: 0px;
+    text-align: left;
+    &:hover{
+        background-color: #333;
     }
 }
 

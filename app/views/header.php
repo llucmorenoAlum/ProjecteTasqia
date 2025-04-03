@@ -2,9 +2,9 @@
 <header>
     <div><img src="public/media/menu.webp" alt=""></div>
     <form action="index.php" method="post">
-        <button class="botoInvisible" type="submit">
+        <button class="botoInvisibleHeader" type="submit">
             <input type="hidden" name="accio" value="mostrarIndex">
-            <img src="public/media/logoTasqia5.png" alt="Tasqia">
+            <img id="logoTasqia" src="public/media/logoTasqia5.png" alt="Tasqia">
         </button>
     </form>
     <div class="avatar-container">
