@@ -53,6 +53,9 @@
                 logout();
                 mostrarlogin();
             }
+            elseif (isset($_POST['accio']) && $_POST['accio'] === 'mostrarIndex') {
+                mostrarIndex();
+            }
             elseif(isset($_POST['accio']) && $_POST['accio'] === 'crearTasca'){
                 mostrarCreacioTasques();
             }
