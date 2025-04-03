@@ -75,5 +75,33 @@ document.addEventListener("DOMContentLoaded", function () {
         updateCalendar();
     });
 
+    function carregarTasques(data) {
+        fetch(`api/obtenirTasques.php?data=${data}`)
+        .then(response => response.json())
+        .then(tasques => {
+            mostrarTasques(tasques);
+        })
+        .catch(error => console.error("Error carregant tasques:", error));
+    }
+
+    function mostrarTasques(tasques) {
+        const tasquesContainer = document.getElementById("tasquesContainer");
+    tasquesContainer.innerHTML = ""; // Neteja el contingut anterior
+
+    if (tasques.length === 0) {
+        tasquesContainer.innerHTML = "<p>No hi ha tasques per aquest dia.</p>";
+        return;
+    }
+
+    tasques.forEach(tasca => {
+        const div = document.createElement("div");
+        div.classList.add("tasca");
+        div.innerHTML = `
+            <strong>${tasca.nom}</strong> - ${tasca.descripcio || "Sense descripció"}
+        `;
+        tasquesContainer.appendChild(div);
+    });
+    }
+
     updateCalendar();
 });
