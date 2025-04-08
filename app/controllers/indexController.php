@@ -38,6 +38,9 @@ function mostrarCreacioRutines($error = ""){
 }
 
 function mostrarCalendari(){
+    $pdo = conectarBD();
+    $idUsuari = $_SESSION['id_usuari'];
+    $tasquesUsuari = getTotesTasques($pdo, $idUsuari);
     require_once 'app/views/celendari.php';
 }
 

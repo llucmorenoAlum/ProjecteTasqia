@@ -113,9 +113,6 @@
                 mostrarRutines();
             }
             elseif (isset($_POST['accio']) && $_POST['accio'] === 'mostrarCalendari') {
-                $pdo = conectarBD();
-                $idUsuari = $_SESSION['id_usuari'];
-                $tasquesUsuari = getTotesTasques($pdo, $idUsuari);
                 mostrarCalendari();
             }
             elseif (isset($_POST['accio']) && $_POST['accio'] === 'mostrarNotes') {
