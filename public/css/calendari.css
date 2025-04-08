@@ -79,11 +79,14 @@
 }
 
 .task-card {
-    background-color: #f0f4ff;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* background-color: #f0f4ff; */
     border: 1px solid #c5d4ff;
     border-radius: 12px;
     padding: 1rem;
-    margin-bottom: 1rem;
+    margin: 1rem;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: transform 0.2s ease;
 }
@@ -95,7 +98,7 @@
 .task-card h3 {
     margin: 0 0 0.5rem 0;
     font-size: 1.2rem;
-    color: #2a3b8c;
+    color: #7d3c98;
 }
 
 .task-card p {
