@@ -1,12 +1,15 @@
 <?php
 
-function getTasques($pdo){
-    try {  
-        $sql = 'SELECT * FROM tasques';
-        $tasques = $pdo->query($sql);
-        return $tasques;
-    } catch (PDOException $e) {?>
-        <h2>ERROR: <?php echo $e?></h2><?php
+function getTotesTasques($pdo, $idUsuari) {
+    try {
+        $sql = "SELECT * FROM tasques WHERE id_usuari = :idUsuari";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(':idUsuari', $idUsuari, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    } catch (PDOException $e) {
+        error_log("Error obtenint tasques: " . $e->getMessage());
+        return [];
     }
 }
 

@@ -15,14 +15,39 @@ document.addEventListener("DOMContentLoaded", function () {
         if (currentView === "month") renderMonthView();
     }
 
+
     function renderDayView() {
+        const diaActual = currentDate.toISOString().slice(0, 10); // format "YYYY-MM-DD"
         calendarTitle.textContent = currentDate.toLocaleDateString("ca-ES", { weekday: 'long', day: 'numeric', month: 'long' });
         calendar.className = "day-view";
+    
+        const tasquesDelDia = tasques.filter(tasca => 
+            tasca.data_inici.startsWith(diaActual)
+        );
+    
         const dayDiv = document.createElement("div");
-        dayDiv.textContent = currentDate.toLocaleDateString("ca-ES", { weekday: 'long', day: 'numeric', month: 'long' });
         dayDiv.className = "calendar-day";
+        dayDiv.textContent = diaActual;
+    
+        const llista = document.createElement("ul");
+        tasquesDelDia.forEach(tasca => {
+            const item = document.createElement("li");
+            item.textContent = tasca.nom;
+            llista.appendChild(item);
+        });
+    
+        dayDiv.appendChild(llista);
         calendar.appendChild(dayDiv);
     }
+    
+    // function renderDayView() {
+    //     calendarTitle.textContent = currentDate.toLocaleDateString("ca-ES", { weekday: 'long', day: 'numeric', month: 'long' });
+    //     calendar.className = "day-view";
+    //     const dayDiv = document.createElement("div");
+    //     dayDiv.textContent = currentDate.toLocaleDateString("ca-ES", { weekday: 'long', day: 'numeric', month: 'long' });
+    //     dayDiv.className = "calendar-day";
+    //     calendar.appendChild(dayDiv);
+    // }
 
     function renderWeekView() {
         const startOfWeek = new Date(currentDate);

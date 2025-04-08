@@ -127,24 +127,6 @@
                 <?php endif;
                 ?>
         </section>
-        <section id="tasquesDia">
-            <h3>Avui | Dilluns 3 de Febrer de 2025</h3>
-            <?php 
-                if (!empty($tasquesAvui)) : ?>
-                    <ul>
-                        <?php foreach ($tasquesAvui as $tascaAvui) : ?>
-                            <li>
-                                <?php echo htmlspecialchars($tascaAvui['nom']); ?>
-                                 - 
-                                <?php echo htmlspecialchars($tascaAvui['descripcio']); ?>
-                            </li>
-                        <?php endforeach; ?>
-                    </ul>
-                <?php else : ?>
-                    <p>No tens cap tasca</p>
-                <?php endif;
-                ?>
-        </section>
         <form action="index.php" method="post">
             <!-- <button name="accio" value="crearTasca" class="btnCrear">+</button> -->
             <!-- From Uiverse.io by Yaya12085 --> 

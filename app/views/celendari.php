@@ -26,6 +26,9 @@
             </div>
             <div id="calendar"></div>
         </div>
+        <script>
+            const tasques = <?php echo json_encode($tasquesUsuari);?>;
+        </script>
         <script src="public/js/calendari.js"></script>
     </main>
 </body>
