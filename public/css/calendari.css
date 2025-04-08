@@ -77,3 +77,29 @@
     min-height: 150px; 
     overflow: hidden;
 }
+
+.task-card {
+    background-color: #f0f4ff;
+    border: 1px solid #c5d4ff;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.task-card:hover {
+    transform: scale(1.02);
+}
+
+.task-card h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+    color: #2a3b8c;
+}
+
+.task-card p {
+    margin: 0.2rem 0;
+    font-size: 0.95rem;
+}
+

@@ -29,12 +29,28 @@ document.addEventListener("DOMContentLoaded", function () {
         dayDiv.className = "calendar-day";
         dayDiv.textContent = diaActual;
     
-        const llista = document.createElement("ul");
         tasquesDelDia.forEach(tasca => {
-            const item = document.createElement("li");
-            item.textContent = tasca.nom;
-            llista.appendChild(item);
+            const card = document.createElement("div");
+            card.className = "task-card";
+        
+            const titol = document.createElement("h3");
+            titol.textContent = tasca.nom;
+        
+            const hora = document.createElement("p");
+            hora.textContent = `Inici: ${new Date(tasca.data_inici).toLocaleTimeString("ca-ES", {
+                hour: '2-digit', minute: '2-digit'
+            })}`;
+        
+            const descripcio = document.createElement("p");
+            descripcio.textContent = tasca.descripcio || "";
+        
+            card.appendChild(titol);
+            card.appendChild(hora);
+            if (tasca.descripcio) card.appendChild(descripcio);
+        
+            dayDiv.appendChild(card);
         });
+        
     
         dayDiv.appendChild(llista);
         calendar.appendChild(dayDiv);
