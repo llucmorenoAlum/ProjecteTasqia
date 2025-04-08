@@ -51,8 +51,6 @@ document.addEventListener("DOMContentLoaded", function () {
             dayDiv.appendChild(card);
         });
         
-    
-        dayDiv.appendChild(llista);
         calendar.appendChild(dayDiv);
     }
     
