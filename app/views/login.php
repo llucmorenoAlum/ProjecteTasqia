@@ -11,7 +11,7 @@
 </head>
 <body>
     <!-- <h1>Tasqia</h1> -->
-    <img src="public/media/logoTasqia4.png" alt="Tasqia" width="50px">
+    <img src="public/media/logoTasqia4.png" alt="Tasqia" width="120px">
     <?php 
         if ($error != ""):?>
             <div class="errorWarning">

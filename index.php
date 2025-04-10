@@ -41,6 +41,9 @@
                     mostrarlogin($error);
                 }
             }
+            elseif (isset($_POST['accio']) && $_POST['accio'] === 'mostrarLogin'){
+                mostrarlogin();
+            }
             else{
                 mostrarlogin();
             }
