@@ -15,7 +15,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    background: #7d3c98;
+    background: linear-gradient(to top right, aqua, #7d3c98) ;
     color: white;
     font-size: 24px;
 }
