@@ -37,7 +37,7 @@
             <button type="submit" name="accio" value="registrarse">Registrar-se</button>
         </form>
         <form action="index.php" method="post">
-            <button name="accio" value="mostrarLogin" type="submit">Log-in</button>
+            <button class="btnRegistre" name="accio" value="mostrarLogin" type="submit">Log-in</button>
         </form>
     </section>
 </body>
