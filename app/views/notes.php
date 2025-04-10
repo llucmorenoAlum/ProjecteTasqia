@@ -62,7 +62,7 @@
         
         <form action="index.php" method="post">
             <!-- <button name="accio" value="crearNota" class="btnCrear">+</button> -->
-            <button name="accio" value="crearTasca" class="Btn">
+            <button name="accio" value="crearNota" class="Btn">
                 <div class="sign">+</div>        
                 <div class="text">Nota</div>
             </button>
