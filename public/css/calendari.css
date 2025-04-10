@@ -82,7 +82,7 @@
 .task-card {
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 80%;
     /* background-color: #f0f4ff; */
     border: 1px solid #7d3c98;
     border-radius: 12px;
