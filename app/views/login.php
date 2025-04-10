@@ -10,7 +10,8 @@
     ?>
 </head>
 <body>
-    <h1>Tasqia</h1>
+    <!-- <h1>Tasqia</h1> -->
+    <img src="public/media/logoTasqia4.png" alt="Tasqia" width="50px">
     <?php 
         if ($error != ""):?>
             <div class="errorWarning">
