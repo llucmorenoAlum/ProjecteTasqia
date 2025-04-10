@@ -75,7 +75,7 @@
                 $descripcioTasca = $_POST['descripcioTasca'];
  
                 if(crearNovaTasca($idUsuari, $nomTasca, $dataTasca, $descripcioTasca)){
-                    mostrarIndex();
+                    mostrarTasques();
                 }else {
                     $error = "No s'ha pogut crear la tasca";
                     mostrarCreacioTasques($error);
@@ -161,7 +161,8 @@
                 $diesRutina = isset($_POST['dies']) ? $_POST['dies'] : [];
             
                 if(modificarRutina($idRutina, $nomRutina, $descripcioRutina, $horaRutina, $diesRutina)){
-                    mostrarRutines($missatge = "La rutina s'ha modificat correctament.");
+                    $missatge = "La rutina s'ha modificat correctament.";
+                    mostrarRutines();
                 } else {
                     mostrarRutines($error= "No s'ha pogut modificar la rutina");
                 }
