@@ -162,7 +162,7 @@
             
                 if(modificarRutina($idRutina, $nomRutina, $descripcioRutina, $horaRutina, $diesRutina)){
                     $missatge = "La rutina s'ha modificat correctament.";
-                    mostrarRutines();
+                    mostrarRutines($error = "", $missatge);
                 } else {
                     mostrarRutines($error= "No s'ha pogut modificar la rutina");
                 }
@@ -195,7 +195,7 @@
             elseif (isset($_POST['eliminarRutina'])) {
                 $idRutina = $_POST['eliminarRutina'];
                 if(eliminarRutina($idRutina)){
-                    mostrarRutines($missatge = "La rutina s'ha eliminat correctament.");
+                    mostrarRutines($error="", $missatge = "La rutina s'ha eliminat correctament.");
                 }else{
                     mostrarRutines($error = "No s'ha pogut eliminar la rutina");
                 }
