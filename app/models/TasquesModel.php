@@ -54,7 +54,7 @@ function getTasquesCompletades($pdo, $idUsuari) {
 
 function getTasquesDia($pdo, $data, $idUsuari) {
     try {
-        $sql = "SELECT * FROM tasques WHERE data_inici LIKE :data AND estat = :estat AND id_usuari = :udUsuari";
+        $sql = "SELECT * FROM tasques WHERE data_inici LIKE :data AND estat = :estat AND id_usuari = :idUsuari";
         $stmt = $pdo->prepare($sql);
         
         $data = $data . '%';
