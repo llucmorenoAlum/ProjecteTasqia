@@ -11,7 +11,7 @@
     <script src="public/js/registre.js"></script>
 </head>
 <body>
-    <img src="public/media/logoTasqia4.png" alt="Tasqia" width="50px">
+    <img src="public/media/logoTasqia4.png" alt="Tasqia" width="120px">
     <?php 
         if ($error != ""):?>
             <div class="errorWarning">

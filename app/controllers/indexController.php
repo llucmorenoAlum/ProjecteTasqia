@@ -13,7 +13,7 @@ function mostrarIndex(){
     $dia = obtenirDiaActual();
     setlocale(LC_TIME, 'ca_ES.UTF-8'); 
     $titolDia = obtenirDiaActualComplet();
-    $tasquesAvui = getTasquesDia($pdo, $data);
+    $tasquesAvui = getTasquesDia($pdo, $data, $idUsuari);
     $rutinesAvui  = getRutinesDia($pdo, $dia, $idUsuari);
     $tasquesPendents = getTasquesActives($pdo, $idUsuari);
     $tasquesCompletades = getTasquesCompletades($pdo, $idUsuari);
@@ -50,7 +50,7 @@ function mostrarTasques(){
     $tasquesPendents = getTasquesActives($pdo, $idUsuari);
     $tasquesCompletades = getTasquesCompletades($pdo, $idUsuari);
     $data = obtenirDataActual();
-    $tasquesDia = getTasquesDia($pdo, $data);
+    $tasquesDia = getTasquesDia($pdo, $data, $idUsuari);
     require_once 'app/views/tasques.php';
 }
 
