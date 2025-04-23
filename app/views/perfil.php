@@ -8,22 +8,24 @@
 </head>
 <body>
     <?php require_once 'app/views/sortir.php'?>
-    <?php if (is_null($_SESSION['imatge'] )) :?>
-        <img src="https://ui-avatars.com/api?rounded=true&name=<?php echo $_SESSION['nom']?>" alt="Perfil" id="imgPerfil">
-    <?php else :?>
-        <img src="<?php echo $_SESSION['imatge']?>" alt="" id="imgPerfil">
-    <?php endif ?>
-    <form action="" method="post">
-        <label for="imatge_url">Imatge</label>
-        <?php if (isset($_SESSION['imatge'])):?>
-            <input  type="url" name="imatge_url" id="imatge_url" placeholder="Introdueix l'URL de la imatge..." value="<?php echo $_SESSION['imatge']?>" required>
-
+    <main>
+        <?php if (is_null($_SESSION['imatge'] )) :?>
+            <img src="https://ui-avatars.com/api?rounded=true&name=<?php echo $_SESSION['nom']?>" alt="Perfil" id="imgPerfil">
         <?php else :?>
-            <input  type="url" name="imatge_url" id="imatge_url" placeholder="Introdueix l'URL de la imatge..." required>
-        <?php endif; ?>
-        <button type="submit">Canviar Imatge</button>
-    </form>
-    <h2>Nom: <?php echo $_SESSION['nom']?></h2>
-    <h2>Correu: <?php echo $_SESSION['usuari']?></h2>
+            <img src="<?php echo $_SESSION['imatge']?>" alt="" id="imgPerfil">
+        <?php endif ?>
+        <form action="" method="post">
+            <label for="imatge_url">Imatge</label>
+            <?php if (isset($_SESSION['imatge'])):?>
+                <input  type="url" name="imatge_url" id="imatge_url" placeholder="Introdueix l'URL de la imatge..." value="<?php echo $_SESSION['imatge']?>" required>
+
+            <?php else :?>
+                <input  type="url" name="imatge_url" id="imatge_url" placeholder="Introdueix l'URL de la imatge..." required>
+            <?php endif; ?>
+            <button type="submit">Canviar Imatge</button>
+        </form>
+        <h2>Nom: <?php echo $_SESSION['nom']?></h2>
+        <h2>Correu: <?php echo $_SESSION['usuari']?></h2>
+    </main>
 </body>
 </html>
