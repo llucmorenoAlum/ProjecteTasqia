@@ -56,6 +56,9 @@
                 logout();
                 mostrarlogin();
             }
+            elseif (isset($_POST['accio']) && $_POST['accio'] === 'perfil') {
+                mostrarPerfil();
+            }
             elseif (isset($_POST['accio']) && $_POST['accio'] === 'mostrarIndex') {
                 mostrarIndex();
             }

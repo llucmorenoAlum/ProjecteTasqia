@@ -96,6 +96,10 @@ function mostrarEditorNota($idNota, $titolNota, $contingutNota, $error = ""){
     require_once 'app/views/editarNota.php';
 }
 
+function mostrarPerfil(){
+    require_once 'app/views/perfil.php';
+}
+
 function crearSessio($correu){
     $pdo = conectarBD();
     $dades = getDadesUsuari($pdo, $correu);

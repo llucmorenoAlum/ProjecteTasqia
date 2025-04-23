@@ -13,6 +13,9 @@
              id="avatar">
         <div id="dropdown-menu" class="hidden">
             <form action="index.php" method="post">
+                <button name="accio" value="perfil">Perfil</button>
+            </form>
+            <form action="index.php" method="post">
                 <button name="accio" value="logout"><img id="imgLogout" src="public/media/logout.png" alt="">Tancar sessió</button>
             </form>
         </div>
