@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="public/css/styles.css">
 </head>
 <body>
+    <?php require_once 'app/views/sortir.php'?>
     <?php if (is_null($_SESSION['imatge'] )) :?>
         <img src="https://ui-avatars.com/api?rounded=true&name=<?php echo $_SESSION['nom']?>" alt="Perfil" id="imgPerfil">
     <?php else :?>
