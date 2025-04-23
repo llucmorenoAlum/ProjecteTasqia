@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="public/css/checkbox.css">
 </head>
 <body>
+    <?php require_once 'app/views/sortir.php' ?>
+    <main>
     <h1>Tasqia</h1>
     <?php 
         $error = $error ?? "";
@@ -123,5 +125,6 @@
             <button name="accio" value="novaRutina">Crear</button>
         </form>
     </section>
+    </main>
 </body>
 </html>
