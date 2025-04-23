@@ -8,13 +8,19 @@
 </head>
 <body>
     <?php if (is_null($_SESSION['imatge'] )) :?>
-        <img src="https://ui-avatars.com/api?rounded=true&name=<?php echo $_SESSION['nom']?>" alt="Perfil" id="avatar">
+        <img src="https://ui-avatars.com/api?rounded=true&name=<?php echo $_SESSION['nom']?>" alt="Perfil" id="imgPerfil">
     <?php else :?>
-        <img src="<?php echo $_SESSION['imatge']?>" alt="">
+        <img src="<?php echo $_SESSION['imatge']?>" alt="" id="imgPerfil">
     <?php endif ?>
     <form action="" method="post">
-    <input type="url" name="imatge_url" id="imatge_url" required>
-    <button type="submit">Canviar Imatge</button>
+        <label for="imatge_url">Imatge</label>
+        <?php if (isset($_SESSION['imatge'])):?>
+            <input  type="url" name="imatge_url" id="imatge_url" placeholder="Introdueix l'URL de la imatge..." value="<?php echo $_SESSION['imatge']?>" required>
+
+        <?php else :?>
+            <input  type="url" name="imatge_url" id="imatge_url" placeholder="Introdueix l'URL de la imatge..." required>
+        <?php endif; ?>
+        <button type="submit">Canviar Imatge</button>
     </form>
     <h2>Nom: <?php echo $_SESSION['nom']?></h2>
     <h2>Correu: <?php echo $_SESSION['usuari']?></h2>

@@ -70,6 +70,10 @@ header img{
     display: block !important;
 }
 
+#imgPerfil{
+    width: 150px;
+    padding: 20px;
+}
 
 nav{
     display: flex;
