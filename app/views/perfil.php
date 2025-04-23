@@ -15,11 +15,11 @@
             <img src="<?php echo $_SESSION['imatge']?>" alt="" id="imgPerfil">
         <?php endif ?>
         <form id="canviImatgeForm">
-            <label for="imatge_url">Imatge</label>
+            <label for="urlImatge">Imatge</label>
             <?php if (isset($_SESSION['imatge'])):?>
-                <input  type="url" name="imatge_url" id="imatge_url" placeholder="URL de la imatge" value="<?php echo $_SESSION['imatge']?>" required>
+                <input  type="url" name="urlImatge" id="urlImatge" placeholder="URL de la imatge" value="<?php echo $_SESSION['imatge']?>" required>
             <?php else :?>
-                <input  type="url" name="imatge_url" id="imatge_url" placeholder="URL de la imatge" required>
+                <input  type="url" name="urlImatge" id="urlImatge" placeholder="URL de la imatge" required>
             <?php endif; ?>
             <button type="submit">Canviar Imatge</button>
         </form>
