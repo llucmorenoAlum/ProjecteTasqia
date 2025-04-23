@@ -7,6 +7,8 @@
         <link rel="stylesheet" href="public/css/styles.css">
     </head>
     <body>
+        <?php require_once 'app/views/sortir.php' ?>
+        <main>
         <h1>Tasqia</h1>
         <?php 
             if ($error != ""):?>
@@ -29,5 +31,6 @@
                 <button type="submit">Guardar</button>
             </form>
         </section>
+        </main>
     </body>
 </html>
