@@ -1,8 +1,8 @@
 <?php
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'tasqia_db');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_HOST', 'bbdd.pentinats.cat');
+define('DB_NAME', 'ddb251992');
+define('DB_USER', 'ddb251992');
+define('DB_PASS', 'Morenodelgado04');
 
 function conectarBD(){
     try {
