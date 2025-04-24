@@ -73,6 +73,9 @@
 /* Caselles dels dies */
 .calendar-day {
     border: 1px solid #ddd;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
     border-radius: 12px;
     padding: 10px;
     display: flex;
@@ -82,6 +85,16 @@
     font-size: 18px;
     min-height: 150px; 
     overflow: hidden;
+}
+
+.day-number {
+    font-weight: bold;
+}
+.task-count {
+    display: block;
+    font-size: 0.8em;
+    color: #555;
+    margin-top: 5px;
 }
 
 .task-card {
