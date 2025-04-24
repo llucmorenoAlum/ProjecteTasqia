@@ -88,34 +88,59 @@ document.addEventListener("DOMContentLoaded", function () {
     function renderMonthView() {
         calendarTitle.textContent = currentDate.toLocaleDateString("ca-ES", { month: 'long', year: 'numeric' });
         calendar.className = "month-view";
-
-        const firstDay = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
-        const lastDay = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0);
-
-        for (let i = 1; i <= lastDay.getDate(); i++) {
-            const dayDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), i);
-            const dayString = dayDate.toISOString().slice(0, 10); // "YYYY-MM-DD"
-
-            // Comptar quantes tasques té aquell dia
-            const tasquesDelDia = tasques.filter(t => t.data_inici.startsWith(dayString));
-
+    
+        const any = currentDate.getFullYear();
+        const mes = currentDate.getMonth();
+    
+        const primerDiaMes = new Date(any, mes, 1);
+        const ultimDiaMes = new Date(any, mes + 1, 0);
+        const diaSetmanaInici = primerDiaMes.getDay(); // 0 (diumenge) - 6 (dissabte)
+        
+        // Ens assegurem que comença en dilluns (com a la majoria de calendaris europeus)
+        const offsetInici = (diaSetmanaInici === 0) ? 6 : diaSetmanaInici - 1;
+    
+        const diesDelMesAnterior = offsetInici;
+        const diesDelMesActual = ultimDiaMes.getDate();
+    
+        // Total dies a mostrar (per completar files senceres de 7 dies)
+        const totalDies = Math.ceil((diesDelMesAnterior + diesDelMesActual) / 7) * 7;
+    
+        // Data inicial a mostrar (pot ser final del mes anterior)
+        const dataInici = new Date(any, mes, 1 - diesDelMesAnterior);
+    
+        for (let i = 0; i < totalDies; i++) {
+            const dia = new Date(dataInici);
+            dia.setDate(dataInici.getDate() + i);
+    
+            const diaString = dia.toISOString().slice(0, 10); // "YYYY-MM-DD"
+    
+            // Comptar quantes tasques té aquest dia
+            const tasquesDelDia = tasques.filter(t => t.data_inici.startsWith(diaString));
+    
             const dayDiv = document.createElement("div");
             dayDiv.className = "calendar-day";
+    
+            // Afegim una classe per identificar dies fora del mes actual
+            if (dia.getMonth() !== mes) {
+                dayDiv.classList.add("outside-month");
+            }
+    
             dayDiv.innerHTML = `
-                <span class="day-number">${i}</span>
+                <span class="day-number">${dia.getDate()}</span>
                 <span class="task-count">${tasquesDelDia.length > 0 ? tasquesDelDia.length + ' tasques' : ''}</span>
             `;
-
-            // Clica per anar a la vista diària
+    
+            // Clic per anar a la vista diària
             dayDiv.addEventListener("click", () => {
-                currentDate = new Date(dayDate); // actualitzem la data seleccionada
-                currentView = "day";             // canviem la vista
-                updateCalendar();    
+                currentDate = new Date(dia);
+                currentView = "day";
+                updateCalendar();
             });
-
+    
             calendar.appendChild(dayDiv);
         }
     }
+    
 
     viewButtons.forEach(button => {
         button.addEventListener("click", () => {

@@ -75,7 +75,6 @@
     border: 1px solid #ddd;
     cursor: pointer;
     position: relative;
-    text-align: center;
     border-radius: 12px;
     padding: 10px;
     display: flex;
@@ -122,5 +121,9 @@
 .task-card p {
     margin: 0.2rem 0;
     font-size: 0.95rem;
+}
+
+.calendar-day.outside-month {
+    opacity: 0.4;
 }
 
