@@ -108,7 +108,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Clica per anar a la vista diària
             dayDiv.addEventListener("click", () => {
-                renderDayView();
+                currentDate = new Date(dayDate); // actualitzem la data seleccionada
+                currentView = "day";             // canviem la vista
+                updateCalendar();    
             });
 
             calendar.appendChild(dayDiv);
