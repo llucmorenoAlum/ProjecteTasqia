@@ -70,20 +70,44 @@ document.addEventListener("DOMContentLoaded", function () {
     // }
 
     function renderWeekView() {
-        const startOfWeek = new Date(currentDate);
-        startOfWeek.setDate(currentDate.getDate() - currentDate.getDay());
-
-        calendarTitle.textContent = `Setmana de ${startOfWeek.toLocaleDateString("ca-ES")}`;
+        calendarTitle.textContent = `Setmana de ${currentDate.toLocaleDateString("ca-ES")}`;
         calendar.className = "week-view";
-
+        calendar.innerHTML = "";
+    
+        const diaActual = new Date(currentDate);
+        const diaSetmana = diaActual.getDay(); // 0 (diumenge) - 6 (dissabte)
+        const offsetDilluns = (diaSetmana === 0) ? -6 : 1 - diaSetmana;
+    
+        const dilluns = new Date(diaActual);
+        dilluns.setDate(diaActual.getDate() + offsetDilluns);
+    
         for (let i = 0; i < 7; i++) {
+            const dia = new Date(dilluns);
+            dia.setDate(dilluns.getDate() + i);
+    
+            const diaString = dia.toISOString().slice(0, 10);
+            const tasquesDelDia = tasques.filter(t => t.data_inici.startsWith(diaString));
+    
             const dayDiv = document.createElement("div");
-            const day = new Date(startOfWeek);
-            day.setDate(startOfWeek.getDate() + i);
-            dayDiv.textContent = day.toLocaleDateString("ca-ES", { weekday: 'short', day: 'numeric' });
+            dayDiv.className = "calendar-day";
+    
+            dayDiv.innerHTML = `
+                <span class="day-name">${dia.toLocaleDateString("ca-ES", { weekday: 'short' })}</span>
+                <span class="day-number">${dia.getDate()}</span>
+                <span class="task-count">${tasquesDelDia.length > 0 ? tasquesDelDia.length + ' tasques' : ''}</span>
+            `;
+    
+            // Clic per anar a la vista diària
+            dayDiv.addEventListener("click", () => {
+                currentDate = new Date(dia);
+                currentView = "day";
+                updateCalendar();
+            });
+    
             calendar.appendChild(dayDiv);
         }
     }
+    
 
     function renderMonthView() {
         calendarTitle.textContent = currentDate.toLocaleDateString("ca-ES", { month: 'long', year: 'numeric' });

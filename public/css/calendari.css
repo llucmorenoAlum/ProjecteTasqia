@@ -55,8 +55,9 @@
 
 /* Vista setmanal */
 .week-view {
+    display: grid;
     grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: 1fr;
+    gap: 4px;
 }
 
 .week-view div {
@@ -83,11 +84,17 @@
     align-items: flex-start;
     font-size: 18px;
     overflow: hidden;
+    transition: 0.2s;
 }
 
 .day-number {
     font-weight: bold;
 }
+
+.day-name{
+    font-weight: bold;
+}
+
 .task-count {
     display: block;
     font-size: 0.8em;
