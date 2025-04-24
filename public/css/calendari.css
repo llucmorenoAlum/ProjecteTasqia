@@ -83,7 +83,6 @@
     justify-content: flex-start;
     align-items: flex-start;
     font-size: 18px;
-    min-height: 150px; 
     overflow: hidden;
 }
 
@@ -93,7 +92,7 @@
 .task-count {
     display: block;
     font-size: 0.8em;
-    color: #555;
+    color: #7d3c98;
     margin-top: 5px;
 }
 

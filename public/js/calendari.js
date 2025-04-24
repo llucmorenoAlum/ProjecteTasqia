@@ -87,31 +87,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function renderMonthView() {
         calendarTitle.textContent = currentDate.toLocaleDateString("ca-ES", { month: 'long', year: 'numeric' });
-    calendar.className = "month-view";
+        calendar.className = "month-view";
 
-    const firstDay = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
-    const lastDay = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0);
+        const firstDay = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
+        const lastDay = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0);
 
-    for (let i = 1; i <= lastDay.getDate(); i++) {
-        const dayDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), i);
-        const dayString = dayDate.toISOString().slice(0, 10); // "YYYY-MM-DD"
+        for (let i = 1; i <= lastDay.getDate(); i++) {
+            const dayDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), i);
+            const dayString = dayDate.toISOString().slice(0, 10); // "YYYY-MM-DD"
 
-        // Comptar quantes tasques té aquell dia
-        const tasquesDelDia = tasques.filter(t => t.data_inici.startsWith(dayString));
+            // Comptar quantes tasques té aquell dia
+            const tasquesDelDia = tasques.filter(t => t.data_inici.startsWith(dayString));
 
-        const dayDiv = document.createElement("div");
-        dayDiv.className = "calendar-day";
-        dayDiv.innerHTML = `
-            <span class="day-number">${i}</span>
-            <span class="task-count">${tasquesDelDia.length > 0 ? tasquesDelDia.length : ''}</span>
-        `;
+            const dayDiv = document.createElement("div");
+            dayDiv.className = "calendar-day";
+            dayDiv.innerHTML = `
+                <span class="day-number">${i}</span>
+                <span class="task-count">${tasquesDelDia.length > 0 ? tasquesDelDia.length + ' tasques' : ''}</span>
+            `;
 
-        // Clica per anar a la vista diària
-        dayDiv.addEventListener("click", () => {
-            window.location.href = `calendari.php?view=day&data=${dayString}`;
-        });
+            // Clica per anar a la vista diària
+            dayDiv.addEventListener("click", () => {
+                renderDayView();
+            });
 
-        calendar.appendChild(dayDiv);
+            calendar.appendChild(dayDiv);
         }
     }
 
