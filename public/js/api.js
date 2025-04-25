@@ -4,7 +4,7 @@ e.preventDefault(); // Evita que es recarregui la pàgina
 const urlImatge = document.getElementById("urlImatge").value;
 
 // Ajusta la URL de la teva API real
-const apiUrl = "http://api.tasqia.pentinats.cat/api/update_profile_image.php";
+const apiUrl = "http://api.tasqia.pentinats.cat";
 
 try {
     const resposta = await fetch(apiUrl, {

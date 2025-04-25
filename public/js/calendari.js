@@ -8,12 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentDate = new Date();
     let currentView = "month";
 
-    const urlParams = new URLSearchParams(window.location.search);
-    const viewFromURL = urlParams.get('view');
-    const dateFromURL = urlParams.get('data');
-    if (viewFromURL) currentView = viewFromURL;
-    if (dateFromURL) currentDate = new Date(dateFromURL);
-
     function updateCalendar() {
         calendar.innerHTML = "";
         if (currentView === "day") renderDayView();
